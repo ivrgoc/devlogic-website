@@ -320,13 +320,489 @@
         .shine-effect:hover::after {
             transform: translateX(100%);
         }
+
+        /* Language Switcher */
+        .lang-btn {
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn.active {
+            background: linear-gradient(135deg, #22d3ee, #06b6d4);
+            color: white;
+        }
     </style>
 </head>
 <body>
     <div id="root"></div>
 
     <script type="text/babel">
-        const { useState, useEffect, useRef } = React;
+        const { useState, useEffect, useRef, createContext, useContext } = React;
+
+        // Translations
+        const translations = {
+            en: {
+                // Navigation
+                nav: {
+                    about: 'About',
+                    services: 'Services',
+                    products: 'Products',
+                    whyUs: 'Why Us',
+                    portfolio: 'Portfolio',
+                    contact: 'Contact',
+                    getStarted: 'Get Started'
+                },
+                // Hero
+                hero: {
+                    badge: 'Now accepting new projects for 2026',
+                    titleLine1: 'Logic Meets',
+                    titleLine2: 'Innovation',
+                    description: 'We engineer exceptional software solutions that transform businesses. Strategic thinking, technical excellence, and unwavering commitment to your success.',
+                    cta1: 'Start Your Project',
+                    cta2: 'Explore Services',
+                    stats: {
+                        projects: 'Projects Delivered',
+                        clients: 'Happy Clients',
+                        experience: 'Years Experience',
+                        satisfaction: 'Client Satisfaction'
+                    }
+                },
+                // About
+                about: {
+                    badge: 'About DevLogic',
+                    titleLine1: 'Engineering Excellence,',
+                    titleLine2: ' Delivered',
+                    description1: 'DevLogic is a premium technology company specializing in innovative software solutions, product design, and technical consulting. We combine strategic thinking with technical excellence to deliver exceptional results that drive business growth.',
+                    description2: 'Founded with a vision to bridge the gap between complex technology and business needs, we\'ve helped companies across industries transform their digital presence and operations.',
+                    mission: 'Mission',
+                    missionDesc: 'Deliver transformative solutions',
+                    vision: 'Vision',
+                    visionDesc: 'Lead through innovation',
+                    values: 'Values',
+                    valuesDesc: 'Integrity, excellence, trust',
+                    approach: 'Approach',
+                    approachDesc: 'Agile and collaborative',
+                    award: 'Award Winning',
+                    awardDesc: 'Tech Solutions 2025'
+                },
+                // Services
+                services: {
+                    badge: 'Our Services',
+                    titleLine1: 'What We ',
+                    titleLine2: 'Do Best',
+                    description: 'Comprehensive technology services designed to elevate your business and drive meaningful results.',
+                    items: [
+                        {
+                            title: 'Product Design',
+                            description: 'User-centric design and UX/UI excellence. We create beautiful, intuitive interfaces that users love and that drive engagement.',
+                            features: ['User Research', 'UI/UX Design', 'Prototyping', 'Design Systems']
+                        },
+                        {
+                            title: 'Software Development',
+                            description: 'Custom applications and scalable solutions built with modern technologies. From MVPs to enterprise systems.',
+                            features: ['Web Applications', 'Mobile Apps', 'APIs & Backend', 'Cloud Solutions']
+                        },
+                        {
+                            title: 'Software Testing',
+                            description: 'Comprehensive QA and quality assurance services ensuring your software is reliable, secure, and performant.',
+                            features: ['Automated Testing', 'Performance Testing', 'Security Audits', 'Code Reviews']
+                        },
+                        {
+                            title: 'DevOps',
+                            description: 'Infrastructure automation and continuous delivery. We streamline your development pipeline for faster, safer deployments.',
+                            features: ['CI/CD Pipelines', 'Cloud Infrastructure', 'Monitoring', 'Container Orchestration']
+                        },
+                        {
+                            title: 'Consulting',
+                            description: 'Strategic technology consulting and advisory services. We help you make informed decisions that align with your business goals.',
+                            features: ['Tech Strategy', 'Architecture Review', 'Team Augmentation', 'Digital Transformation']
+                        }
+                    ]
+                },
+                // Products
+                products: {
+                    badge: 'Our Products',
+                    titleLine1: 'Products That ',
+                    titleLine2: 'Deliver',
+                    description: 'Innovative software products designed to solve real problems and empower teams to do their best work.',
+                    comingSoon: 'Coming Soon',
+                    getStarted: 'Get Started',
+                    learnMore: 'Learn More',
+                    notifyMe: 'Notify Me',
+                    items: [
+                        {
+                            name: 'ResumeAI Pro',
+                            tagline: 'AI-Powered Resume Builder',
+                            description: 'Create professional resumes in minutes with intelligent suggestions, industry-specific templates, and ATS optimization.',
+                            features: ['AI-Powered Suggestions', 'Professional Templates', 'ATS Optimization', 'Export to PDF/DOCX']
+                        },
+                        {
+                            name: 'CodeSync',
+                            tagline: 'Real-time Collaboration',
+                            description: 'Seamless code collaboration platform with real-time editing, integrated code review, and AI-assisted debugging.',
+                            features: ['Real-time Editing', 'Code Review', 'AI Debugging', 'Team Insights']
+                        },
+                        {
+                            name: 'DeployHub',
+                            tagline: 'One-Click Deployments',
+                            description: 'Simplified deployment platform for modern applications. Deploy to any cloud with zero configuration.',
+                            features: ['Multi-Cloud Support', 'Auto-Scaling', 'Monitoring', 'Rollback']
+                        }
+                    ]
+                },
+                // Why Us
+                whyUs: {
+                    badge: 'Why Choose Us',
+                    titleLine1: 'Why Leading Companies',
+                    titleLine2: ' Trust DevLogic',
+                    description: 'We\'re not just another development agency. We\'re your strategic technology partner committed to your long-term success.',
+                    cta1: 'Schedule a Call',
+                    cta2: 'View Our Work',
+                    reasons: [
+                        { title: 'Proven Track Record', description: '150+ successful projects delivered with 99% client satisfaction rate.' },
+                        { title: 'Expert Team', description: 'Senior engineers and designers with deep expertise across technologies.' },
+                        { title: 'On-Time Delivery', description: 'We respect deadlines and deliver quality work within agreed timelines.' },
+                        { title: 'Clear Communication', description: 'Regular updates, transparent processes, and always accessible team.' },
+                        { title: 'Security First', description: 'Enterprise-grade security practices built into every solution we deliver.' },
+                        { title: 'Scalable Solutions', description: 'Architecture designed for growth, from startup to enterprise scale.' }
+                    ]
+                },
+                // Portfolio
+                portfolio: {
+                    badge: 'Portfolio',
+                    titleLine1: 'Our Recent ',
+                    titleLine2: 'Work',
+                    description: 'A selection of projects that showcase our expertise and commitment to excellence.',
+                    viewCase: 'View Case Study',
+                    cta: 'Want to see more? Let\'s talk about your project',
+                    projects: [
+                        { title: 'FinTech Dashboard', category: 'Web Application', description: 'Real-time financial analytics platform' },
+                        { title: 'HealthCare App', category: 'Mobile Application', description: 'Patient management and telemedicine' },
+                        { title: 'E-Commerce Platform', category: 'Full Stack', description: 'Scalable marketplace solution' },
+                        { title: 'SaaS Analytics', category: 'Enterprise', description: 'Business intelligence platform' }
+                    ]
+                },
+                // Testimonials
+                testimonials: {
+                    badge: 'Testimonials',
+                    titleLine1: 'What Our Clients ',
+                    titleLine2: 'Say',
+                    description: 'Don\'t just take our word for it. Here\'s what our partners have to say.',
+                    items: [
+                        {
+                            quote: 'DevLogic transformed our vision into reality. Their technical expertise and attention to detail exceeded our expectations.',
+                            author: 'Sarah Chen',
+                            role: 'CEO, TechStart Inc.'
+                        },
+                        {
+                            quote: 'Working with DevLogic was a game-changer for our business. They delivered a solution that scaled beautifully with our growth.',
+                            author: 'Michael Roberts',
+                            role: 'CTO, ScaleUp Labs'
+                        },
+                        {
+                            quote: 'The team\'s commitment to quality and communication made the entire development process smooth and predictable.',
+                            author: 'Emily Watson',
+                            role: 'Product Director, InnovateCo'
+                        }
+                    ]
+                },
+                // Contact
+                contact: {
+                    badge: 'Contact Us',
+                    titleLine1: 'Let\'s Build Something',
+                    titleLine2: ' Amazing',
+                    description: 'Ready to transform your ideas into reality? Get in touch with our team and let\'s discuss how we can help you achieve your goals.',
+                    email: 'Email Us',
+                    phone: 'Call Us',
+                    visit: 'Visit Us',
+                    address: '123 Innovation Drive\nSan Francisco, CA 94105',
+                    form: {
+                        name: 'Your Name',
+                        namePlaceholder: 'John Doe',
+                        email: 'Email Address',
+                        emailPlaceholder: 'john@company.com',
+                        company: 'Company',
+                        companyPlaceholder: 'Your Company',
+                        service: 'Service Interested In',
+                        servicePlaceholder: 'Select a service',
+                        message: 'Your Message',
+                        messagePlaceholder: 'Tell us about your project...',
+                        submit: 'Send Message',
+                        success: 'Message Sent!',
+                        successDesc: 'We\'ll get back to you within 24 hours.'
+                    },
+                    services: ['Product Design', 'Software Development', 'Software Testing', 'DevOps', 'Consulting', 'Other'],
+                    errors: {
+                        nameRequired: 'Name is required',
+                        emailRequired: 'Email is required',
+                        emailInvalid: 'Please enter a valid email',
+                        serviceRequired: 'Please select a service',
+                        messageRequired: 'Message is required',
+                        messageMinLength: 'Message must be at least 10 characters'
+                    }
+                },
+                // Footer
+                footer: {
+                    description: 'Engineering excellence for modern businesses. We build software that matters.',
+                    newsletter: {
+                        title: 'Stay in the Loop',
+                        description: 'Subscribe to our newsletter for the latest insights, product updates, and tech trends.',
+                        placeholder: 'Enter your email',
+                        button: 'Subscribe',
+                        success: 'Thanks for subscribing!'
+                    },
+                    company: 'Company',
+                    companyLinks: ['About', 'Careers', 'Blog', 'Press'],
+                    servicesTitle: 'Services',
+                    servicesLinks: ['Product Design', 'Development', 'Testing', 'DevOps'],
+                    productsTitle: 'Products',
+                    productsLinks: ['ResumeAI Pro', 'CodeSync', 'DeployHub'],
+                    legal: 'Legal',
+                    legalLinks: ['Privacy Policy', 'Terms of Service', 'Cookie Policy'],
+                    copyright: 'All rights reserved.',
+                    madeWith: 'Crafted with',
+                    byTeam: 'by the DevLogic team'
+                }
+            },
+            hr: {
+                // Navigation
+                nav: {
+                    about: 'O nama',
+                    services: 'Usluge',
+                    products: 'Proizvodi',
+                    whyUs: 'Zasto mi',
+                    portfolio: 'Portfolio',
+                    contact: 'Kontakt',
+                    getStarted: 'Zapocnite'
+                },
+                // Hero
+                hero: {
+                    badge: 'Prihvacamo nove projekte za 2026',
+                    titleLine1: 'Logika susrece',
+                    titleLine2: 'Inovaciju',
+                    description: 'Razvijamo iznimna softverska rjesenja koja transformiraju poslovanje. Stratesko razmisljanje, tehnicka izvrsnost i nepokolebljiva predanost vasem uspjehu.',
+                    cta1: 'Zapocnite projekt',
+                    cta2: 'Istrazite usluge',
+                    stats: {
+                        projects: 'Isporucenih projekata',
+                        clients: 'Zadovoljnih klijenata',
+                        experience: 'Godina iskustva',
+                        satisfaction: 'Zadovoljstvo klijenata'
+                    }
+                },
+                // About
+                about: {
+                    badge: 'O DevLogicu',
+                    titleLine1: 'Inzenjerska izvrsnost,',
+                    titleLine2: ' Isporucena',
+                    description1: 'DevLogic je premium tehnolska tvrtka specijalizirana za inovativna softverska rjesenja, dizajn proizvoda i tehnicko savjetovanje. Kombiniramo stratesko razmisljanje s tehnickom izvrsnošcu za postizanje iznimnih rezultata koji pokrecu rast poslovanja.',
+                    description2: 'Osnovani s vizijom premoscivanja jaza izmedu kompleksne tehnologije i poslovnih potreba, pomogli smo tvrtkama u razlicitim industrijama transformirati njihovu digitalnu prisutnost i operacije.',
+                    mission: 'Misija',
+                    missionDesc: 'Isporuciti transformativna rjesenja',
+                    vision: 'Vizija',
+                    visionDesc: 'Voditi kroz inovacije',
+                    values: 'Vrijednosti',
+                    valuesDesc: 'Integritet, izvrsnost, povjerenje',
+                    approach: 'Pristup',
+                    approachDesc: 'Agilan i suradnicki',
+                    award: 'Nagraduvano',
+                    awardDesc: 'Tech rjesenja 2025'
+                },
+                // Services
+                services: {
+                    badge: 'Nase usluge',
+                    titleLine1: 'Sto radimo ',
+                    titleLine2: 'Najbolje',
+                    description: 'Sveobuhvatne tehnolske usluge dizajnirane za unaprjedenje vaseg poslovanja i postizanje znacajnih rezultata.',
+                    items: [
+                        {
+                            title: 'Dizajn proizvoda',
+                            description: 'Dizajn usmjeren na korisnika i UX/UI izvrsnost. Stvaramo prekrasna, intuitivna sucelja koja korisnici vole i koja pokrecu angazman.',
+                            features: ['Istrazivanje korisnika', 'UI/UX dizajn', 'Prototipiranje', 'Dizajn sustavi']
+                        },
+                        {
+                            title: 'Razvoj softvera',
+                            description: 'Prilagodene aplikacije i skalabilna rjesenja izgraduena modernim tehnologijama. Od MVP-a do enterprise sustava.',
+                            features: ['Web aplikacije', 'Mobilne aplikacije', 'API-ji i Backend', 'Cloud rjesenja']
+                        },
+                        {
+                            title: 'Testiranje softvera',
+                            description: 'Sveobuhvatne QA usluge osiguravanja kvalitete koje garantiraju da je vas softver pouzdan, siguran i ucinkovit.',
+                            features: ['Automatizirano testiranje', 'Testiranje performansi', 'Sigurnosne revizije', 'Pregledi koda']
+                        },
+                        {
+                            title: 'DevOps',
+                            description: 'Automatizacija infrastrukture i kontinuirana isporuka. Pojednostavljujemo vas razvojni proces za brze i sigurnije implementacije.',
+                            features: ['CI/CD cjevovodi', 'Cloud infrastruktura', 'Nadzor', 'Orkestracija kontejnera']
+                        },
+                        {
+                            title: 'Savjetovanje',
+                            description: 'Stratesko tehnolosko savjetovanje. Pomažemo vam donositi informirane odluke uskladene s vasim poslovnim ciljevima.',
+                            features: ['Tech strategija', 'Pregled arhitekture', 'Pojacanje tima', 'Digitalna transformacija']
+                        }
+                    ]
+                },
+                // Products
+                products: {
+                    badge: 'Nasi proizvodi',
+                    titleLine1: 'Proizvodi koji ',
+                    titleLine2: 'Isporucuju',
+                    description: 'Inovativni softverski proizvodi dizajnirani za rjesavanje stvarnih problema i osnazivanje timova za najbolji rad.',
+                    comingSoon: 'Uskoro',
+                    getStarted: 'Zapocnite',
+                    learnMore: 'Saznajte vise',
+                    notifyMe: 'Obavijesti me',
+                    items: [
+                        {
+                            name: 'ResumeAI Pro',
+                            tagline: 'AI alat za izradu životopisa',
+                            description: 'Izradite profesionalne životopise u minutama s inteligentnim prijedlozima, predloscima specificnim za industriju i ATS optimizacijom.',
+                            features: ['AI prijedlozi', 'Profesionalni predlosci', 'ATS optimizacija', 'Izvoz u PDF/DOCX']
+                        },
+                        {
+                            name: 'CodeSync',
+                            tagline: 'Suradnja u realnom vremenu',
+                            description: 'Platforma za suradnju na kodu s ureduivanjem u realnom vremenu, integriranim pregledom koda i AI-potpomognutim debuggiranjem.',
+                            features: ['Ureduivanje uživo', 'Pregled koda', 'AI debugging', 'Uvidi tima']
+                        },
+                        {
+                            name: 'DeployHub',
+                            tagline: 'Implementacija jednim klikom',
+                            description: 'Pojednostavljena platforma za implementaciju modernih aplikacija. Implementirajte na bilo koji cloud bez konfiguracije.',
+                            features: ['Multi-cloud podrska', 'Auto-skaliranje', 'Nadzor', 'Rollback']
+                        }
+                    ]
+                },
+                // Why Us
+                whyUs: {
+                    badge: 'Zasto mi',
+                    titleLine1: 'Zasto vodece tvrtke',
+                    titleLine2: ' vjeruju DevLogicu',
+                    description: 'Nismo samo jos jedna razvojna agencija. Mi smo vas strateski tehnoloski partner predan vasem dugorocnom uspjehu.',
+                    cta1: 'Zakaži poziv',
+                    cta2: 'Pogledaj naš rad',
+                    reasons: [
+                        { title: 'Dokazani rezultati', description: '150+ uspjesno isporucenih projekata s 99% zadovoljstva klijenata.' },
+                        { title: 'Strucni tim', description: 'Stariji inženjeri i dizajneri s dubokom ekspertizom kroz tehnologije.' },
+                        { title: 'Isporuka na vrijeme', description: 'Postujemo rokove i isporucujemo kvalitetan rad unutar dogovorenih vremenskih okvira.' },
+                        { title: 'Jasna komunikacija', description: 'Redovita ažuriranja, transparentni procesi i uvijek dostupan tim.' },
+                        { title: 'Sigurnost na prvom mjestu', description: 'Sigurnosne prakse enterprise razine ugraduene u svako rjesenje.' },
+                        { title: 'Skalabilna rjesenja', description: 'Arhitektura dizajnirana za rast, od startupa do enterprise razine.' }
+                    ]
+                },
+                // Portfolio
+                portfolio: {
+                    badge: 'Portfolio',
+                    titleLine1: 'Nas nedavni ',
+                    titleLine2: 'Rad',
+                    description: 'Izbor projekata koji prikazuju nasu ekspertizu i predanost izvrsnosti.',
+                    viewCase: 'Pogledaj studiju slucaja',
+                    cta: 'Želite vidjeti vise? Razgovarajmo o vasem projektu',
+                    projects: [
+                        { title: 'FinTech nadzorna ploca', category: 'Web aplikacija', description: 'Platforma za financijsku analitiku u realnom vremenu' },
+                        { title: 'Zdravstvena aplikacija', category: 'Mobilna aplikacija', description: 'Upravljanje pacijentima i telemedicina' },
+                        { title: 'E-trgovina platforma', category: 'Full Stack', description: 'Skalabilno rjesenje za tržiste' },
+                        { title: 'SaaS analitika', category: 'Enterprise', description: 'Platforma za poslovnu inteligenciju' }
+                    ]
+                },
+                // Testimonials
+                testimonials: {
+                    badge: 'Svjedocanstva',
+                    titleLine1: 'Sto nasi klijenti ',
+                    titleLine2: 'Kazu',
+                    description: 'Ne vjerujte samo nama na rijec. Evo sto nasi partneri kažu.',
+                    items: [
+                        {
+                            quote: 'DevLogic je pretvorio nasu viziju u stvarnost. Njihova tehnicka ekspertiza i pozornost na detalje premašili su nasa ocekivanja.',
+                            author: 'Sara Chen',
+                            role: 'CEO, TechStart Inc.'
+                        },
+                        {
+                            quote: 'Rad s DevLogicom bio je prekretnica za nase poslovanje. Isporucili su rjesenje koje se prekrasno skaliralo s nasim rastom.',
+                            author: 'Michael Roberts',
+                            role: 'CTO, ScaleUp Labs'
+                        },
+                        {
+                            quote: 'Predanost tima kvaliteti i komunikaciji ucinila je cijeli razvojni proces glatkim i predvidljivim.',
+                            author: 'Emily Watson',
+                            role: 'Direktorica proizvoda, InnovateCo'
+                        }
+                    ]
+                },
+                // Contact
+                contact: {
+                    badge: 'Kontaktirajte nas',
+                    titleLine1: 'Izgradimo nesto',
+                    titleLine2: ' Nevjerojatno',
+                    description: 'Spremni pretvoriti svoje ideje u stvarnost? Javite nam se i razgovarajmo kako vam možemo pomoci ostvariti vase ciljeve.',
+                    email: 'Posaljite email',
+                    phone: 'Nazovite nas',
+                    visit: 'Posjetite nas',
+                    address: '123 Innovation Drive\nSan Francisco, CA 94105',
+                    form: {
+                        name: 'Vase ime',
+                        namePlaceholder: 'Ivan Horvat',
+                        email: 'Email adresa',
+                        emailPlaceholder: 'ivan@tvrtka.hr',
+                        company: 'Tvrtka',
+                        companyPlaceholder: 'Vasa tvrtka',
+                        service: 'Usluga koja vas zanima',
+                        servicePlaceholder: 'Odaberite uslugu',
+                        message: 'Vasa poruka',
+                        messagePlaceholder: 'Recite nam o svom projektu...',
+                        submit: 'Posalji poruku',
+                        success: 'Poruka poslana!',
+                        successDesc: 'Javit cemo vam se unutar 24 sata.'
+                    },
+                    services: ['Dizajn proizvoda', 'Razvoj softvera', 'Testiranje softvera', 'DevOps', 'Savjetovanje', 'Ostalo'],
+                    errors: {
+                        nameRequired: 'Ime je obavezno',
+                        emailRequired: 'Email je obavezan',
+                        emailInvalid: 'Unesite valjanu email adresu',
+                        serviceRequired: 'Odaberite uslugu',
+                        messageRequired: 'Poruka je obavezna',
+                        messageMinLength: 'Poruka mora imati najmanje 10 znakova'
+                    }
+                },
+                // Footer
+                footer: {
+                    description: 'Inženjerska izvrsnost za moderno poslovanje. Gradimo softver koji je bitan.',
+                    newsletter: {
+                        title: 'Budite u toku',
+                        description: 'Pretplatite se na nas newsletter za najnovije uvide, ažuriranja proizvoda i tech trendove.',
+                        placeholder: 'Unesite email',
+                        button: 'Pretplatite se',
+                        success: 'Hvala na pretplati!'
+                    },
+                    company: 'Tvrtka',
+                    companyLinks: ['O nama', 'Karijere', 'Blog', 'Mediji'],
+                    servicesTitle: 'Usluge',
+                    servicesLinks: ['Dizajn proizvoda', 'Razvoj', 'Testiranje', 'DevOps'],
+                    productsTitle: 'Proizvodi',
+                    productsLinks: ['ResumeAI Pro', 'CodeSync', 'DeployHub'],
+                    legal: 'Pravno',
+                    legalLinks: ['Politika privatnosti', 'Uvjeti korištenja', 'Politika kolacica'],
+                    copyright: 'Sva prava pridržana.',
+                    madeWith: 'Izradeno s',
+                    byTeam: 'od DevLogic tima'
+                }
+            }
+        };
+
+        // Language Context
+        const LanguageContext = createContext();
+
+        const LanguageProvider = ({ children }) => {
+            const [language, setLanguage] = useState('en');
+            const t = translations[language];
+
+            return (
+                <LanguageContext.Provider value={{ language, setLanguage, t }}>
+                    {children}
+                </LanguageContext.Provider>
+            );
+        };
+
+        const useLanguage = () => useContext(LanguageContext);
 
         // Icon Components using Lucide
         const Icon = ({ name, size = 24, className = "" }) => {
@@ -348,8 +824,35 @@
             return <span ref={iconRef} className="inline-flex items-center justify-center"></span>;
         };
 
+        // Language Switcher Component
+        const LanguageSwitcher = () => {
+            const { language, setLanguage } = useLanguage();
+
+            return (
+                <div className="flex items-center space-x-1 glass rounded-lg p-1">
+                    <button
+                        onClick={() => setLanguage('en')}
+                        className={`lang-btn px-3 py-1.5 rounded-md text-sm font-medium transition-all ${
+                            language === 'en' ? 'active' : 'text-gray-400 hover:text-white'
+                        }`}
+                    >
+                        EN
+                    </button>
+                    <button
+                        onClick={() => setLanguage('hr')}
+                        className={`lang-btn px-3 py-1.5 rounded-md text-sm font-medium transition-all ${
+                            language === 'hr' ? 'active' : 'text-gray-400 hover:text-white'
+                        }`}
+                    >
+                        HR
+                    </button>
+                </div>
+            );
+        };
+
         // Navigation Component
         const Navigation = () => {
+            const { t } = useLanguage();
             const [scrolled, setScrolled] = useState(false);
             const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -362,12 +865,12 @@
             }, []);
 
             const navLinks = [
-                { name: 'About', href: '#about' },
-                { name: 'Services', href: '#services' },
-                { name: 'Products', href: '#products' },
-                { name: 'Why Us', href: '#why-us' },
-                { name: 'Portfolio', href: '#portfolio' },
-                { name: 'Contact', href: '#contact' },
+                { name: t.nav.about, href: '#about' },
+                { name: t.nav.services, href: '#services' },
+                { name: t.nav.products, href: '#products' },
+                { name: t.nav.whyUs, href: '#why-us' },
+                { name: t.nav.portfolio, href: '#portfolio' },
+                { name: t.nav.contact, href: '#contact' },
             ];
 
             return (
@@ -388,7 +891,7 @@
                             </a>
 
                             {/* Desktop Navigation */}
-                            <div className="hidden md:flex items-center space-x-8">
+                            <div className="hidden lg:flex items-center space-x-8">
                                 {navLinks.map((link) => (
                                     <a
                                         key={link.name}
@@ -398,26 +901,33 @@
                                         {link.name}
                                     </a>
                                 ))}
+                            </div>
+
+                            <div className="hidden lg:flex items-center space-x-4">
+                                <LanguageSwitcher />
                                 <a
                                     href="#contact"
                                     className="px-5 py-2.5 bg-gradient-to-r from-primary-500 to-primary-600 rounded-lg text-white text-sm font-semibold btn-glow"
                                 >
-                                    Get Started
+                                    {t.nav.getStarted}
                                 </a>
                             </div>
 
                             {/* Mobile Menu Button */}
-                            <button
-                                className="md:hidden p-2 text-gray-300 hover:text-white"
-                                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                            >
-                                <Icon name={mobileMenuOpen ? 'x' : 'menu'} size={24} />
-                            </button>
+                            <div className="lg:hidden flex items-center space-x-3">
+                                <LanguageSwitcher />
+                                <button
+                                    className="p-2 text-gray-300 hover:text-white"
+                                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                                >
+                                    <Icon name={mobileMenuOpen ? 'x' : 'menu'} size={24} />
+                                </button>
+                            </div>
                         </div>
 
                         {/* Mobile Menu */}
                         {mobileMenuOpen && (
-                            <div className="md:hidden py-4 border-t border-white/10">
+                            <div className="lg:hidden py-4 border-t border-white/10">
                                 {navLinks.map((link) => (
                                     <a
                                         key={link.name}
@@ -433,7 +943,7 @@
                                     className="block mt-4 px-5 py-2.5 bg-gradient-to-r from-primary-500 to-primary-600 rounded-lg text-white text-sm font-semibold text-center"
                                     onClick={() => setMobileMenuOpen(false)}
                                 >
-                                    Get Started
+                                    {t.nav.getStarted}
                                 </a>
                             </div>
                         )}
@@ -444,6 +954,8 @@
 
         // Hero Section
         const HeroSection = () => {
+            const { t } = useLanguage();
+
             return (
                 <section className="relative min-h-screen flex items-center justify-center hero-gradient grid-pattern overflow-hidden">
                     {/* Floating Elements */}
@@ -458,19 +970,18 @@
                         <div className="animate-fade-in-up">
                             <div className="inline-flex items-center px-4 py-2 rounded-full glass mb-8">
                                 <span className="w-2 h-2 bg-primary-400 rounded-full animate-pulse mr-2"></span>
-                                <span className="text-sm text-gray-300">Now accepting new projects for 2026</span>
+                                <span className="text-sm text-gray-300">{t.hero.badge}</span>
                             </div>
                         </div>
 
                         <h1 className="animate-fade-in-up delay-100 text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-6">
-                            <span className="text-white">Logic Meets</span>
+                            <span className="text-white">{t.hero.titleLine1}</span>
                             <br />
-                            <span className="gradient-text">Innovation</span>
+                            <span className="gradient-text">{t.hero.titleLine2}</span>
                         </h1>
 
                         <p className="animate-fade-in-up delay-200 text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-10">
-                            We engineer exceptional software solutions that transform businesses.
-                            Strategic thinking, technical excellence, and unwavering commitment to your success.
+                            {t.hero.description}
                         </p>
 
                         <div className="animate-fade-in-up delay-300 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -478,7 +989,7 @@
                                 href="#contact"
                                 className="px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-600 rounded-xl text-white font-semibold btn-glow flex items-center space-x-2"
                             >
-                                <span>Start Your Project</span>
+                                <span>{t.hero.cta1}</span>
                                 <Icon name="arrow-right" size={20} />
                             </a>
                             <a
@@ -486,17 +997,17 @@
                                 className="px-8 py-4 glass rounded-xl text-white font-semibold hover:bg-white/10 transition-all flex items-center space-x-2"
                             >
                                 <Icon name="play-circle" size={20} />
-                                <span>Explore Services</span>
+                                <span>{t.hero.cta2}</span>
                             </a>
                         </div>
 
                         {/* Stats */}
                         <div className="animate-fade-in-up delay-400 mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
                             {[
-                                { number: '150+', label: 'Projects Delivered' },
-                                { number: '50+', label: 'Happy Clients' },
-                                { number: '8+', label: 'Years Experience' },
-                                { number: '99%', label: 'Client Satisfaction' },
+                                { number: '150+', label: t.hero.stats.projects },
+                                { number: '50+', label: t.hero.stats.clients },
+                                { number: '8+', label: t.hero.stats.experience },
+                                { number: '99%', label: t.hero.stats.satisfaction },
                             ].map((stat, index) => (
                                 <div key={index} className="stats-card rounded-2xl p-6 glass">
                                     <div className="text-3xl sm:text-4xl font-bold gradient-text mb-1">{stat.number}</div>
@@ -516,6 +1027,8 @@
 
         // About Section
         const AboutSection = () => {
+            const { t } = useLanguage();
+
             return (
                 <section id="about" className="py-24 bg-dark-800 relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary-500/5 to-transparent"></div>
@@ -526,31 +1039,28 @@
                             <div>
                                 <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary-500/10 text-primary-400 text-sm font-medium mb-6">
                                     <Icon name="info" size={16} className="mr-2" />
-                                    About DevLogic
+                                    {t.about.badge}
                                 </div>
 
                                 <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-                                    Engineering Excellence,
-                                    <span className="gradient-text"> Delivered</span>
+                                    {t.about.titleLine1}
+                                    <span className="gradient-text">{t.about.titleLine2}</span>
                                 </h2>
 
                                 <p className="text-gray-400 text-lg mb-6 leading-relaxed">
-                                    DevLogic is a premium technology company specializing in innovative software solutions,
-                                    product design, and technical consulting. We combine strategic thinking with technical
-                                    excellence to deliver exceptional results that drive business growth.
+                                    {t.about.description1}
                                 </p>
 
                                 <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-                                    Founded with a vision to bridge the gap between complex technology and business needs,
-                                    we've helped companies across industries transform their digital presence and operations.
+                                    {t.about.description2}
                                 </p>
 
                                 <div className="grid grid-cols-2 gap-6">
                                     {[
-                                        { icon: 'target', title: 'Mission', desc: 'Deliver transformative solutions' },
-                                        { icon: 'eye', title: 'Vision', desc: 'Lead through innovation' },
-                                        { icon: 'heart', title: 'Values', desc: 'Integrity, excellence, trust' },
-                                        { icon: 'zap', title: 'Approach', desc: 'Agile and collaborative' },
+                                        { icon: 'target', title: t.about.mission, desc: t.about.missionDesc },
+                                        { icon: 'eye', title: t.about.vision, desc: t.about.visionDesc },
+                                        { icon: 'heart', title: t.about.values, desc: t.about.valuesDesc },
+                                        { icon: 'zap', title: t.about.approach, desc: t.about.approachDesc },
                                     ].map((item, index) => (
                                         <div key={index} className="flex items-start space-x-3">
                                             <div className="w-10 h-10 rounded-lg bg-primary-500/10 flex items-center justify-center flex-shrink-0">
@@ -611,8 +1121,8 @@
                                             <Icon name="award" size={24} className="text-white" />
                                         </div>
                                         <div>
-                                            <div className="text-white font-semibold">Award Winning</div>
-                                            <div className="text-gray-400 text-sm">Tech Solutions 2025</div>
+                                            <div className="text-white font-semibold">{t.about.award}</div>
+                                            <div className="text-gray-400 text-sm">{t.about.awardDesc}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -625,38 +1135,8 @@
 
         // Services Section
         const ServicesSection = () => {
-            const services = [
-                {
-                    icon: 'palette',
-                    title: 'Product Design',
-                    description: 'User-centric design and UX/UI excellence. We create beautiful, intuitive interfaces that users love and that drive engagement.',
-                    features: ['User Research', 'UI/UX Design', 'Prototyping', 'Design Systems']
-                },
-                {
-                    icon: 'code-2',
-                    title: 'Software Development',
-                    description: 'Custom applications and scalable solutions built with modern technologies. From MVPs to enterprise systems.',
-                    features: ['Web Applications', 'Mobile Apps', 'APIs & Backend', 'Cloud Solutions']
-                },
-                {
-                    icon: 'shield-check',
-                    title: 'Software Testing',
-                    description: 'Comprehensive QA and quality assurance services ensuring your software is reliable, secure, and performant.',
-                    features: ['Automated Testing', 'Performance Testing', 'Security Audits', 'Code Reviews']
-                },
-                {
-                    icon: 'git-branch',
-                    title: 'DevOps',
-                    description: 'Infrastructure automation and continuous delivery. We streamline your development pipeline for faster, safer deployments.',
-                    features: ['CI/CD Pipelines', 'Cloud Infrastructure', 'Monitoring', 'Container Orchestration']
-                },
-                {
-                    icon: 'lightbulb',
-                    title: 'Consulting',
-                    description: 'Strategic technology consulting and advisory services. We help you make informed decisions that align with your business goals.',
-                    features: ['Tech Strategy', 'Architecture Review', 'Team Augmentation', 'Digital Transformation']
-                }
-            ];
+            const { t } = useLanguage();
+            const icons = ['palette', 'code-2', 'shield-check', 'git-branch', 'lightbulb'];
 
             return (
                 <section id="services" className="py-24 bg-dark-900 relative">
@@ -667,20 +1147,19 @@
                         <div className="text-center mb-16">
                             <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary-500/10 text-primary-400 text-sm font-medium mb-6">
                                 <Icon name="briefcase" size={16} className="mr-2" />
-                                Our Services
+                                {t.services.badge}
                             </div>
                             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-                                What We <span className="gradient-text">Do Best</span>
+                                {t.services.titleLine1}<span className="gradient-text">{t.services.titleLine2}</span>
                             </h2>
                             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-                                Comprehensive technology services designed to elevate your business
-                                and drive meaningful results.
+                                {t.services.description}
                             </p>
                         </div>
 
                         {/* Services Grid */}
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {services.map((service, index) => (
+                            {t.services.items.map((service, index) => (
                                 <div
                                     key={index}
                                     className={`glass rounded-2xl p-8 card-hover glass-hover ${
@@ -688,7 +1167,7 @@
                                     }`}
                                 >
                                     <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-500/20 to-accent-500/20 flex items-center justify-center mb-6 icon-glow">
-                                        <Icon name={service.icon} size={28} className="text-primary-400" />
+                                        <Icon name={icons[index]} size={28} className="text-primary-400" />
                                     </div>
 
                                     <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
@@ -714,35 +1193,14 @@
 
         // Products Section
         const ProductsSection = () => {
-            const products = [
-                {
-                    name: 'ResumeAI Pro',
-                    tagline: 'AI-Powered Resume Builder',
-                    description: 'Create professional resumes in minutes with intelligent suggestions, industry-specific templates, and ATS optimization.',
-                    features: ['AI-Powered Suggestions', 'Professional Templates', 'ATS Optimization', 'Export to PDF/DOCX'],
-                    status: 'available',
-                    gradient: 'from-primary-500 to-cyan-500',
-                    icon: 'file-text'
-                },
-                {
-                    name: 'CodeSync',
-                    tagline: 'Real-time Collaboration',
-                    description: 'Seamless code collaboration platform with real-time editing, integrated code review, and AI-assisted debugging.',
-                    features: ['Real-time Editing', 'Code Review', 'AI Debugging', 'Team Insights'],
-                    status: 'coming-soon',
-                    gradient: 'from-violet-500 to-purple-500',
-                    icon: 'git-merge'
-                },
-                {
-                    name: 'DeployHub',
-                    tagline: 'One-Click Deployments',
-                    description: 'Simplified deployment platform for modern applications. Deploy to any cloud with zero configuration.',
-                    features: ['Multi-Cloud Support', 'Auto-Scaling', 'Monitoring', 'Rollback'],
-                    status: 'coming-soon',
-                    gradient: 'from-accent-500 to-orange-500',
-                    icon: 'rocket'
-                }
+            const { t } = useLanguage();
+            const gradients = [
+                'from-primary-500 to-cyan-500',
+                'from-violet-500 to-purple-500',
+                'from-accent-500 to-orange-500'
             ];
+            const icons = ['file-text', 'git-merge', 'rocket'];
+            const statuses = ['available', 'coming-soon', 'coming-soon'];
 
             return (
                 <section id="products" className="py-24 bg-dark-800 relative overflow-hidden">
@@ -753,39 +1211,38 @@
                         <div className="text-center mb-16">
                             <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary-500/10 text-primary-400 text-sm font-medium mb-6">
                                 <Icon name="box" size={16} className="mr-2" />
-                                Our Products
+                                {t.products.badge}
                             </div>
                             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-                                Products That <span className="gradient-text">Deliver</span>
+                                {t.products.titleLine1}<span className="gradient-text">{t.products.titleLine2}</span>
                             </h2>
                             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-                                Innovative software products designed to solve real problems
-                                and empower teams to do their best work.
+                                {t.products.description}
                             </p>
                         </div>
 
                         {/* Products Grid */}
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            {products.map((product, index) => (
+                            {t.products.items.map((product, index) => (
                                 <div
                                     key={index}
                                     className="glass rounded-3xl overflow-hidden card-hover shine-effect group"
                                 >
                                     {/* Product Header */}
-                                    <div className={`h-48 bg-gradient-to-br ${product.gradient} p-6 relative overflow-hidden`}>
+                                    <div className={`h-48 bg-gradient-to-br ${gradients[index]} p-6 relative overflow-hidden`}>
                                         {/* Pattern Overlay */}
                                         <div className="absolute inset-0 grid-pattern opacity-30"></div>
 
                                         {/* Status Badge */}
-                                        {product.status === 'coming-soon' && (
+                                        {statuses[index] === 'coming-soon' && (
                                             <div className="absolute top-4 right-4 px-3 py-1 bg-black/30 backdrop-blur-sm rounded-full text-xs font-semibold text-white">
-                                                Coming Soon
+                                                {t.products.comingSoon}
                                             </div>
                                         )}
 
                                         {/* Icon */}
                                         <div className="relative z-10 w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-sm flex items-center justify-center mb-4">
-                                            <Icon name={product.icon} size={32} className="text-white" />
+                                            <Icon name={icons[index]} size={32} className="text-white" />
                                         </div>
 
                                         <h3 className="relative z-10 text-2xl font-bold text-white">{product.name}</h3>
@@ -805,19 +1262,19 @@
                                             ))}
                                         </div>
 
-                                        {product.status === 'available' ? (
+                                        {statuses[index] === 'available' ? (
                                             <div className="flex gap-3">
                                                 <button className="flex-1 px-4 py-3 bg-gradient-to-r from-primary-500 to-primary-600 rounded-xl text-white font-semibold btn-glow text-sm">
-                                                    Get Started
+                                                    {t.products.getStarted}
                                                 </button>
                                                 <button className="px-4 py-3 glass rounded-xl text-white font-medium hover:bg-white/10 transition-colors text-sm">
-                                                    Learn More
+                                                    {t.products.learnMore}
                                                 </button>
                                             </div>
                                         ) : (
                                             <button className="w-full px-4 py-3 glass rounded-xl text-gray-300 font-medium flex items-center justify-center space-x-2 group-hover:text-primary-400 transition-colors">
                                                 <Icon name="bell" size={18} />
-                                                <span>Notify Me</span>
+                                                <span>{t.products.notifyMe}</span>
                                             </button>
                                         )}
                                     </div>
@@ -831,38 +1288,8 @@
 
         // Why DevLogic Section
         const WhySection = () => {
-            const reasons = [
-                {
-                    icon: 'trophy',
-                    title: 'Proven Track Record',
-                    description: '150+ successful projects delivered with 99% client satisfaction rate.'
-                },
-                {
-                    icon: 'users',
-                    title: 'Expert Team',
-                    description: 'Senior engineers and designers with deep expertise across technologies.'
-                },
-                {
-                    icon: 'clock',
-                    title: 'On-Time Delivery',
-                    description: 'We respect deadlines and deliver quality work within agreed timelines.'
-                },
-                {
-                    icon: 'message-circle',
-                    title: 'Clear Communication',
-                    description: 'Regular updates, transparent processes, and always accessible team.'
-                },
-                {
-                    icon: 'shield',
-                    title: 'Security First',
-                    description: 'Enterprise-grade security practices built into every solution we deliver.'
-                },
-                {
-                    icon: 'trending-up',
-                    title: 'Scalable Solutions',
-                    description: 'Architecture designed for growth, from startup to enterprise scale.'
-                }
-            ];
+            const { t } = useLanguage();
+            const icons = ['trophy', 'users', 'clock', 'message-circle', 'shield', 'trending-up'];
 
             return (
                 <section id="why-us" className="py-24 bg-dark-900 relative">
@@ -872,26 +1299,25 @@
                             <div>
                                 <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary-500/10 text-primary-400 text-sm font-medium mb-6">
                                     <Icon name="star" size={16} className="mr-2" />
-                                    Why Choose Us
+                                    {t.whyUs.badge}
                                 </div>
 
                                 <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-                                    Why Leading Companies
-                                    <span className="gradient-text"> Trust DevLogic</span>
+                                    {t.whyUs.titleLine1}
+                                    <span className="gradient-text">{t.whyUs.titleLine2}</span>
                                 </h2>
 
                                 <p className="text-gray-400 text-lg mb-8">
-                                    We're not just another development agency. We're your strategic technology
-                                    partner committed to your long-term success.
+                                    {t.whyUs.description}
                                 </p>
 
                                 <div className="flex flex-col sm:flex-row gap-4">
                                     <a href="#contact" className="px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 rounded-xl text-white font-semibold btn-glow flex items-center justify-center space-x-2">
-                                        <span>Schedule a Call</span>
+                                        <span>{t.whyUs.cta1}</span>
                                         <Icon name="phone" size={18} />
                                     </a>
                                     <a href="#portfolio" className="px-6 py-3 glass rounded-xl text-white font-medium hover:bg-white/10 transition-colors flex items-center justify-center space-x-2">
-                                        <span>View Our Work</span>
+                                        <span>{t.whyUs.cta2}</span>
                                         <Icon name="external-link" size={18} />
                                     </a>
                                 </div>
@@ -899,13 +1325,13 @@
 
                             {/* Right Content - Reasons Grid */}
                             <div className="grid sm:grid-cols-2 gap-4">
-                                {reasons.map((reason, index) => (
+                                {t.whyUs.reasons.map((reason, index) => (
                                     <div
                                         key={index}
                                         className="glass rounded-xl p-5 card-hover glass-hover"
                                     >
                                         <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary-500/20 to-accent-500/20 flex items-center justify-center mb-4">
-                                            <Icon name={reason.icon} size={20} className="text-primary-400" />
+                                            <Icon name={icons[index]} size={20} className="text-primary-400" />
                                         </div>
                                         <h4 className="text-white font-semibold mb-2">{reason.title}</h4>
                                         <p className="text-gray-400 text-sm">{reason.description}</p>
@@ -920,31 +1346,12 @@
 
         // Portfolio Section
         const PortfolioSection = () => {
-            const projects = [
-                {
-                    title: 'FinTech Dashboard',
-                    category: 'Web Application',
-                    image: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                    description: 'Real-time financial analytics platform'
-                },
-                {
-                    title: 'HealthCare App',
-                    category: 'Mobile Application',
-                    image: 'linear-gradient(135deg, #11998e 0%, #38ef7d 100%)',
-                    description: 'Patient management and telemedicine'
-                },
-                {
-                    title: 'E-Commerce Platform',
-                    category: 'Full Stack',
-                    image: 'linear-gradient(135deg, #fc466b 0%, #3f5efb 100%)',
-                    description: 'Scalable marketplace solution'
-                },
-                {
-                    title: 'SaaS Analytics',
-                    category: 'Enterprise',
-                    image: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
-                    description: 'Business intelligence platform'
-                }
+            const { t } = useLanguage();
+            const gradients = [
+                'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                'linear-gradient(135deg, #11998e 0%, #38ef7d 100%)',
+                'linear-gradient(135deg, #fc466b 0%, #3f5efb 100%)',
+                'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
             ];
 
             return (
@@ -954,19 +1361,19 @@
                         <div className="text-center mb-16">
                             <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary-500/10 text-primary-400 text-sm font-medium mb-6">
                                 <Icon name="folder" size={16} className="mr-2" />
-                                Portfolio
+                                {t.portfolio.badge}
                             </div>
                             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-                                Our Recent <span className="gradient-text">Work</span>
+                                {t.portfolio.titleLine1}<span className="gradient-text">{t.portfolio.titleLine2}</span>
                             </h2>
                             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-                                A selection of projects that showcase our expertise and commitment to excellence.
+                                {t.portfolio.description}
                             </p>
                         </div>
 
                         {/* Projects Grid */}
                         <div className="grid md:grid-cols-2 gap-8">
-                            {projects.map((project, index) => (
+                            {t.portfolio.projects.map((project, index) => (
                                 <div
                                     key={index}
                                     className="group rounded-2xl overflow-hidden glass card-hover"
@@ -974,7 +1381,7 @@
                                     {/* Project Image */}
                                     <div
                                         className="h-64 relative overflow-hidden"
-                                        style={{ background: project.image }}
+                                        style={{ background: gradients[index] }}
                                     >
                                         <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
                                         <div className="absolute inset-0 grid-pattern opacity-30"></div>
@@ -982,7 +1389,7 @@
                                         {/* Hover Content */}
                                         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                                             <button className="px-6 py-3 bg-white/20 backdrop-blur-sm rounded-xl text-white font-medium flex items-center space-x-2">
-                                                <span>View Case Study</span>
+                                                <span>{t.portfolio.viewCase}</span>
                                                 <Icon name="arrow-right" size={18} />
                                             </button>
                                         </div>
@@ -1005,7 +1412,7 @@
                         {/* CTA */}
                         <div className="text-center mt-12">
                             <a href="#contact" className="inline-flex items-center space-x-2 text-primary-400 hover:text-primary-300 font-medium transition-colors">
-                                <span>Want to see more? Let's talk about your project</span>
+                                <span>{t.portfolio.cta}</span>
                                 <Icon name="arrow-right" size={20} />
                             </a>
                         </div>
@@ -1016,25 +1423,11 @@
 
         // Testimonials Section
         const TestimonialsSection = () => {
-            const testimonials = [
-                {
-                    quote: "DevLogic transformed our vision into reality. Their technical expertise and attention to detail exceeded our expectations.",
-                    author: "Sarah Chen",
-                    role: "CEO, TechStart Inc.",
-                    avatar: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
-                },
-                {
-                    quote: "Working with DevLogic was a game-changer for our business. They delivered a solution that scaled beautifully with our growth.",
-                    author: "Michael Roberts",
-                    role: "CTO, ScaleUp Labs",
-                    avatar: 'linear-gradient(135deg, #11998e 0%, #38ef7d 100%)'
-                },
-                {
-                    quote: "The team's commitment to quality and communication made the entire development process smooth and predictable.",
-                    author: "Emily Watson",
-                    role: "Product Director, InnovateCo",
-                    avatar: 'linear-gradient(135deg, #fc466b 0%, #3f5efb 100%)'
-                }
+            const { t } = useLanguage();
+            const avatars = [
+                'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                'linear-gradient(135deg, #11998e 0%, #38ef7d 100%)',
+                'linear-gradient(135deg, #fc466b 0%, #3f5efb 100%)'
             ];
 
             return (
@@ -1049,19 +1442,19 @@
                         <div className="text-center mb-16">
                             <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary-500/10 text-primary-400 text-sm font-medium mb-6">
                                 <Icon name="message-square" size={16} className="mr-2" />
-                                Testimonials
+                                {t.testimonials.badge}
                             </div>
                             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-                                What Our Clients <span className="gradient-text">Say</span>
+                                {t.testimonials.titleLine1}<span className="gradient-text">{t.testimonials.titleLine2}</span>
                             </h2>
                             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-                                Don't just take our word for it. Here's what our partners have to say.
+                                {t.testimonials.description}
                             </p>
                         </div>
 
                         {/* Testimonials Grid */}
                         <div className="grid md:grid-cols-3 gap-8">
-                            {testimonials.map((testimonial, index) => (
+                            {t.testimonials.items.map((testimonial, index) => (
                                 <div
                                     key={index}
                                     className="glass rounded-2xl p-8 card-hover relative"
@@ -1083,7 +1476,7 @@
                                     <div className="flex items-center space-x-4">
                                         <div
                                             className="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold"
-                                            style={{ background: testimonial.avatar }}
+                                            style={{ background: avatars[index] }}
                                         >
                                             {testimonial.author.split(' ').map(n => n[0]).join('')}
                                         </div>
@@ -1102,6 +1495,7 @@
 
         // Contact Section
         const ContactSection = () => {
+            const { t } = useLanguage();
             const [formData, setFormData] = useState({
                 name: '',
                 email: '',
@@ -1112,36 +1506,27 @@
             const [errors, setErrors] = useState({});
             const [submitted, setSubmitted] = useState(false);
 
-            const services = [
-                'Product Design',
-                'Software Development',
-                'Software Testing',
-                'DevOps',
-                'Consulting',
-                'Other'
-            ];
-
             const validateForm = () => {
                 const newErrors = {};
 
                 if (!formData.name.trim()) {
-                    newErrors.name = 'Name is required';
+                    newErrors.name = t.contact.errors.nameRequired;
                 }
 
                 if (!formData.email.trim()) {
-                    newErrors.email = 'Email is required';
+                    newErrors.email = t.contact.errors.emailRequired;
                 } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-                    newErrors.email = 'Please enter a valid email';
+                    newErrors.email = t.contact.errors.emailInvalid;
                 }
 
                 if (!formData.service) {
-                    newErrors.service = 'Please select a service';
+                    newErrors.service = t.contact.errors.serviceRequired;
                 }
 
                 if (!formData.message.trim()) {
-                    newErrors.message = 'Message is required';
+                    newErrors.message = t.contact.errors.messageRequired;
                 } else if (formData.message.trim().length < 10) {
-                    newErrors.message = 'Message must be at least 10 characters';
+                    newErrors.message = t.contact.errors.messageMinLength;
                 }
 
                 setErrors(newErrors);
@@ -1152,11 +1537,9 @@
                 e.preventDefault();
 
                 if (validateForm()) {
-                    // Log form data (in production, send to backend/service)
                     console.log('Form submitted:', formData);
                     setSubmitted(true);
 
-                    // Reset form after 3 seconds
                     setTimeout(() => {
                         setFormData({
                             name: '',
@@ -1174,7 +1557,6 @@
                 const { name, value } = e.target;
                 setFormData(prev => ({ ...prev, [name]: value }));
 
-                // Clear error when user starts typing
                 if (errors[name]) {
                     setErrors(prev => ({ ...prev, [name]: '' }));
                 }
@@ -1190,17 +1572,16 @@
                             <div>
                                 <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary-500/10 text-primary-400 text-sm font-medium mb-6">
                                     <Icon name="mail" size={16} className="mr-2" />
-                                    Contact Us
+                                    {t.contact.badge}
                                 </div>
 
                                 <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-                                    Let's Build Something
-                                    <span className="gradient-text"> Amazing</span>
+                                    {t.contact.titleLine1}
+                                    <span className="gradient-text">{t.contact.titleLine2}</span>
                                 </h2>
 
                                 <p className="text-gray-400 text-lg mb-8">
-                                    Ready to transform your ideas into reality? Get in touch with our team
-                                    and let's discuss how we can help you achieve your goals.
+                                    {t.contact.description}
                                 </p>
 
                                 {/* Contact Info */}
@@ -1210,7 +1591,7 @@
                                             <Icon name="mail" size={24} className="text-primary-400" />
                                         </div>
                                         <div>
-                                            <h4 className="text-white font-semibold mb-1">Email Us</h4>
+                                            <h4 className="text-white font-semibold mb-1">{t.contact.email}</h4>
                                             <a href="mailto:hello@devlogic.io" className="text-gray-400 hover:text-primary-400 transition-colors">
                                                 hello@devlogic.io
                                             </a>
@@ -1222,7 +1603,7 @@
                                             <Icon name="phone" size={24} className="text-primary-400" />
                                         </div>
                                         <div>
-                                            <h4 className="text-white font-semibold mb-1">Call Us</h4>
+                                            <h4 className="text-white font-semibold mb-1">{t.contact.phone}</h4>
                                             <a href="tel:+1234567890" className="text-gray-400 hover:text-primary-400 transition-colors">
                                                 +1 (234) 567-890
                                             </a>
@@ -1234,10 +1615,9 @@
                                             <Icon name="map-pin" size={24} className="text-primary-400" />
                                         </div>
                                         <div>
-                                            <h4 className="text-white font-semibold mb-1">Visit Us</h4>
-                                            <p className="text-gray-400">
-                                                123 Innovation Drive<br />
-                                                San Francisco, CA 94105
+                                            <h4 className="text-white font-semibold mb-1">{t.contact.visit}</h4>
+                                            <p className="text-gray-400 whitespace-pre-line">
+                                                {t.contact.address}
                                             </p>
                                         </div>
                                     </div>
@@ -1264,15 +1644,15 @@
                                         <div className="w-20 h-20 rounded-full bg-green-500/20 flex items-center justify-center mb-6">
                                             <Icon name="check-circle" size={48} className="text-green-400" />
                                         </div>
-                                        <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
-                                        <p className="text-gray-400">We'll get back to you within 24 hours.</p>
+                                        <h3 className="text-2xl font-bold text-white mb-2">{t.contact.form.success}</h3>
+                                        <p className="text-gray-400">{t.contact.form.successDesc}</p>
                                     </div>
                                 ) : (
                                     <form onSubmit={handleSubmit} className="space-y-6">
                                         <div className="grid sm:grid-cols-2 gap-6">
                                             <div>
                                                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                                                    Your Name *
+                                                    {t.contact.form.name} *
                                                 </label>
                                                 <input
                                                     type="text"
@@ -1280,14 +1660,14 @@
                                                     value={formData.name}
                                                     onChange={handleChange}
                                                     className={`w-full px-4 py-3 bg-dark-700 border ${errors.name ? 'border-red-500' : 'border-dark-500'} rounded-xl text-white placeholder-gray-500 transition-colors`}
-                                                    placeholder="John Doe"
+                                                    placeholder={t.contact.form.namePlaceholder}
                                                 />
                                                 {errors.name && <p className="mt-1 text-sm text-red-400">{errors.name}</p>}
                                             </div>
 
                                             <div>
                                                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                                                    Email Address *
+                                                    {t.contact.form.email} *
                                                 </label>
                                                 <input
                                                     type="email"
@@ -1295,7 +1675,7 @@
                                                     value={formData.email}
                                                     onChange={handleChange}
                                                     className={`w-full px-4 py-3 bg-dark-700 border ${errors.email ? 'border-red-500' : 'border-dark-500'} rounded-xl text-white placeholder-gray-500 transition-colors`}
-                                                    placeholder="john@company.com"
+                                                    placeholder={t.contact.form.emailPlaceholder}
                                                 />
                                                 {errors.email && <p className="mt-1 text-sm text-red-400">{errors.email}</p>}
                                             </div>
@@ -1304,7 +1684,7 @@
                                         <div className="grid sm:grid-cols-2 gap-6">
                                             <div>
                                                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                                                    Company
+                                                    {t.contact.form.company}
                                                 </label>
                                                 <input
                                                     type="text"
@@ -1312,13 +1692,13 @@
                                                     value={formData.company}
                                                     onChange={handleChange}
                                                     className="w-full px-4 py-3 bg-dark-700 border border-dark-500 rounded-xl text-white placeholder-gray-500 transition-colors"
-                                                    placeholder="Your Company"
+                                                    placeholder={t.contact.form.companyPlaceholder}
                                                 />
                                             </div>
 
                                             <div>
                                                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                                                    Service Interested In *
+                                                    {t.contact.form.service} *
                                                 </label>
                                                 <select
                                                     name="service"
@@ -1326,8 +1706,8 @@
                                                     onChange={handleChange}
                                                     className={`w-full px-4 py-3 bg-dark-700 border ${errors.service ? 'border-red-500' : 'border-dark-500'} rounded-xl text-white transition-colors`}
                                                 >
-                                                    <option value="">Select a service</option>
-                                                    {services.map((service) => (
+                                                    <option value="">{t.contact.form.servicePlaceholder}</option>
+                                                    {t.contact.services.map((service) => (
                                                         <option key={service} value={service}>{service}</option>
                                                     ))}
                                                 </select>
@@ -1337,7 +1717,7 @@
 
                                         <div>
                                             <label className="block text-sm font-medium text-gray-300 mb-2">
-                                                Your Message *
+                                                {t.contact.form.message} *
                                             </label>
                                             <textarea
                                                 name="message"
@@ -1345,7 +1725,7 @@
                                                 onChange={handleChange}
                                                 rows={5}
                                                 className={`w-full px-4 py-3 bg-dark-700 border ${errors.message ? 'border-red-500' : 'border-dark-500'} rounded-xl text-white placeholder-gray-500 transition-colors resize-none`}
-                                                placeholder="Tell us about your project..."
+                                                placeholder={t.contact.form.messagePlaceholder}
                                             ></textarea>
                                             {errors.message && <p className="mt-1 text-sm text-red-400">{errors.message}</p>}
                                         </div>
@@ -1354,7 +1734,7 @@
                                             type="submit"
                                             className="w-full px-6 py-4 bg-gradient-to-r from-primary-500 to-primary-600 rounded-xl text-white font-semibold btn-glow flex items-center justify-center space-x-2"
                                         >
-                                            <span>Send Message</span>
+                                            <span>{t.contact.form.submit}</span>
                                             <Icon name="send" size={20} />
                                         </button>
                                     </form>
@@ -1368,6 +1748,7 @@
 
         // Footer Component
         const Footer = () => {
+            const { t } = useLanguage();
             const [email, setEmail] = useState('');
             const [subscribed, setSubscribed] = useState(false);
 
@@ -1383,31 +1764,6 @@
                 }
             };
 
-            const footerLinks = {
-                company: [
-                    { name: 'About', href: '#about' },
-                    { name: 'Careers', href: '#' },
-                    { name: 'Blog', href: '#' },
-                    { name: 'Press', href: '#' }
-                ],
-                services: [
-                    { name: 'Product Design', href: '#services' },
-                    { name: 'Development', href: '#services' },
-                    { name: 'Testing', href: '#services' },
-                    { name: 'DevOps', href: '#services' }
-                ],
-                products: [
-                    { name: 'ResumeAI Pro', href: '#products' },
-                    { name: 'CodeSync', href: '#products' },
-                    { name: 'DeployHub', href: '#products' }
-                ],
-                legal: [
-                    { name: 'Privacy Policy', href: '#' },
-                    { name: 'Terms of Service', href: '#' },
-                    { name: 'Cookie Policy', href: '#' }
-                ]
-            };
-
             return (
                 <footer className="bg-dark-900 border-t border-white/5">
                     {/* Newsletter Section */}
@@ -1419,11 +1775,10 @@
                             <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center">
                                 <div>
                                     <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">
-                                        Stay in the Loop
+                                        {t.footer.newsletter.title}
                                     </h3>
                                     <p className="text-gray-400">
-                                        Subscribe to our newsletter for the latest insights,
-                                        product updates, and tech trends.
+                                        {t.footer.newsletter.description}
                                     </p>
                                 </div>
 
@@ -1431,7 +1786,7 @@
                                     {subscribed ? (
                                         <div className="flex items-center space-x-2 text-green-400">
                                             <Icon name="check-circle" size={24} />
-                                            <span>Thanks for subscribing!</span>
+                                            <span>{t.footer.newsletter.success}</span>
                                         </div>
                                     ) : (
                                         <>
@@ -1439,14 +1794,14 @@
                                                 type="email"
                                                 value={email}
                                                 onChange={(e) => setEmail(e.target.value)}
-                                                placeholder="Enter your email"
+                                                placeholder={t.footer.newsletter.placeholder}
                                                 className="flex-1 px-5 py-3 bg-dark-700 border border-dark-500 rounded-xl text-white placeholder-gray-500"
                                             />
                                             <button
                                                 type="submit"
                                                 className="px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 rounded-xl text-white font-semibold btn-glow whitespace-nowrap"
                                             >
-                                                Subscribe
+                                                {t.footer.newsletter.button}
                                             </button>
                                         </>
                                     )}
@@ -1470,8 +1825,7 @@
                                     </span>
                                 </a>
                                 <p className="text-gray-400 text-sm mb-6">
-                                    Engineering excellence for modern businesses.
-                                    We build software that matters.
+                                    {t.footer.description}
                                 </p>
                                 <div className="flex space-x-3">
                                     {['twitter', 'linkedin', 'github', 'dribbble'].map((social) => (
@@ -1488,12 +1842,12 @@
 
                             {/* Links */}
                             <div>
-                                <h4 className="text-white font-semibold mb-4">Company</h4>
+                                <h4 className="text-white font-semibold mb-4">{t.footer.company}</h4>
                                 <ul className="space-y-3">
-                                    {footerLinks.company.map((link) => (
-                                        <li key={link.name}>
-                                            <a href={link.href} className="text-gray-400 hover:text-primary-400 text-sm transition-colors">
-                                                {link.name}
+                                    {t.footer.companyLinks.map((link) => (
+                                        <li key={link}>
+                                            <a href="#" className="text-gray-400 hover:text-primary-400 text-sm transition-colors">
+                                                {link}
                                             </a>
                                         </li>
                                     ))}
@@ -1501,12 +1855,12 @@
                             </div>
 
                             <div>
-                                <h4 className="text-white font-semibold mb-4">Services</h4>
+                                <h4 className="text-white font-semibold mb-4">{t.footer.servicesTitle}</h4>
                                 <ul className="space-y-3">
-                                    {footerLinks.services.map((link) => (
-                                        <li key={link.name}>
-                                            <a href={link.href} className="text-gray-400 hover:text-primary-400 text-sm transition-colors">
-                                                {link.name}
+                                    {t.footer.servicesLinks.map((link) => (
+                                        <li key={link}>
+                                            <a href="#services" className="text-gray-400 hover:text-primary-400 text-sm transition-colors">
+                                                {link}
                                             </a>
                                         </li>
                                     ))}
@@ -1514,12 +1868,12 @@
                             </div>
 
                             <div>
-                                <h4 className="text-white font-semibold mb-4">Products</h4>
+                                <h4 className="text-white font-semibold mb-4">{t.footer.productsTitle}</h4>
                                 <ul className="space-y-3">
-                                    {footerLinks.products.map((link) => (
-                                        <li key={link.name}>
-                                            <a href={link.href} className="text-gray-400 hover:text-primary-400 text-sm transition-colors">
-                                                {link.name}
+                                    {t.footer.productsLinks.map((link) => (
+                                        <li key={link}>
+                                            <a href="#products" className="text-gray-400 hover:text-primary-400 text-sm transition-colors">
+                                                {link}
                                             </a>
                                         </li>
                                     ))}
@@ -1527,12 +1881,12 @@
                             </div>
 
                             <div>
-                                <h4 className="text-white font-semibold mb-4">Legal</h4>
+                                <h4 className="text-white font-semibold mb-4">{t.footer.legal}</h4>
                                 <ul className="space-y-3">
-                                    {footerLinks.legal.map((link) => (
-                                        <li key={link.name}>
-                                            <a href={link.href} className="text-gray-400 hover:text-primary-400 text-sm transition-colors">
-                                                {link.name}
+                                    {t.footer.legalLinks.map((link) => (
+                                        <li key={link}>
+                                            <a href="#" className="text-gray-400 hover:text-primary-400 text-sm transition-colors">
+                                                {link}
                                             </a>
                                         </li>
                                     ))}
@@ -1543,12 +1897,12 @@
                         {/* Bottom Bar */}
                         <div className="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                             <p className="text-gray-500 text-sm">
-                                &copy; {new Date().getFullYear()} DevLogic. All rights reserved.
+                                &copy; {new Date().getFullYear()} DevLogic. {t.footer.copyright}
                             </p>
                             <p className="text-gray-500 text-sm flex items-center space-x-1">
-                                <span>Crafted with</span>
+                                <span>{t.footer.madeWith}</span>
                                 <Icon name="heart" size={14} className="text-red-500" />
-                                <span>by the DevLogic team</span>
+                                <span>{t.footer.byTeam}</span>
                             </p>
                         </div>
                     </div>
@@ -1559,10 +1913,8 @@
         // Main App Component
         const App = () => {
             useEffect(() => {
-                // Initialize Lucide icons
                 lucide.createIcons();
 
-                // Intersection Observer for animations
                 const observerOptions = {
                     threshold: 0.1,
                     rootMargin: '0px 0px -50px 0px'
@@ -1582,18 +1934,20 @@
             }, []);
 
             return (
-                <div className="font-inter">
-                    <Navigation />
-                    <HeroSection />
-                    <AboutSection />
-                    <ServicesSection />
-                    <ProductsSection />
-                    <WhySection />
-                    <PortfolioSection />
-                    <TestimonialsSection />
-                    <ContactSection />
-                    <Footer />
-                </div>
+                <LanguageProvider>
+                    <div className="font-inter">
+                        <Navigation />
+                        <HeroSection />
+                        <AboutSection />
+                        <ServicesSection />
+                        <ProductsSection />
+                        <WhySection />
+                        <PortfolioSection />
+                        <TestimonialsSection />
+                        <ContactSection />
+                        <Footer />
+                    </div>
+                </LanguageProvider>
             );
         };
 
