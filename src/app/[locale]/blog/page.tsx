@@ -1,5 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
+
+export const runtime = 'edge';
 import { Badge, GlassCard } from '@/components/ui';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/shared';
 import { Calendar, Clock, ArrowRight } from 'lucide-react';

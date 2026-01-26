@@ -1,5 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
+
+export const runtime = 'edge';
 import { ProductsSection } from '@/components/sections';
 
 interface PageProps {
