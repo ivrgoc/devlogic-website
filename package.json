@@ -1,0 +1,23 @@
+{
+  "name": "devlogic-website",
+  "version": "1.0.0",
+  "description": "DevLogic - Logic Meets Innovation | Premium Tech Solutions",
+  "scripts": {
+    "dev": "npx serve -p 3000 -l tcp://localhost:3000",
+    "start": "npx serve -p 3000",
+    "preview": "npx serve -p 5000"
+  },
+  "keywords": [
+    "devlogic",
+    "website",
+    "tech",
+    "solutions"
+  ],
+  "author": "DevLogic",
+  "license": "MIT",
+  "homepage": "https://www.devlogic.hr",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ivrgoc/devlogic-website.git"
+  }
+}
