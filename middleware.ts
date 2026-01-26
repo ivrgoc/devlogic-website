@@ -27,5 +27,12 @@ export default function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/', '/(hr|en)/:path*'],
+  matcher: [
+    // Match root
+    '/',
+    // Match locale paths
+    '/(en|hr)/:path*',
+    // Match paths that need locale prefix (exclude static files)
+    '/((?!_next|api|favicon|robots|sitemap|images).*)',
+  ],
 };
