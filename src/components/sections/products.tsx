@@ -1,17 +1,17 @@
 'use client';
 
 import { useTranslations } from '@/lib/i18n';
-import { FileText, Code2, Rocket, ArrowRight, Check } from 'lucide-react';
+import { FileText, Code2, Rocket, Activity, ArrowRight, Check } from 'lucide-react';
 import { Badge, Button, GlassCard } from '@/components/ui';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/shared';
 
-const productIcons = [FileText, Code2, Rocket];
-const productStatus = ['available', 'coming-soon', 'coming-soon'];
+const productIcons = [FileText, Code2, Rocket, Activity];
+const productStatus = ['available', 'coming-soon', 'coming-soon', 'available'];
 
 export function ProductsSection() {
   const t = useTranslations('products');
 
-  const products = [0, 1, 2].map((index) => ({
+  const products = [0, 1, 2, 3].map((index) => ({
     icon: productIcons[index],
     name: t(`items.${index}.name`),
     tagline: t(`items.${index}.tagline`),
@@ -41,7 +41,7 @@ export function ProductsSection() {
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">{t('description')}</p>
         </AnimatedSection>
 
-        <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <StaggerContainer className="grid md:grid-cols-2 gap-8">
           {products.map((product, index) => (
             <StaggerItem key={index}>
               <GlassCard className="h-full flex flex-col">

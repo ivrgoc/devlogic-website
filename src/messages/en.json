@@ -100,6 +100,12 @@
         "tagline": "One-Click Deployments",
         "description": "Simplified deployment platform for modern applications. Deploy to any cloud with zero configuration.",
         "features": ["Multi-Cloud Support", "Auto-Scaling", "Monitoring", "Rollback"]
+      },
+      {
+        "name": "UptimeWatch",
+        "tagline": "Website & API Monitoring",
+        "description": "Know the moment your site goes down. Comprehensive uptime monitoring with multi-channel alerts, SSL tracking, and detailed incident reports.",
+        "features": ["Multi-channel Alerts", "SSL Certificate Monitoring", "Public Status Pages", "Incident Management"]
       }
     ]
   },
@@ -240,7 +246,7 @@
     "servicesTitle": "Services",
     "servicesLinks": ["Product Design", "Development", "Testing", "DevOps"],
     "productsTitle": "Products",
-    "productsLinks": ["ResumeAI Pro", "CodeSync", "DeployHub"],
+    "productsLinks": ["ResumeAI Pro", "CodeSync", "DeployHub", "UptimeWatch"],
     "legal": "Legal",
     "legalLinks": ["Privacy Policy", "Terms of Service", "Cookie Policy"],
     "copyright": "All rights reserved.",
