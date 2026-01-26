@@ -1,0 +1,260 @@
+{
+  "nav": {
+    "about": "O nama",
+    "services": "Usluge",
+    "products": "Proizvodi",
+    "whyUs": "Zasto mi",
+    "portfolio": "Portfolio",
+    "contact": "Kontakt",
+    "getStarted": "Zapocnite",
+    "blog": "Blog"
+  },
+  "hero": {
+    "badge": "Prihvacamo nove projekte za 2026",
+    "titleLine1": "Logika susrece",
+    "titleLine2": "Inovaciju",
+    "description": "Razvijamo iznimna softverska rjesenja koja transformiraju poslovanje. Stratesko razmisljanje, tehnicka izvrsnost i nepokolebljiva predanost vasem uspjehu.",
+    "cta1": "Zapocnite projekt",
+    "cta2": "Istrazite usluge",
+    "stats": {
+      "projects": "Isporucenih projekata",
+      "clients": "Zadovoljnih klijenata",
+      "experience": "Godina iskustva",
+      "satisfaction": "Zadovoljstvo klijenata"
+    }
+  },
+  "about": {
+    "badge": "O DevLogicu",
+    "titleLine1": "Inzenjerska izvrsnost,",
+    "titleLine2": " Isporucena",
+    "description1": "DevLogic je premium tehnolska tvrtka specijalizirana za inovativna softverska rjesenja, dizajn proizvoda i tehnicko savjetovanje. Kombiniramo stratesko razmisljanje s tehnickom izvrsnošcu za postizanje iznimnih rezultata koji pokrecu rast poslovanja.",
+    "description2": "Osnovani s vizijom premoscivanja jaza izmedu kompleksne tehnologije i poslovnih potreba, pomogli smo tvrtkama u razlicitim industrijama transformirati njihovu digitalnu prisutnost i operacije.",
+    "mission": "Misija",
+    "missionDesc": "Isporuciti transformativna rjesenja",
+    "vision": "Vizija",
+    "visionDesc": "Voditi kroz inovacije",
+    "values": "Vrijednosti",
+    "valuesDesc": "Integritet, izvrsnost, povjerenje",
+    "approach": "Pristup",
+    "approachDesc": "Agilan i suradnicki",
+    "award": "Nagraduvano",
+    "awardDesc": "Tech rjesenja 2025"
+  },
+  "services": {
+    "badge": "Nase usluge",
+    "titleLine1": "Sto radimo ",
+    "titleLine2": "Najbolje",
+    "description": "Sveobuhvatne tehnolske usluge dizajnirane za unaprjedenje vaseg poslovanja i postizanje znacajnih rezultata.",
+    "items": [
+      {
+        "title": "Dizajn proizvoda",
+        "description": "Dizajn usmjeren na korisnika i UX/UI izvrsnost. Stvaramo prekrasna, intuitivna sucelja koja korisnici vole i koja pokrecu angazman.",
+        "features": ["Istrazivanje korisnika", "UI/UX dizajn", "Prototipiranje", "Dizajn sustavi"]
+      },
+      {
+        "title": "Razvoj softvera",
+        "description": "Prilagodene aplikacije i skalabilna rjesenja izgraduena modernim tehnologijama. Od MVP-a do enterprise sustava.",
+        "features": ["Web aplikacije", "Mobilne aplikacije", "API-ji i Backend", "Cloud rjesenja"]
+      },
+      {
+        "title": "Testiranje softvera",
+        "description": "Sveobuhvatne QA usluge osiguravanja kvalitete koje garantiraju da je vas softver pouzdan, siguran i ucinkovit.",
+        "features": ["Automatizirano testiranje", "Testiranje performansi", "Sigurnosne revizije", "Pregledi koda"]
+      },
+      {
+        "title": "DevOps",
+        "description": "Automatizacija infrastrukture i kontinuirana isporuka. Pojednostavljujemo vas razvojni proces za brze i sigurnije implementacije.",
+        "features": ["CI/CD cjevovodi", "Cloud infrastruktura", "Nadzor", "Orkestracija kontejnera"]
+      },
+      {
+        "title": "Savjetovanje",
+        "description": "Stratesko tehnolosko savjetovanje. Pomažemo vam donositi informirane odluke uskladene s vasim poslovnim ciljevima.",
+        "features": ["Tech strategija", "Pregled arhitekture", "Pojacanje tima", "Digitalna transformacija"]
+      }
+    ]
+  },
+  "products": {
+    "badge": "Nasi proizvodi",
+    "titleLine1": "Proizvodi koji ",
+    "titleLine2": "Isporucuju",
+    "description": "Inovativni softverski proizvodi dizajnirani za rjesavanje stvarnih problema i osnazivanje timova za najbolji rad.",
+    "comingSoon": "Uskoro",
+    "getStarted": "Zapocnite",
+    "learnMore": "Saznajte vise",
+    "notifyMe": "Obavijesti me",
+    "items": [
+      {
+        "name": "ResumeAI Pro",
+        "tagline": "AI alat za izradu zivotopisa",
+        "description": "Izradite profesionalne zivotopise u minutama s inteligentnim prijedlozima, predloscima specificnim za industriju i ATS optimizacijom.",
+        "features": ["AI prijedlozi", "Profesionalni predlosci", "ATS optimizacija", "Izvoz u PDF/DOCX"]
+      },
+      {
+        "name": "CodeSync",
+        "tagline": "Suradnja u realnom vremenu",
+        "description": "Platforma za suradnju na kodu s ureduivanjem u realnom vremenu, integriranim pregledom koda i AI-potpomognutim debuggiranjem.",
+        "features": ["Ureduivanje uzivo", "Pregled koda", "AI debugging", "Uvidi tima"]
+      },
+      {
+        "name": "DeployHub",
+        "tagline": "Implementacija jednim klikom",
+        "description": "Pojednostavljena platforma za implementaciju modernih aplikacija. Implementirajte na bilo koji cloud bez konfiguracije.",
+        "features": ["Multi-cloud podrska", "Auto-skaliranje", "Nadzor", "Rollback"]
+      }
+    ]
+  },
+  "whyUs": {
+    "badge": "Zasto mi",
+    "titleLine1": "Zasto vodece tvrtke",
+    "titleLine2": " vjeruju DevLogicu",
+    "description": "Nismo samo jos jedna razvojna agencija. Mi smo vas strateski tehnoloski partner predan vasem dugorocnom uspjehu.",
+    "cta1": "Zakazi poziv",
+    "cta2": "Pogledaj nas rad",
+    "reasons": [
+      {
+        "title": "Dokazani rezultati",
+        "description": "150+ uspjesno isporucenih projekata s 99% zadovoljstva klijenata."
+      },
+      {
+        "title": "Strucni tim",
+        "description": "Stariji inzenjeri i dizajneri s dubokom ekspertizom kroz tehnologije."
+      },
+      {
+        "title": "Isporuka na vrijeme",
+        "description": "Postujemo rokove i isporucujemo kvalitetan rad unutar dogovorenih vremenskih okvira."
+      },
+      {
+        "title": "Jasna komunikacija",
+        "description": "Redovita azuriranja, transparentni procesi i uvijek dostupan tim."
+      },
+      {
+        "title": "Sigurnost na prvom mjestu",
+        "description": "Sigurnosne prakse enterprise razine ugraduene u svako rjesenje."
+      },
+      {
+        "title": "Skalabilna rjesenja",
+        "description": "Arhitektura dizajnirana za rast, od startupa do enterprise razine."
+      }
+    ]
+  },
+  "portfolio": {
+    "badge": "Portfolio",
+    "titleLine1": "Nas nedavni ",
+    "titleLine2": "Rad",
+    "description": "Izbor projekata koji prikazuju nasu ekspertizu i predanost izvrsnosti.",
+    "viewCase": "Pogledaj studiju slucaja",
+    "cta": "Zelite vidjeti vise? Razgovarajmo o vasem projektu",
+    "projects": [
+      {
+        "title": "FinTech nadzorna ploca",
+        "category": "Web aplikacija",
+        "description": "Platforma za financijsku analitiku u realnom vremenu"
+      },
+      {
+        "title": "Zdravstvena aplikacija",
+        "category": "Mobilna aplikacija",
+        "description": "Upravljanje pacijentima i telemedicina"
+      },
+      {
+        "title": "E-trgovina platforma",
+        "category": "Full Stack",
+        "description": "Skalabilno rjesenje za trziste"
+      },
+      {
+        "title": "SaaS analitika",
+        "category": "Enterprise",
+        "description": "Platforma za poslovnu inteligenciju"
+      }
+    ]
+  },
+  "testimonials": {
+    "badge": "Svjedocanstva",
+    "titleLine1": "Sto nasi klijenti ",
+    "titleLine2": "Kazu",
+    "description": "Ne vjerujte samo nama na rijec. Evo sto nasi partneri kazu.",
+    "items": [
+      {
+        "quote": "DevLogic je pretvorio nasu viziju u stvarnost. Njihova tehnicka ekspertiza i pozornost na detalje premasili su nasa ocekivanja.",
+        "author": "Sara Chen",
+        "role": "CEO, TechStart Inc."
+      },
+      {
+        "quote": "Rad s DevLogicom bio je prekretnica za nase poslovanje. Isporucili su rjesenje koje se prekrasno skaliralo s nasim rastom.",
+        "author": "Michael Roberts",
+        "role": "CTO, ScaleUp Labs"
+      },
+      {
+        "quote": "Predanost tima kvaliteti i komunikaciji ucinila je cijeli razvojni proces glatkim i predvidljivim.",
+        "author": "Emily Watson",
+        "role": "Direktorica proizvoda, InnovateCo"
+      }
+    ]
+  },
+  "contact": {
+    "badge": "Kontaktirajte nas",
+    "titleLine1": "Izgradimo nesto",
+    "titleLine2": " Nevjerojatno",
+    "description": "Spremni pretvoriti svoje ideje u stvarnost? Javite nam se i razgovarajmo kako vam mozemo pomoci ostvariti vase ciljeve.",
+    "email": "Posaljite email",
+    "phone": "Nazovite nas",
+    "visit": "Posjetite nas",
+    "address": "Zagreb, Hrvatska",
+    "form": {
+      "name": "Vase ime",
+      "namePlaceholder": "Ivan Horvat",
+      "email": "Email adresa",
+      "emailPlaceholder": "ivan@tvrtka.hr",
+      "company": "Tvrtka",
+      "companyPlaceholder": "Vasa tvrtka",
+      "service": "Usluga koja vas zanima",
+      "servicePlaceholder": "Odaberite uslugu",
+      "message": "Vasa poruka",
+      "messagePlaceholder": "Recite nam o svom projektu...",
+      "submit": "Posalji poruku",
+      "sending": "Slanje...",
+      "success": "Poruka poslana!",
+      "successDesc": "Javit cemo vam se unutar 24 sata.",
+      "error": "Slanje nije uspjelo. Pokusajte ponovno."
+    },
+    "services": ["Dizajn proizvoda", "Razvoj softvera", "Testiranje softvera", "DevOps", "Savjetovanje", "Ostalo"],
+    "errors": {
+      "nameRequired": "Ime je obavezno",
+      "emailRequired": "Email je obavezan",
+      "emailInvalid": "Unesite valjanu email adresu",
+      "serviceRequired": "Odaberite uslugu",
+      "messageRequired": "Poruka je obavezna",
+      "messageMinLength": "Poruka mora imati najmanje 10 znakova"
+    }
+  },
+  "footer": {
+    "description": "Inzenjerska izvrsnost za moderno poslovanje. Gradimo softver koji je bitan.",
+    "newsletter": {
+      "title": "Budite u toku",
+      "description": "Pretplatite se na nas newsletter za najnovije uvide, azuriranja proizvoda i tech trendove.",
+      "placeholder": "Unesite email",
+      "button": "Pretplatite se",
+      "success": "Hvala na pretplati!"
+    },
+    "company": "Tvrtka",
+    "companyLinks": ["O nama", "Karijere", "Blog", "Mediji"],
+    "servicesTitle": "Usluge",
+    "servicesLinks": ["Dizajn proizvoda", "Razvoj", "Testiranje", "DevOps"],
+    "productsTitle": "Proizvodi",
+    "productsLinks": ["ResumeAI Pro", "CodeSync", "DeployHub"],
+    "legal": "Pravno",
+    "legalLinks": ["Politika privatnosti", "Uvjeti koristenja", "Politika kolacica"],
+    "copyright": "Sva prava pridrzana.",
+    "madeWith": "Izradeno s",
+    "byTeam": "od DevLogic tima"
+  },
+  "metadata": {
+    "title": "DevLogic - Logika susrece inovaciju",
+    "description": "DevLogic isporucuje inovativna softverska rjesenja, dizajn proizvoda i tehnicko savjetovanje. Inzenjerska izvrsnost za moderna poslovanja.",
+    "keywords": "razvoj softvera, web razvoj, mobilne aplikacije, devops, savjetovanje, dizajn proizvoda"
+  },
+  "privacyPolicy": {
+    "title": "Politika privatnosti",
+    "lastUpdated": "Posljednje azuriranje",
+    "content": "Ova politika privatnosti opisuje kako DevLogic prikuplja, koristi i stiti vase osobne podatke."
+  }
+}
