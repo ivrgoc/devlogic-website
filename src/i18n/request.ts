@@ -1,11 +1,12 @@
 import { getRequestConfig } from 'next-intl/server';
 import { routing } from './routing';
+import type { AbstractIntlMessages } from 'next-intl';
 import en from '@/messages/en.json';
 import hr from '@/messages/hr.json';
 
-const messages = {
-  en,
-  hr,
+const messages: Record<string, AbstractIntlMessages> = {
+  en: en as unknown as AbstractIntlMessages,
+  hr: hr as unknown as AbstractIntlMessages,
 };
 
 export default getRequestConfig(async ({ requestLocale }) => {
@@ -17,6 +18,6 @@ export default getRequestConfig(async ({ requestLocale }) => {
 
   return {
     locale,
-    messages: messages[locale as keyof typeof messages],
+    messages: messages[locale],
   };
 });
