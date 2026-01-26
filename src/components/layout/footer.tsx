@@ -1,6 +1,6 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useTranslations } from '@/lib/i18n';
 import { Heart } from 'lucide-react';
 import { Link } from '@/i18n/routing';
 import { Logo } from '@/components/shared';

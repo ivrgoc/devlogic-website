@@ -1,6 +1,6 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useTranslations } from '@/lib/i18n';
 import { Trophy, Users, Clock, MessageCircle, Shield, TrendingUp, ArrowRight } from 'lucide-react';
 import { Badge, Button, Card } from '@/components/ui';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/shared';

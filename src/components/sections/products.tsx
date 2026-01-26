@@ -1,6 +1,6 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useTranslations } from '@/lib/i18n';
 import { FileText, Code2, Rocket, ArrowRight, Check } from 'lucide-react';
 import { Badge, Button, GlassCard } from '@/components/ui';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/shared';

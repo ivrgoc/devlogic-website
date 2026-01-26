@@ -1,20 +1,29 @@
-import createMiddleware from 'next-intl/middleware';
 import { NextRequest, NextResponse } from 'next/server';
-import { routing } from '@/i18n/routing';
 
 export const runtime = 'edge';
 
-const intlMiddleware = createMiddleware(routing);
+const locales = ['en', 'hr'];
+const defaultLocale = 'en';
 
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Handle root path explicitly for Cloudflare compatibility
+  // Redirect root to default locale
   if (pathname === '/') {
-    return NextResponse.redirect(new URL('/en', request.url));
+    return NextResponse.redirect(new URL(`/${defaultLocale}`, request.url));
   }
 
-  return intlMiddleware(request);
+  // Check if pathname starts with a valid locale
+  const pathnameHasLocale = locales.some(
+    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
+  );
+
+  if (!pathnameHasLocale) {
+    // Redirect to default locale if no locale in path
+    return NextResponse.redirect(new URL(`/${defaultLocale}${pathname}`, request.url));
+  }
+
+  return NextResponse.next();
 }
 
 export const config = {
