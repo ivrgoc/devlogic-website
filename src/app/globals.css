@@ -14,7 +14,7 @@
   }
 
   body {
-    @apply font-inter bg-dark-900 text-white antialiased;
+    @apply font-sans bg-dark-900 text-white antialiased;
     overflow-x: hidden;
   }
 
