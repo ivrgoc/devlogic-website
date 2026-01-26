@@ -7,6 +7,8 @@ import { Providers } from '../providers';
 import { Navigation, Footer } from '@/components/layout';
 import '../globals.css';
 
+export const runtime = 'edge';
+
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export function generateStaticParams() {
