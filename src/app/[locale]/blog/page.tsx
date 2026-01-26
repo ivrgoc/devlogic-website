@@ -1,24 +1,15 @@
-import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
-
-export const runtime = 'edge';
 import { Badge, GlassCard } from '@/components/ui';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/shared';
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
 
-interface PageProps {
-  params: Promise<{ locale: string }>;
-}
+export const runtime = 'edge';
+export const dynamic = 'force-static';
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'nav' });
-
-  return {
-    title: `${t('blog')} | DevLogic`,
-    description: 'Latest insights, tutorials, and news from the DevLogic team.',
-  };
-}
+export const metadata: Metadata = {
+  title: 'Blog | DevLogic',
+  description: 'Latest insights, tutorials, and news from the DevLogic team.',
+};
 
 // Static blog posts for now - will be replaced with Sanity data
 const blogPosts = [
@@ -51,16 +42,13 @@ const blogPosts = [
   },
 ];
 
-export default async function BlogPage({ params }: PageProps) {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'nav' });
-
+export default function BlogPage() {
   return (
     <div className="min-h-screen bg-dark-900 pt-32 pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-16">
           <Badge variant="primary" className="mb-4">
-            {t('blog')}
+            Blog
           </Badge>
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">
             <span className="text-white">Latest </span>

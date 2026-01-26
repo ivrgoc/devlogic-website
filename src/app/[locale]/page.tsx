@@ -1,7 +1,4 @@
-import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
-
-export const runtime = 'edge';
 import {
   HeroSection,
   AboutSection,
@@ -13,40 +10,27 @@ import {
   ContactSection,
 } from '@/components/sections';
 
-interface PageProps {
-  params: Promise<{ locale: string }>;
-}
+export const runtime = 'edge';
+export const dynamic = 'force-static';
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'metadata' });
-
-  return {
-    title: t('title'),
-    description: t('description'),
-    keywords: t('keywords'),
-    openGraph: {
-      title: t('title'),
-      description: t('description'),
-      url: 'https://www.devlogic.hr',
-      siteName: 'DevLogic',
-      locale: locale === 'hr' ? 'hr_HR' : 'en_US',
-      type: 'website',
+export const metadata: Metadata = {
+  title: 'DevLogic | Logic Meets Innovation',
+  description: 'Premium tech solutions for businesses. We build scalable web applications, mobile apps, and provide DevOps consulting.',
+  openGraph: {
+    title: 'DevLogic | Logic Meets Innovation',
+    description: 'Premium tech solutions for businesses.',
+    url: 'https://www.devlogic.hr',
+    siteName: 'DevLogic',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://www.devlogic.hr',
+    languages: {
+      en: 'https://www.devlogic.hr/en',
+      hr: 'https://www.devlogic.hr/hr',
     },
-    twitter: {
-      card: 'summary_large_image',
-      title: t('title'),
-      description: t('description'),
-    },
-    alternates: {
-      canonical: 'https://www.devlogic.hr',
-      languages: {
-        en: 'https://www.devlogic.hr/en',
-        hr: 'https://www.devlogic.hr/hr',
-      },
-    },
-  };
-}
+  },
+};
 
 export default function HomePage() {
   return (

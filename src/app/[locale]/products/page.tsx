@@ -1,22 +1,13 @@
-import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
-
-export const runtime = 'edge';
 import { ProductsSection } from '@/components/sections';
 
-interface PageProps {
-  params: Promise<{ locale: string }>;
-}
+export const runtime = 'edge';
+export const dynamic = 'force-static';
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'products' });
-
-  return {
-    title: `${t('badge')} | DevLogic`,
-    description: t('description'),
-  };
-}
+export const metadata: Metadata = {
+  title: 'Products | DevLogic',
+  description: 'Explore our products and solutions.',
+};
 
 export default function ProductsPage() {
   return (

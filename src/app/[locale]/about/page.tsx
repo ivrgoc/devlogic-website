@@ -1,22 +1,13 @@
-import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
-
-export const runtime = 'edge';
 import { AboutSection } from '@/components/sections';
 
-interface PageProps {
-  params: Promise<{ locale: string }>;
-}
+export const runtime = 'edge';
+export const dynamic = 'force-static';
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'about' });
-
-  return {
-    title: `${t('badge')} | DevLogic`,
-    description: t('description1'),
-  };
-}
+export const metadata: Metadata = {
+  title: 'About | DevLogic',
+  description: 'Learn about DevLogic - a team of passionate developers and designers.',
+};
 
 export default function AboutPage() {
   return (

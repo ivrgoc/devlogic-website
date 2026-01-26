@@ -1,6 +1,7 @@
 'use client';
 
 export const runtime = 'edge';
+export const dynamic = 'force-static';
 
 import { NextStudio } from 'next-sanity/studio';
 import config from '../../../../sanity.config';

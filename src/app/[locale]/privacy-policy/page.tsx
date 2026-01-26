@@ -1,34 +1,20 @@
-import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
-
-export const runtime = 'edge';
 import { GlassCard } from '@/components/ui';
 
-interface PageProps {
-  params: Promise<{ locale: string }>;
-}
+export const runtime = 'edge';
+export const dynamic = 'force-static';
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'privacyPolicy' });
+export const metadata: Metadata = {
+  title: 'Privacy Policy | DevLogic',
+  description: 'Privacy Policy for DevLogic services.',
+};
 
-  return {
-    title: `${t('title')} | DevLogic`,
-    description: t('content'),
-  };
-}
-
-export default async function PrivacyPolicyPage({ params }: PageProps) {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'privacyPolicy' });
-
+export default function PrivacyPolicyPage() {
   return (
     <div className="min-h-screen bg-dark-900 pt-32 pb-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-bold text-white mb-4">{t('title')}</h1>
-        <p className="text-gray-400 mb-8">
-          {t('lastUpdated')}: January 2024
-        </p>
+        <h1 className="text-4xl font-bold text-white mb-4">Privacy Policy</h1>
+        <p className="text-gray-400 mb-8">Last Updated: January 2024</p>
 
         <GlassCard className="prose prose-invert max-w-none">
           <h2 className="text-xl font-semibold text-white mt-6 mb-4">
