@@ -35,7 +35,7 @@ export function AboutSection() {
             <p className="text-gray-400 text-lg mb-6">{t('description1')}</p>
             <p className="text-gray-400 text-lg">{t('description2')}</p>
 
-            {/* Award Badge */}
+            {/* Award Badge - temporarily hidden
             <div className="mt-8 inline-flex items-center px-4 py-3 bg-gradient-to-r from-primary-500/10 to-accent-500/10 border border-primary-500/30 rounded-xl">
               <Award className="text-primary-400 mr-3" size={24} />
               <div>
@@ -43,6 +43,7 @@ export function AboutSection() {
                 <div className="text-gray-400 text-sm">{t('awardDesc')}</div>
               </div>
             </div>
+            */}
           </AnimatedSection>
 
           <StaggerContainer className="grid grid-cols-2 gap-4">
