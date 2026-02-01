@@ -85,7 +85,7 @@ export function HeroSection() {
           </Button>
         </motion.div>
 
-        {/* Stats */}
+        {/* Stats - temporarily hidden
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -101,6 +101,7 @@ export function HeroSection() {
             </div>
           ))}
         </motion.div>
+        */}
       </div>
     </section>
   );
