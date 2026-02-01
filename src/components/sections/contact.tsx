@@ -94,7 +94,7 @@ export function ContactSection() {
               <div>
                 <div className="text-gray-400 text-sm">{t('calendly')}</div>
                 <a
-                  href="https://calendly.com/devlogic"
+                  href="https://calendly.com/ivrgoc/30min"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary-400 hover:text-primary-300 font-medium transition-colors"
