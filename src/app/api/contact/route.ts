@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { Resend } from 'resend';
 
 export const runtime = 'edge';
 
@@ -8,6 +9,15 @@ interface ContactFormData {
   company?: string;
   service: string;
   message: string;
+}
+
+function escapeHtml(text: string): string {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
 }
 
 export async function POST(request: Request) {
@@ -31,26 +41,28 @@ export async function POST(request: Request) {
       );
     }
 
-    // In production, integrate with Resend or other email service
-    // For now, log the message and return success
-    console.log('Contact form submission:', data);
+    // Escape user input for HTML
+    const safeName = escapeHtml(data.name);
+    const safeCompany = escapeHtml(data.company || 'N/A');
+    const safeService = escapeHtml(data.service);
+    const safeMessage = escapeHtml(data.message).replace(/\n/g, '<br>');
 
-    // Example Resend integration (uncomment when RESEND_API_KEY is set):
-    /*
     const resend = new Resend(process.env.RESEND_API_KEY);
 
+    // Send notification email to DevLogic
     await resend.emails.send({
-      from: 'DevLogic <noreply@devlogic.hr>',
+      from: 'DevLogic Contact Form <noreply@devlogic.hr>',
       to: 'info@devlogic.hr',
-      subject: `New Contact Form: ${data.service}`,
+      replyTo: data.email,
+      subject: `New Contact Form: ${safeService}`,
       html: `
         <h2>New Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${data.name}</p>
-        <p><strong>Email:</strong> ${data.email}</p>
-        <p><strong>Company:</strong> ${data.company || 'N/A'}</p>
-        <p><strong>Service:</strong> ${data.service}</p>
+        <p><strong>Name:</strong> ${safeName}</p>
+        <p><strong>Email:</strong> ${escapeHtml(data.email)}</p>
+        <p><strong>Company:</strong> ${safeCompany}</p>
+        <p><strong>Service:</strong> ${safeService}</p>
         <p><strong>Message:</strong></p>
-        <p>${data.message}</p>
+        <p>${safeMessage}</p>
       `,
     });
 
@@ -61,12 +73,11 @@ export async function POST(request: Request) {
       subject: 'Thank you for contacting DevLogic',
       html: `
         <h2>Thank you for reaching out!</h2>
-        <p>Hi ${data.name},</p>
+        <p>Hi ${safeName},</p>
         <p>We've received your message and will get back to you within 24 hours.</p>
         <p>Best regards,<br>The DevLogic Team</p>
       `,
     });
-    */
 
     return NextResponse.json(
       { success: true, message: 'Message sent successfully' },
