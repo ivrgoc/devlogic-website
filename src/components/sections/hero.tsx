@@ -8,13 +8,6 @@ import { Button, Badge } from '@/components/ui';
 export function HeroSection() {
   const t = useTranslations('hero');
 
-  const stats = [
-    { value: '150+', label: t('stats.projects') },
-    { value: '50+', label: t('stats.clients') },
-    { value: '8+', label: t('stats.experience') },
-    { value: '99%', label: t('stats.satisfaction') },
-  ];
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Effects */}
@@ -80,28 +73,10 @@ export function HeroSection() {
             {t('cta1')}
             <ArrowRight size={20} className="ml-2" />
           </Button>
-          <Button variant="secondary" size="lg" href="#services">
+          <Button variant="secondary" size="lg" href="#process">
             {t('cta2')}
           </Button>
         </motion.div>
-
-        {/* Stats - temporarily hidden
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
-        >
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-primary-400 to-accent-500 bg-clip-text text-transparent">
-                {stat.value}
-              </div>
-              <div className="text-sm text-gray-500 mt-1">{stat.label}</div>
-            </div>
-          ))}
-        </motion.div>
-        */}
       </div>
     </section>
   );

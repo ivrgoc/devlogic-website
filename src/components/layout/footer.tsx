@@ -1,13 +1,15 @@
 'use client';
 
 import { useTranslations } from '@/lib/i18n';
-import { Heart } from 'lucide-react';
+import { Heart, Github, Linkedin } from 'lucide-react';
 import { Link } from '@/i18n/routing';
 import { Logo } from '@/components/shared';
 
 export function Footer() {
   const t = useTranslations('footer');
   const currentYear = new Date().getFullYear();
+
+  const services = ['Web Development', 'Testing & QA', 'DevOps'];
 
   return (
     <footer className="bg-dark-900 border-t border-white/5">
@@ -19,13 +21,36 @@ export function Footer() {
               <Logo />
             </Link>
             <p className="mt-4 text-gray-400 max-w-md">{t('description')}</p>
+            <p className="mt-2 text-gray-500 text-sm">{t('businessInfo')}</p>
+
+            {/* Social Links */}
+            <div className="mt-4 flex items-center space-x-4">
+              <a
+                href="https://github.com/devlogic-hr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-primary-400 transition-colors"
+                aria-label="GitHub"
+              >
+                <Github size={20} />
+              </a>
+              <a
+                href="https://linkedin.com/in/devlogic"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-primary-400 transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={20} />
+              </a>
+            </div>
           </div>
 
           {/* Services */}
           <div>
             <h4 className="text-white font-semibold mb-4">{t('servicesTitle')}</h4>
             <ul className="space-y-2">
-              {['Product Design', 'Development', 'Testing', 'DevOps'].map((service) => (
+              {services.map((service) => (
                 <li key={service}>
                   <a
                     href="#services"

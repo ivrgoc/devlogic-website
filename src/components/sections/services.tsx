@@ -1,16 +1,16 @@
 'use client';
 
 import { useTranslations } from '@/lib/i18n';
-import { Palette, Code, TestTube, Cloud, MessageSquare } from 'lucide-react';
+import { Code, TestTube, Cloud } from 'lucide-react';
 import { Badge, Card } from '@/components/ui';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/shared';
 
-const serviceIcons = [Palette, Code, TestTube, Cloud, MessageSquare];
+const serviceIcons = [Code, TestTube, Cloud];
 
 export function ServicesSection() {
   const t = useTranslations('services');
 
-  const services = [0, 1, 2, 3, 4].map((index) => ({
+  const services = [0, 1, 2].map((index) => ({
     icon: serviceIcons[index],
     title: t(`items.${index}.title`),
     description: t(`items.${index}.description`),
@@ -38,7 +38,7 @@ export function ServicesSection() {
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">{t('description')}</p>
         </AnimatedSection>
 
-        <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <StaggerContainer className="grid md:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <StaggerItem key={index}>
               <Card hover className="h-full">

@@ -5,8 +5,8 @@ import { useTranslations } from '@/lib/i18n';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
-import { Badge, Button, Input, Textarea, Select, GlassCard } from '@/components/ui';
+import { Mail, Send, CheckCircle, Calendar } from 'lucide-react';
+import { Badge, Button, Input, Textarea, GlassCard } from '@/components/ui';
 import { AnimatedSection } from '@/components/shared';
 
 export function ContactSection() {
@@ -17,8 +17,6 @@ export function ContactSection() {
   const schema = z.object({
     name: z.string().min(1, t('errors.nameRequired')),
     email: z.string().min(1, t('errors.emailRequired')).email(t('errors.emailInvalid')),
-    company: z.string().optional(),
-    service: z.string().min(1, t('errors.serviceRequired')),
     message: z.string().min(10, t('errors.messageMinLength')),
   });
 
@@ -32,15 +30,6 @@ export function ContactSection() {
   } = useForm<FormData>({
     resolver: zodResolver(schema),
   });
-
-  const services = [
-    { value: 'product-design', label: t('services.0') },
-    { value: 'software-development', label: t('services.1') },
-    { value: 'software-testing', label: t('services.2') },
-    { value: 'devops', label: t('services.3') },
-    { value: 'consulting', label: t('services.4') },
-    { value: 'other', label: t('services.5') },
-  ];
 
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
@@ -64,8 +53,6 @@ export function ContactSection() {
 
   const contactInfo = [
     { icon: Mail, label: t('email'), value: 'info@devlogic.hr' },
-    // { icon: Phone, label: t('phone'), value: '+385 1 234 5678' },
-    // { icon: MapPin, label: t('visit'), value: t('address') },
   ];
 
   return (
@@ -98,6 +85,24 @@ export function ContactSection() {
                 </div>
               </GlassCard>
             ))}
+
+            {/* Calendly Section */}
+            <GlassCard className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-lg bg-primary-500/10 flex items-center justify-center">
+                <Calendar className="text-primary-400" size={24} />
+              </div>
+              <div>
+                <div className="text-gray-400 text-sm">{t('calendly')}</div>
+                <a
+                  href="https://calendly.com/devlogic"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary-400 hover:text-primary-300 font-medium transition-colors"
+                >
+                  {t('calendlyLink')}
+                </a>
+              </div>
+            </GlassCard>
           </AnimatedSection>
 
           {/* Contact Form */}
@@ -124,20 +129,6 @@ export function ContactSection() {
                       placeholder={t('form.emailPlaceholder')}
                       error={errors.email?.message}
                       {...register('email')}
-                    />
-                  </div>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <Input
-                      label={t('form.company')}
-                      placeholder={t('form.companyPlaceholder')}
-                      {...register('company')}
-                    />
-                    <Select
-                      label={t('form.service')}
-                      placeholder={t('form.servicePlaceholder')}
-                      options={services}
-                      error={errors.service?.message}
-                      {...register('service')}
                     />
                   </div>
                   <Textarea

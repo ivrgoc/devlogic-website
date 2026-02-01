@@ -2,20 +2,20 @@
   "nav": {
     "about": "About",
     "services": "Services",
-    "products": "Products",
+    "projects": "Projects",
     "whyUs": "Why Us",
     "portfolio": "Portfolio",
     "contact": "Contact",
-    "getStarted": "Get Started",
+    "getStarted": "Let's Talk",
     "blog": "Blog"
   },
   "hero": {
-    "badge": "Now accepting new projects for 2026",
-    "titleLine1": "Logic Meets",
-    "titleLine2": "Innovation",
-    "description": "We engineer exceptional software solutions that transform businesses. Strategic thinking, technical excellence, and unwavering commitment to your success.",
-    "cta1": "Start Your Project",
-    "cta2": "Explore Services",
+    "badge": "Available for new projects",
+    "titleLine1": "Software Development.",
+    "titleLine2": "From Idea to Production.",
+    "description": "I'm a software developer specializing in web applications, testing, and DevOps. I help businesses turn ideas into reliable, scalable software solutions.",
+    "cta1": "Let's Talk",
+    "cta2": "See How I Work",
     "stats": {
       "projects": "Projects Delivered",
       "clients": "Happy Clients",
@@ -24,83 +24,64 @@
     }
   },
   "about": {
-    "badge": "About DevLogic",
-    "titleLine1": "Engineering Excellence,",
-    "titleLine2": " Delivered",
-    "description1": "DevLogic is a premium technology company specializing in innovative software solutions, product design, and technical consulting. We combine strategic thinking with technical excellence to deliver exceptional results that drive business growth.",
-    "description2": "Founded with a vision to bridge the gap between complex technology and business needs, we've helped companies across industries transform their digital presence and operations.",
-    "mission": "Mission",
-    "missionDesc": "Deliver transformative solutions",
-    "vision": "Vision",
-    "visionDesc": "Lead through innovation",
-    "values": "Values",
-    "valuesDesc": "Integrity, excellence, trust",
-    "approach": "Approach",
-    "approachDesc": "Agile and collaborative",
+    "badge": "About",
+    "titleLine1": "Who's Behind",
+    "titleLine2": " DevLogic",
+    "description1": "Hi, I'm Igor - a software developer with a passion for building reliable, well-tested applications. I started DevLogic to offer direct, no-nonsense development services to businesses that need quality software without the agency overhead.",
+    "description2": "When you work with me, you get direct communication, transparent pricing, and a partner who genuinely cares about delivering software that works. No layers of management, no surprises - just focused, quality development.",
+    "qualityFocus": "Quality Focus",
+    "qualityFocusDesc": "Clean code, thorough testing",
+    "directComm": "Direct Communication",
+    "directCommDesc": "Work directly with me",
+    "transparentPricing": "Transparent Pricing",
+    "transparentPricingDesc": "No hidden costs or surprises",
     "award": "Award Winning",
     "awardDesc": "Tech Solutions 2025"
   },
   "services": {
-    "badge": "Our Services",
-    "titleLine1": "What We ",
-    "titleLine2": "Do Best",
-    "description": "Comprehensive technology services designed to elevate your business and drive meaningful results.",
+    "badge": "Services",
+    "titleLine1": "What I ",
+    "titleLine2": "Offer",
+    "description": "Focused services designed to deliver quality results for your business.",
     "items": [
       {
-        "title": "Product Design",
-        "description": "User-centric design and UX/UI excellence. We create beautiful, intuitive interfaces that users love and that drive engagement.",
-        "features": ["User Research", "UI/UX Design", "Prototyping", "Design Systems"]
+        "title": "Web Development",
+        "description": "Custom web applications built with modern technologies. From MVPs to full-scale platforms, I build software that scales with your business.",
+        "features": ["React & Next.js", "Node.js & APIs", "Database Design", "Cloud Deployment"]
       },
       {
-        "title": "Software Development",
-        "description": "Custom applications and scalable solutions built with modern technologies. From MVPs to enterprise systems.",
-        "features": ["Web Applications", "Mobile Apps", "APIs & Backend", "Cloud Solutions"]
+        "title": "Testing & QA",
+        "description": "Comprehensive testing services to ensure your software is reliable and bug-free. I help teams build confidence in their releases.",
+        "features": ["Automated Testing", "Test Strategy", "CI/CD Integration", "Code Reviews"]
       },
       {
-        "title": "Software Testing",
-        "description": "Comprehensive QA and quality assurance services ensuring your software is reliable, secure, and performant.",
-        "features": ["Automated Testing", "Performance Testing", "Security Audits", "Code Reviews"]
-      },
-      {
-        "title": "DevOps",
-        "description": "Infrastructure automation and continuous delivery. We streamline your development pipeline for faster, safer deployments.",
-        "features": ["CI/CD Pipelines", "Cloud Infrastructure", "Monitoring", "Container Orchestration"]
-      },
-      {
-        "title": "Consulting",
-        "description": "Strategic technology consulting and advisory services. We help you make informed decisions that align with your business goals.",
-        "features": ["Tech Strategy", "Architecture Review", "Team Augmentation", "Digital Transformation"]
+        "title": "DevOps & Infrastructure",
+        "description": "Streamline your development workflow with modern DevOps practices. From CI/CD pipelines to cloud infrastructure.",
+        "features": ["CI/CD Pipelines", "Cloud Setup (AWS/GCP)", "Docker & Kubernetes", "Monitoring & Logging"]
       }
     ]
   },
   "products": {
-    "badge": "Our Products",
-    "titleLine1": "Products That ",
-    "titleLine2": "Deliver",
-    "description": "Innovative software products designed to solve real problems and empower teams to do their best work.",
-    "comingSoon": "Coming Soon",
-    "coming2H2026": "Coming 2H 2026",
-    "getStarted": "Get Started",
-    "learnMore": "Learn More",
-    "notifyMe": "Notify Me",
+    "badge": "How I Work",
+    "titleLine1": "From First Call to ",
+    "titleLine2": "Delivery",
+    "description": "A straightforward process designed for clarity and results.",
     "items": [
       {
-        "name": "ResumeAI Pro",
-        "tagline": "AI-Powered Resume Builder",
-        "description": "Create professional resumes in minutes with intelligent suggestions, industry-specific templates, and ATS optimization.",
-        "features": ["AI-Powered Suggestions", "Professional Templates", "ATS Optimization", "Export to PDF/DOCX"]
+        "title": "Discovery Call",
+        "description": "We start with a free call to understand your project, goals, and timeline. No commitment, just a conversation."
       },
       {
-        "name": "UptimeWatch",
-        "tagline": "Website & API Monitoring",
-        "description": "Know the moment your site goes down. Comprehensive uptime monitoring with multi-channel alerts, SSL tracking, and detailed incident reports.",
-        "features": ["Multi-channel Alerts", "SSL Certificate Monitoring", "Public Status Pages", "Incident Management"]
+        "title": "Proposal",
+        "description": "You receive a clear proposal with scope, timeline, and fixed pricing. No surprises or hidden costs."
       },
       {
-        "name": "TestFlaw",
-        "tagline": "AI-Powered Test Management",
-        "description": "Next-generation test management platform with AI-driven test case generation, comprehensive reporting, and no-code test automation.",
-        "features": ["AI Test Case Generation", "Comprehensive Reporting", "No-Code Automation", "Smart Test Analytics"]
+        "title": "Development",
+        "description": "I build your solution with regular updates and demos. You're always in the loop on progress."
+      },
+      {
+        "title": "Delivery & Support",
+        "description": "Your project is delivered with documentation and handover. I'm available for ongoing support if needed."
       }
     ]
   },
@@ -192,66 +173,53 @@
     ]
   },
   "contact": {
-    "badge": "Contact Us",
-    "titleLine1": "Let's Build Something",
-    "titleLine2": " Amazing",
-    "description": "Ready to transform your ideas into reality? Get in touch with our team and let's discuss how we can help you achieve your goals.",
-    "email": "Email Us",
+    "badge": "Contact",
+    "titleLine1": "Let's",
+    "titleLine2": " Talk",
+    "description": "Have a project in mind? Send me a message and I'll get back to you within 24 hours.",
+    "email": "Email",
     "phone": "Call Us",
     "visit": "Visit Us",
     "address": "Zagreb, Croatia",
+    "calendly": "Prefer to schedule directly?",
+    "calendlyLink": "Book a time on my calendar",
     "form": {
       "name": "Your Name",
       "namePlaceholder": "John Doe",
       "email": "Email Address",
       "emailPlaceholder": "john@company.com",
-      "company": "Company",
-      "companyPlaceholder": "Your Company",
-      "service": "Service Interested In",
-      "servicePlaceholder": "Select a service",
       "message": "Your Message",
-      "messagePlaceholder": "Tell us about your project...",
+      "messagePlaceholder": "Tell me about your project...",
       "submit": "Send Message",
       "sending": "Sending...",
       "success": "Message Sent!",
-      "successDesc": "We'll get back to you within 24 hours.",
+      "successDesc": "I'll get back to you within 24 hours.",
       "error": "Failed to send message. Please try again."
     },
-    "services": ["Product Design", "Software Development", "Software Testing", "DevOps", "Consulting", "Other"],
     "errors": {
       "nameRequired": "Name is required",
       "emailRequired": "Email is required",
       "emailInvalid": "Please enter a valid email",
-      "serviceRequired": "Please select a service",
       "messageRequired": "Message is required",
       "messageMinLength": "Message must be at least 10 characters"
     }
   },
   "footer": {
-    "description": "Engineering excellence for modern businesses. We build software that matters.",
-    "newsletter": {
-      "title": "Stay in the Loop",
-      "description": "Subscribe to our newsletter for the latest insights, product updates, and tech trends.",
-      "placeholder": "Enter your email",
-      "button": "Subscribe",
-      "success": "Thanks for subscribing!"
-    },
-    "company": "Company",
-    "companyLinks": ["About", "Careers", "Blog", "Press"],
+    "description": "Software development services focused on quality and reliability. From web apps to DevOps, I help businesses build better software.",
     "servicesTitle": "Services",
-    "servicesLinks": ["Product Design", "Development", "Testing", "DevOps"],
-    "productsTitle": "Products",
-    "productsLinks": ["ResumeAI Pro", "UptimeWatch", "TestFlaw"],
+    "servicesLinks": ["Web Development", "Testing & QA", "DevOps"],
     "legal": "Legal",
     "legalLinks": ["Privacy Policy", "Terms of Service", "Cookie Policy"],
+    "socialTitle": "Connect",
+    "businessInfo": "Sole proprietorship, Croatia",
     "copyright": "All rights reserved.",
-    "madeWith": "Crafted with",
-    "byTeam": "by the DevLogic team"
+    "madeWith": "Built with",
+    "byTeam": "in Croatia"
   },
   "metadata": {
-    "title": "DevLogic - Logic Meets Innovation",
-    "description": "DevLogic delivers innovative software solutions, product design, and technical consulting. Engineering excellence for modern businesses.",
-    "keywords": "software development, web development, mobile apps, devops, consulting, product design"
+    "title": "DevLogic - Software Development Services",
+    "description": "I help businesses build reliable web applications, implement testing strategies, and set up DevOps infrastructure. Direct communication, quality results.",
+    "keywords": "software development, web development, testing, QA, devops, freelance developer, croatia"
   },
   "privacyPolicy": {
     "title": "Privacy Policy",

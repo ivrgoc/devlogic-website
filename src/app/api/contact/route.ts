@@ -6,8 +6,6 @@ export const runtime = 'edge';
 interface ContactFormData {
   name: string;
   email: string;
-  company?: string;
-  service: string;
   message: string;
 }
 
@@ -25,7 +23,7 @@ export async function POST(request: Request) {
     const data: ContactFormData = await request.json();
 
     // Validate required fields
-    if (!data.name || !data.email || !data.service || !data.message) {
+    if (!data.name || !data.email || !data.message) {
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 }
@@ -43,8 +41,6 @@ export async function POST(request: Request) {
 
     // Escape user input for HTML
     const safeName = escapeHtml(data.name);
-    const safeCompany = escapeHtml(data.company || 'N/A');
-    const safeService = escapeHtml(data.service);
     const safeMessage = escapeHtml(data.message).replace(/\n/g, '<br>');
 
     const resend = new Resend(process.env.RESEND_API_KEY);
@@ -54,13 +50,11 @@ export async function POST(request: Request) {
       from: 'DevLogic Contact Form <noreply@devlogic.hr>',
       to: 'info@devlogic.hr',
       replyTo: data.email,
-      subject: `New Contact Form: ${safeService}`,
+      subject: `New Contact Form Message from ${safeName}`,
       html: `
         <h2>New Contact Form Submission</h2>
         <p><strong>Name:</strong> ${safeName}</p>
         <p><strong>Email:</strong> ${escapeHtml(data.email)}</p>
-        <p><strong>Company:</strong> ${safeCompany}</p>
-        <p><strong>Service:</strong> ${safeService}</p>
         <p><strong>Message:</strong></p>
         <p>${safeMessage}</p>
       `,
@@ -74,8 +68,8 @@ export async function POST(request: Request) {
       html: `
         <h2>Thank you for reaching out!</h2>
         <p>Hi ${safeName},</p>
-        <p>We've received your message and will get back to you within 24 hours.</p>
-        <p>Best regards,<br>The DevLogic Team</p>
+        <p>I've received your message and will get back to you within 24 hours.</p>
+        <p>Best regards,<br>Igor @ DevLogic</p>
       `,
     });
 

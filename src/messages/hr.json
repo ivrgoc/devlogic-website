@@ -1,21 +1,21 @@
 {
   "nav": {
-    "about": "O nama",
+    "about": "O meni",
     "services": "Usluge",
-    "products": "Proizvodi",
+    "projects": "Projekti",
     "whyUs": "Zašto mi",
     "portfolio": "Portfolio",
     "contact": "Kontakt",
-    "getStarted": "Započnite",
+    "getStarted": "Razgovarajmo",
     "blog": "Blog"
   },
   "hero": {
-    "badge": "Prihvaćamo nove projekte za 2026",
-    "titleLine1": "Logika susreće",
-    "titleLine2": "Inovaciju",
-    "description": "Razvijamo iznimna softverska rješenja koja transformiraju poslovanje. Strateško razmišljanje, tehnička izvrsnost i nepokolebljiva predanost vašem uspjehu.",
-    "cta1": "Započnite projekt",
-    "cta2": "Istražite usluge",
+    "badge": "Dostupan za nove projekte",
+    "titleLine1": "Razvoj softvera.",
+    "titleLine2": "Od ideje do produkcije.",
+    "description": "Razvijam web aplikacije, implementiram testiranje i postavljam DevOps infrastrukturu. Pomažem tvrtkama pretvoriti ideje u pouzdana, skalabilna softverska rješenja.",
+    "cta1": "Razgovarajmo",
+    "cta2": "Kako radim",
     "stats": {
       "projects": "Isporučenih projekata",
       "clients": "Zadovoljnih klijenata",
@@ -24,83 +24,64 @@
     }
   },
   "about": {
-    "badge": "O DevLogicu",
-    "titleLine1": "Inženjerska izvrsnost,",
-    "titleLine2": " Isporučena",
-    "description1": "DevLogic je premium tehnološka tvrtka specijalizirana za inovativna softverska rješenja, dizajn proizvoda i tehničko savjetovanje. Kombiniramo strateško razmišljanje s tehničkom izvrsnošću za postizanje iznimnih rezultata koji pokreću rast poslovanja.",
-    "description2": "Osnovani s vizijom premošćivanja jaza između kompleksne tehnologije i poslovnih potreba, pomogli smo tvrtkama u različitim industrijama transformirati njihovu digitalnu prisutnost i operacije.",
-    "mission": "Misija",
-    "missionDesc": "Isporučiti transformativna rješenja",
-    "vision": "Vizija",
-    "visionDesc": "Voditi kroz inovacije",
-    "values": "Vrijednosti",
-    "valuesDesc": "Integritet, izvrsnost, povjerenje",
-    "approach": "Pristup",
-    "approachDesc": "Agilan i suradnički",
+    "badge": "O meni",
+    "titleLine1": "Tko stoji iza",
+    "titleLine2": " DevLogica",
+    "description1": "Bok, ja sam Igor - programer s fokusom na izradu pouzdanih, dobro testiranih aplikacija. Pokrenuo sam DevLogic kako bih ponudio direktne, konkretne razvojne usluge tvrtkama kojima treba kvalitetan softver bez agencijskih troškova.",
+    "description2": "Kada radite sa mnom, dobivate direktnu komunikaciju, transparentne cijene i partnera kojem je iskreno stalo do isporuke softvera koji radi. Bez slojeva menadžmenta, bez iznenađenja - samo fokusiran, kvalitetan razvoj.",
+    "qualityFocus": "Fokus na kvalitetu",
+    "qualityFocusDesc": "Čist kod, temeljito testiranje",
+    "directComm": "Direktna komunikacija",
+    "directCommDesc": "Radite direktno sa mnom",
+    "transparentPricing": "Transparentne cijene",
+    "transparentPricingDesc": "Bez skrivenih troškova",
     "award": "Nagrađivano",
     "awardDesc": "Tech rješenja 2025"
   },
   "services": {
-    "badge": "Naše usluge",
-    "titleLine1": "Što radimo ",
-    "titleLine2": "Najbolje",
-    "description": "Sveobuhvatne tehnološke usluge dizajnirane za unapređenje vašeg poslovanja i postizanje značajnih rezultata.",
+    "badge": "Usluge",
+    "titleLine1": "Što ",
+    "titleLine2": "nudim",
+    "description": "Fokusirane usluge dizajnirane za isporuku kvalitetnih rezultata za vaše poslovanje.",
     "items": [
       {
-        "title": "Dizajn proizvoda",
-        "description": "Dizajn usmjeren na korisnika i UX/UI izvrsnost. Stvaramo prekrasna, intuitivna sučelja koja korisnici vole i koja pokreću angažman.",
-        "features": ["Istraživanje korisnika", "UI/UX dizajn", "Prototipiranje", "Dizajn sustavi"]
+        "title": "Web razvoj",
+        "description": "Prilagođene web aplikacije izgrađene modernim tehnologijama. Od MVP-a do punih platformi, gradim softver koji raste s vašim poslovanjem.",
+        "features": ["React & Next.js", "Node.js & API-ji", "Dizajn baze podataka", "Cloud deployment"]
       },
       {
-        "title": "Razvoj softvera",
-        "description": "Prilagođene aplikacije i skalabilna rješenja izgrađena modernim tehnologijama. Od MVP-a do enterprise sustava.",
-        "features": ["Web aplikacije", "Mobilne aplikacije", "API-ji i Backend", "Cloud rješenja"]
+        "title": "Testiranje i QA",
+        "description": "Sveobuhvatne usluge testiranja koje osiguravaju da je vaš softver pouzdan i bez grešaka. Pomažem timovima izgraditi povjerenje u svoje isporuke.",
+        "features": ["Automatizirano testiranje", "Strategija testiranja", "CI/CD integracija", "Pregledi koda"]
       },
       {
-        "title": "Testiranje softvera",
-        "description": "Sveobuhvatne QA usluge osiguravanja kvalitete koje garantiraju da je vaš softver pouzdan, siguran i učinkovit.",
-        "features": ["Automatizirano testiranje", "Testiranje performansi", "Sigurnosne revizije", "Pregledi koda"]
-      },
-      {
-        "title": "DevOps",
-        "description": "Automatizacija infrastrukture i kontinuirana isporuka. Pojednostavljujemo vaš razvojni proces za brže i sigurnije implementacije.",
-        "features": ["CI/CD cjevovodi", "Cloud infrastruktura", "Nadzor", "Orkestracija kontejnera"]
-      },
-      {
-        "title": "Savjetovanje",
-        "description": "Strateško tehnološko savjetovanje. Pomažemo vam donositi informirane odluke usklađene s vašim poslovnim ciljevima.",
-        "features": ["Tech strategija", "Pregled arhitekture", "Pojačanje tima", "Digitalna transformacija"]
+        "title": "DevOps i infrastruktura",
+        "description": "Unaprijedite svoj razvojni proces s modernim DevOps praksama. Od CI/CD cjevovoda do cloud infrastrukture.",
+        "features": ["CI/CD cjevovodi", "Cloud setup (AWS/GCP)", "Docker & Kubernetes", "Monitoring i logiranje"]
       }
     ]
   },
   "products": {
-    "badge": "Naši proizvodi",
-    "titleLine1": "Proizvodi koji ",
-    "titleLine2": "Isporučuju",
-    "description": "Inovativni softverski proizvodi dizajnirani za rješavanje stvarnih problema i osnaživanje timova za najbolji rad.",
-    "comingSoon": "Uskoro",
-    "coming2H2026": "Dolazi 2H 2026",
-    "getStarted": "Započnite",
-    "learnMore": "Saznajte više",
-    "notifyMe": "Obavijesti me",
+    "badge": "Kako radim",
+    "titleLine1": "Od prvog poziva do ",
+    "titleLine2": "isporuke",
+    "description": "Jednostavan proces dizajniran za jasnoću i rezultate.",
     "items": [
       {
-        "name": "ResumeAI Pro",
-        "tagline": "AI alat za izradu životopisa",
-        "description": "Izradite profesionalne životopise u minutama s inteligentnim prijedlozima, predlošcima specifičnim za industriju i ATS optimizacijom.",
-        "features": ["AI prijedlozi", "Profesionalni predlošci", "ATS optimizacija", "Izvoz u PDF/DOCX"]
+        "title": "Uvodni poziv",
+        "description": "Počinjemo s besplatnim pozivom kako bismo razumjeli vaš projekt, ciljeve i vremenski okvir. Bez obveza, samo razgovor."
       },
       {
-        "name": "UptimeWatch",
-        "tagline": "Nadzor web stranica i API-ja",
-        "description": "Saznajte u trenutku kada vaša stranica padne. Sveobuhvatni nadzor dostupnosti s višekanalnim obavijestima, praćenjem SSL certifikata i detaljnim izvješćima o incidentima.",
-        "features": ["Višekanalne obavijesti", "Praćenje SSL certifikata", "Javne status stranice", "Upravljanje incidentima"]
+        "title": "Ponuda",
+        "description": "Dobivate jasnu ponudu s opsegom, vremenskim okvirom i fiksnom cijenom. Bez iznenađenja ili skrivenih troškova."
       },
       {
-        "name": "TestFlaw",
-        "tagline": "AI alat za upravljanje testiranjem",
-        "description": "Test management platforma nove generacije s AI generiranjem test slučajeva, sveobuhvatnim izvještajima i no-code automatizacijom testiranja.",
-        "features": ["AI generiranje testova", "Sveobuhvatno izvještavanje", "No-code automatizacija", "Pametna analitika testova"]
+        "title": "Razvoj",
+        "description": "Gradim vaše rješenje s redovitim ažuriranjima i demo prikazima. Uvijek ste u toku s napretkom."
+      },
+      {
+        "title": "Isporuka i podrška",
+        "description": "Vaš projekt je isporučen s dokumentacijom i predajom. Dostupan sam za kontinuiranu podršku ako je potrebna."
       }
     ]
   },
@@ -192,66 +173,53 @@
     ]
   },
   "contact": {
-    "badge": "Kontaktirajte nas",
-    "titleLine1": "Izgradimo nešto",
-    "titleLine2": " Nevjerojatno",
-    "description": "Spremni pretvoriti svoje ideje u stvarnost? Javite nam se i razgovarajmo kako vam možemo pomoći ostvariti vaše ciljeve.",
-    "email": "Pošaljite email",
+    "badge": "Kontakt",
+    "titleLine1": "Razgovarajmo",
+    "titleLine2": "",
+    "description": "Imate projekt na umu? Pošaljite mi poruku i javit ću vam se unutar 24 sata.",
+    "email": "Email",
     "phone": "Nazovite nas",
     "visit": "Posjetite nas",
     "address": "Zagreb, Hrvatska",
+    "calendly": "Preferirate zakazati direktno?",
+    "calendlyLink": "Rezervirajte termin u mom kalendaru",
     "form": {
       "name": "Vaše ime",
       "namePlaceholder": "Ivan Horvat",
       "email": "Email adresa",
       "emailPlaceholder": "ivan@tvrtka.hr",
-      "company": "Tvrtka",
-      "companyPlaceholder": "Vaša tvrtka",
-      "service": "Usluga koja vas zanima",
-      "servicePlaceholder": "Odaberite uslugu",
       "message": "Vaša poruka",
-      "messagePlaceholder": "Recite nam o svom projektu...",
+      "messagePlaceholder": "Recite mi o svom projektu...",
       "submit": "Pošalji poruku",
       "sending": "Slanje...",
       "success": "Poruka poslana!",
-      "successDesc": "Javit ćemo vam se unutar 24 sata.",
+      "successDesc": "Javit ću vam se unutar 24 sata.",
       "error": "Slanje nije uspjelo. Pokušajte ponovno."
     },
-    "services": ["Dizajn proizvoda", "Razvoj softvera", "Testiranje softvera", "DevOps", "Savjetovanje", "Ostalo"],
     "errors": {
       "nameRequired": "Ime je obavezno",
       "emailRequired": "Email je obavezan",
       "emailInvalid": "Unesite valjanu email adresu",
-      "serviceRequired": "Odaberite uslugu",
       "messageRequired": "Poruka je obavezna",
       "messageMinLength": "Poruka mora imati najmanje 10 znakova"
     }
   },
   "footer": {
-    "description": "Inženjerska izvrsnost za moderno poslovanje. Gradimo softver koji je bitan.",
-    "newsletter": {
-      "title": "Budite u toku",
-      "description": "Pretplatite se na naš newsletter za najnovije uvide, ažuriranja proizvoda i tech trendove.",
-      "placeholder": "Unesite email",
-      "button": "Pretplatite se",
-      "success": "Hvala na pretplati!"
-    },
-    "company": "Tvrtka",
-    "companyLinks": ["O nama", "Karijere", "Blog", "Mediji"],
+    "description": "Usluge razvoja softvera s fokusom na kvalitetu i pouzdanost. Od web aplikacija do DevOpsa, pomažem tvrtkama graditi bolji softver.",
     "servicesTitle": "Usluge",
-    "servicesLinks": ["Dizajn proizvoda", "Razvoj", "Testiranje", "DevOps"],
-    "productsTitle": "Proizvodi",
-    "productsLinks": ["ResumeAI Pro", "UptimeWatch", "TestFlaw"],
+    "servicesLinks": ["Web razvoj", "Testiranje i QA", "DevOps"],
     "legal": "Pravno",
     "legalLinks": ["Politika privatnosti", "Uvjeti korištenja", "Politika kolačića"],
+    "socialTitle": "Povežite se",
+    "businessInfo": "Obrt, Hrvatska",
     "copyright": "Sva prava pridržana.",
-    "madeWith": "Izrađeno s",
-    "byTeam": "od DevLogic tima"
+    "madeWith": "Izgrađeno s",
+    "byTeam": "u Hrvatskoj"
   },
   "metadata": {
-    "title": "DevLogic - Logika susreće inovaciju",
-    "description": "DevLogic isporučuje inovativna softverska rješenja, dizajn proizvoda i tehničko savjetovanje. Inženjerska izvrsnost za moderna poslovanja.",
-    "keywords": "razvoj softvera, web razvoj, mobilne aplikacije, devops, savjetovanje, dizajn proizvoda"
+    "title": "DevLogic - Usluge razvoja softvera",
+    "description": "Pomažem tvrtkama graditi pouzdane web aplikacije, implementirati strategije testiranja i postaviti DevOps infrastrukturu. Direktna komunikacija, kvalitetni rezultati.",
+    "keywords": "razvoj softvera, web razvoj, testiranje, QA, devops, freelance developer, hrvatska"
   },
   "privacyPolicy": {
     "title": "Politika privatnosti",

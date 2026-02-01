@@ -23,11 +23,9 @@ export function Navigation() {
   }, []);
 
   const navLinks = [
-    { name: t('about'), href: '#about' },
     { name: t('services'), href: '#services' },
-    { name: t('products'), href: '#products' },
-    // { name: t('whyUs'), href: '#why-us' },
-    // { name: t('portfolio'), href: '#portfolio' },
+    { name: t('projects'), href: '#process' },
+    { name: t('about'), href: '#about' },
     { name: t('contact'), href: '#contact' },
   ];
 

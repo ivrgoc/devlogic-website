@@ -1,32 +1,24 @@
 'use client';
 
 import { useTranslations } from '@/lib/i18n';
-import { FileText, Activity, ClipboardCheck, ArrowRight, Check } from 'lucide-react';
-import { Badge, Button, GlassCard } from '@/components/ui';
+import { Phone, FileText, Code, Rocket } from 'lucide-react';
+import { Badge, Card } from '@/components/ui';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/shared';
 
-const productIcons = [FileText, Activity, ClipboardCheck];
-const productStatus = ['coming-soon', 'coming-soon', 'coming-2h-2026'];
+const stepIcons = [Phone, FileText, Code, Rocket];
 
 export function ProductsSection() {
   const t = useTranslations('products');
 
-  const products = [0, 1, 2].map((index) => ({
-    icon: productIcons[index],
-    name: t(`items.${index}.name`),
-    tagline: t(`items.${index}.tagline`),
+  const steps = [0, 1, 2, 3].map((index) => ({
+    icon: stepIcons[index],
+    title: t(`items.${index}.title`),
     description: t(`items.${index}.description`),
-    features: [
-      t(`items.${index}.features.0`),
-      t(`items.${index}.features.1`),
-      t(`items.${index}.features.2`),
-      t(`items.${index}.features.3`),
-    ],
-    status: productStatus[index],
+    stepNumber: index + 1,
   }));
 
   return (
-    <section id="products" className="py-24 bg-dark-800">
+    <section id="process" className="py-24 bg-dark-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-16">
           <Badge variant="primary" className="mb-4">
@@ -41,37 +33,19 @@ export function ProductsSection() {
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">{t('description')}</p>
         </AnimatedSection>
 
-        <StaggerContainer className="grid md:grid-cols-2 gap-8">
-          {products.map((product, index) => (
+        <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {steps.map((step, index) => (
             <StaggerItem key={index}>
-              <GlassCard className="h-full flex flex-col">
-                {(product.status === 'coming-soon' || product.status === 'coming-2h-2026') && (
-                  <Badge variant="accent" className="self-start mb-4">
-                    {product.status === 'coming-2h-2026' ? t('coming2H2026') : t('comingSoon')}
-                  </Badge>
-                )}
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center mb-4">
-                  <product.icon className="text-white" size={28} />
+              <Card hover className="h-full relative">
+                <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-bold text-sm">
+                  {step.stepNumber}
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-1">{product.name}</h3>
-                <p className="text-primary-400 text-sm mb-3">{product.tagline}</p>
-                <p className="text-gray-400 text-sm mb-6 flex-grow">{product.description}</p>
-                <ul className="space-y-2 mb-6">
-                  {product.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-300">
-                      <Check size={16} className="text-primary-400 mr-2 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <Button
-                  variant="outline"
-                  className="w-full"
-                >
-                  {t('notifyMe')}
-                  <ArrowRight size={16} className="ml-2" />
-                </Button>
-              </GlassCard>
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary-500/20 to-accent-500/20 flex items-center justify-center mb-4 mt-2">
+                  <step.icon className="text-primary-400" size={24} />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
+                <p className="text-gray-400 text-sm">{step.description}</p>
+              </Card>
             </StaggerItem>
           ))}
         </StaggerContainer>

@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from '@/lib/i18n';
-import { Target, Eye, Heart, Users, Award } from 'lucide-react';
+import { Shield, MessageCircle, CreditCard } from 'lucide-react';
 import { Badge, Card } from '@/components/ui';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/shared';
 
@@ -9,10 +9,9 @@ export function AboutSection() {
   const t = useTranslations('about');
 
   const values = [
-    { icon: Target, title: t('mission'), description: t('missionDesc') },
-    { icon: Eye, title: t('vision'), description: t('visionDesc') },
-    { icon: Heart, title: t('values'), description: t('valuesDesc') },
-    { icon: Users, title: t('approach'), description: t('approachDesc') },
+    { icon: Shield, title: t('qualityFocus'), description: t('qualityFocusDesc') },
+    { icon: MessageCircle, title: t('directComm'), description: t('directCommDesc') },
+    { icon: CreditCard, title: t('transparentPricing'), description: t('transparentPricingDesc') },
   ];
 
   return (
@@ -34,19 +33,9 @@ export function AboutSection() {
           <AnimatedSection direction="left">
             <p className="text-gray-400 text-lg mb-6">{t('description1')}</p>
             <p className="text-gray-400 text-lg">{t('description2')}</p>
-
-            {/* Award Badge - temporarily hidden
-            <div className="mt-8 inline-flex items-center px-4 py-3 bg-gradient-to-r from-primary-500/10 to-accent-500/10 border border-primary-500/30 rounded-xl">
-              <Award className="text-primary-400 mr-3" size={24} />
-              <div>
-                <div className="text-white font-semibold">{t('award')}</div>
-                <div className="text-gray-400 text-sm">{t('awardDesc')}</div>
-              </div>
-            </div>
-            */}
           </AnimatedSection>
 
-          <StaggerContainer className="grid grid-cols-2 gap-4">
+          <StaggerContainer className="grid md:grid-cols-3 gap-4">
             {values.map((value, index) => (
               <StaggerItem key={index}>
                 <Card hover className="h-full">
