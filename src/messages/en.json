@@ -79,6 +79,7 @@
     "titleLine2": "Deliver",
     "description": "Innovative software products designed to solve real problems and empower teams to do their best work.",
     "comingSoon": "Coming Soon",
+    "coming2H2026": "Coming 2H 2026",
     "getStarted": "Get Started",
     "learnMore": "Learn More",
     "notifyMe": "Notify Me",
@@ -90,22 +91,16 @@
         "features": ["AI-Powered Suggestions", "Professional Templates", "ATS Optimization", "Export to PDF/DOCX"]
       },
       {
-        "name": "CodeSync",
-        "tagline": "Real-time Collaboration",
-        "description": "Seamless code collaboration platform with real-time editing, integrated code review, and AI-assisted debugging.",
-        "features": ["Real-time Editing", "Code Review", "AI Debugging", "Team Insights"]
-      },
-      {
-        "name": "DeployHub",
-        "tagline": "One-Click Deployments",
-        "description": "Simplified deployment platform for modern applications. Deploy to any cloud with zero configuration.",
-        "features": ["Multi-Cloud Support", "Auto-Scaling", "Monitoring", "Rollback"]
-      },
-      {
         "name": "UptimeWatch",
         "tagline": "Website & API Monitoring",
         "description": "Know the moment your site goes down. Comprehensive uptime monitoring with multi-channel alerts, SSL tracking, and detailed incident reports.",
         "features": ["Multi-channel Alerts", "SSL Certificate Monitoring", "Public Status Pages", "Incident Management"]
+      },
+      {
+        "name": "TestFlaw",
+        "tagline": "AI-Powered Test Management",
+        "description": "Next-generation test management platform with AI-driven test case generation, comprehensive reporting, and no-code test automation.",
+        "features": ["AI Test Case Generation", "Comprehensive Reporting", "No-Code Automation", "Smart Test Analytics"]
       }
     ]
   },
@@ -246,7 +241,7 @@
     "servicesTitle": "Services",
     "servicesLinks": ["Product Design", "Development", "Testing", "DevOps"],
     "productsTitle": "Products",
-    "productsLinks": ["ResumeAI Pro", "CodeSync", "DeployHub", "UptimeWatch"],
+    "productsLinks": ["ResumeAI Pro", "UptimeWatch", "TestFlaw"],
     "legal": "Legal",
     "legalLinks": ["Privacy Policy", "Terms of Service", "Cookie Policy"],
     "copyright": "All rights reserved.",

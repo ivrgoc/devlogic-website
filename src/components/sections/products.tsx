@@ -1,17 +1,17 @@
 'use client';
 
 import { useTranslations } from '@/lib/i18n';
-import { FileText, Code2, Rocket, Activity, ArrowRight, Check } from 'lucide-react';
+import { FileText, Activity, ClipboardCheck, ArrowRight, Check } from 'lucide-react';
 import { Badge, Button, GlassCard } from '@/components/ui';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/shared';
 
-const productIcons = [FileText, Code2, Rocket, Activity];
-const productStatus = ['available', 'coming-soon', 'coming-soon', 'available'];
+const productIcons = [FileText, Activity, ClipboardCheck];
+const productStatus = ['coming-soon', 'coming-soon', 'coming-2h-2026'];
 
 export function ProductsSection() {
   const t = useTranslations('products');
 
-  const products = [0, 1, 2, 3].map((index) => ({
+  const products = [0, 1, 2].map((index) => ({
     icon: productIcons[index],
     name: t(`items.${index}.name`),
     tagline: t(`items.${index}.tagline`),
@@ -45,9 +45,9 @@ export function ProductsSection() {
           {products.map((product, index) => (
             <StaggerItem key={index}>
               <GlassCard className="h-full flex flex-col">
-                {product.status === 'coming-soon' && (
+                {(product.status === 'coming-soon' || product.status === 'coming-2h-2026') && (
                   <Badge variant="accent" className="self-start mb-4">
-                    {t('comingSoon')}
+                    {product.status === 'coming-2h-2026' ? t('coming2H2026') : t('comingSoon')}
                   </Badge>
                 )}
                 <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center mb-4">
@@ -65,10 +65,10 @@ export function ProductsSection() {
                   ))}
                 </ul>
                 <Button
-                  variant={product.status === 'available' ? 'primary' : 'outline'}
+                  variant="outline"
                   className="w-full"
                 >
-                  {product.status === 'available' ? t('getStarted') : t('notifyMe')}
+                  {t('notifyMe')}
                   <ArrowRight size={16} className="ml-2" />
                 </Button>
               </GlassCard>

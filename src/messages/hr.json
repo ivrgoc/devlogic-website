@@ -79,6 +79,7 @@
     "titleLine2": "Isporucuju",
     "description": "Inovativni softverski proizvodi dizajnirani za rjesavanje stvarnih problema i osnazivanje timova za najbolji rad.",
     "comingSoon": "Uskoro",
+    "coming2H2026": "Dolazi 2H 2026",
     "getStarted": "Zapocnite",
     "learnMore": "Saznajte vise",
     "notifyMe": "Obavijesti me",
@@ -90,22 +91,16 @@
         "features": ["AI prijedlozi", "Profesionalni predlosci", "ATS optimizacija", "Izvoz u PDF/DOCX"]
       },
       {
-        "name": "CodeSync",
-        "tagline": "Suradnja u realnom vremenu",
-        "description": "Platforma za suradnju na kodu s ureduivanjem u realnom vremenu, integriranim pregledom koda i AI-potpomognutim debuggiranjem.",
-        "features": ["Ureduivanje uzivo", "Pregled koda", "AI debugging", "Uvidi tima"]
-      },
-      {
-        "name": "DeployHub",
-        "tagline": "Implementacija jednim klikom",
-        "description": "Pojednostavljena platforma za implementaciju modernih aplikacija. Implementirajte na bilo koji cloud bez konfiguracije.",
-        "features": ["Multi-cloud podrska", "Auto-skaliranje", "Nadzor", "Rollback"]
-      },
-      {
         "name": "UptimeWatch",
         "tagline": "Nadzor web stranica i API-ja",
         "description": "Saznajte u trenutku kada vasa stranica padne. Sveobuhvatni nadzor dostupnosti s visekanalnim obavijestima, pracenjem SSL certifikata i detaljnim izvjescima o incidentima.",
         "features": ["Visekanalne obavijesti", "Pracenje SSL certifikata", "Javne status stranice", "Upravljanje incidentima"]
+      },
+      {
+        "name": "TestFlaw",
+        "tagline": "AI alat za upravljanje testiranjem",
+        "description": "Test management platforma nove generacije s AI generiranjem test slucajeva, sveobuhvatnim izvjestajima i no-code automatizacijom testiranja.",
+        "features": ["AI generiranje testova", "Sveobuhvatno izvjestavanje", "No-code automatizacija", "Pametna analitika testova"]
       }
     ]
   },
@@ -246,7 +241,7 @@
     "servicesTitle": "Usluge",
     "servicesLinks": ["Dizajn proizvoda", "Razvoj", "Testiranje", "DevOps"],
     "productsTitle": "Proizvodi",
-    "productsLinks": ["ResumeAI Pro", "CodeSync", "DeployHub", "UptimeWatch"],
+    "productsLinks": ["ResumeAI Pro", "UptimeWatch", "TestFlaw"],
     "legal": "Pravno",
     "legalLinks": ["Politika privatnosti", "Uvjeti koristenja", "Politika kolacica"],
     "copyright": "Sva prava pridrzana.",
