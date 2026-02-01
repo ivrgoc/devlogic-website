@@ -1,16 +1,16 @@
 'use client';
 
 import { useTranslations } from '@/lib/i18n';
-import { Code, TestTube, Cloud } from 'lucide-react';
+import { Code, TestTube, Cloud, Lightbulb } from 'lucide-react';
 import { Badge, Card } from '@/components/ui';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/shared';
 
-const serviceIcons = [Code, TestTube, Cloud];
+const serviceIcons = [Code, TestTube, Cloud, Lightbulb];
 
 export function ServicesSection() {
   const t = useTranslations('services');
 
-  const services = [0, 1, 2].map((index) => ({
+  const services = [0, 1, 2, 3].map((index) => ({
     icon: serviceIcons[index],
     title: t(`items.${index}.title`),
     description: t(`items.${index}.description`),
@@ -38,7 +38,7 @@ export function ServicesSection() {
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">{t('description')}</p>
         </AnimatedSection>
 
-        <StaggerContainer className="grid md:grid-cols-3 gap-6">
+        <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
             <StaggerItem key={index}>
               <Card hover className="h-full">
@@ -50,7 +50,7 @@ export function ServicesSection() {
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-500">
-                      <span className="w-1.5 h-1.5 bg-primary-400 rounded-full mr-2" />
+                      <span className="w-1.5 h-1.5 bg-primary-400 rounded-full mr-2 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}

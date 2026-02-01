@@ -24,7 +24,6 @@ export function Navigation() {
 
   const navLinks = [
     { name: t('services'), href: '#services' },
-    { name: t('projects'), href: '#process' },
     { name: t('about'), href: '#about' },
     { name: t('contact'), href: '#contact' },
   ];

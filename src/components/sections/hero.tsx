@@ -73,7 +73,7 @@ export function HeroSection() {
             {t('cta1')}
             <ArrowRight size={20} className="ml-2" />
           </Button>
-          <Button variant="secondary" size="lg" href="#process">
+          <Button variant="secondary" size="lg" href="#services">
             {t('cta2')}
           </Button>
         </motion.div>

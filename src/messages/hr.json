@@ -10,12 +10,12 @@
     "blog": "Blog"
   },
   "hero": {
-    "badge": "Dostupan za nove projekte",
-    "titleLine1": "Razvoj softvera.",
-    "titleLine2": "Od ideje do produkcije.",
-    "description": "Razvijam web aplikacije, implementiram testiranje i postavljam DevOps infrastrukturu. Pomažem tvrtkama pretvoriti ideje u pouzdana, skalabilna softverska rješenja.",
-    "cta1": "Razgovarajmo",
-    "cta2": "Kako radim",
+    "badge": "20+ godina u IT industriji · Dostupan za projekte",
+    "titleLine1": "Razvoj softvera i QA konzalting",
+    "titleLine2": "s iskustvom iz prve ruke.",
+    "description": "Full-stack razvoj, automatizirano testiranje i DevOps — od nekoga tko je vodio QA timove u korporativnom okruženju i radio na enterprise sustavima. Sada to isto iskustvo dostupno i vašem projektu.",
+    "cta1": "Razgovarajmo o projektu",
+    "cta2": "Pogledaj usluge",
     "stats": {
       "projects": "Isporučenih projekata",
       "clients": "Zadovoljnih klijenata",
@@ -25,16 +25,19 @@
   },
   "about": {
     "badge": "O meni",
-    "titleLine1": "Tko stoji iza",
-    "titleLine2": " DevLogica",
-    "description1": "Bok, ja sam Igor - programer s fokusom na izradu pouzdanih, dobro testiranih aplikacija. Pokrenuo sam DevLogic kako bih ponudio direktne, konkretne razvojne usluge tvrtkama kojima treba kvalitetan softver bez agencijskih troškova.",
-    "description2": "Kada radite sa mnom, dobivate direktnu komunikaciju, transparentne cijene i partnera kojem je iskreno stalo do isporuke softvera koji radi. Bez slojeva menadžmenta, bez iznenađenja - samo fokusiran, kvalitetan razvoj.",
-    "qualityFocus": "Fokus na kvalitetu",
-    "qualityFocusDesc": "Čist kod, temeljito testiranje",
-    "directComm": "Direktna komunikacija",
-    "directCommDesc": "Radite direktno sa mnom",
-    "transparentPricing": "Transparentne cijene",
-    "transparentPricingDesc": "Bez skrivenih troškova",
+    "titleLine1": "Više od dva desetljeća",
+    "titleLine2": " u softveru",
+    "description1": "Ja sam Igor — softverski inženjer s više od 20 godina iskustva u IT industriji. Trenutno vodim QA odjel u jednoj od vodećih globalnih tvrtki za cybersecurity, gdje upravljam timom od 10+ QA inženjera na proizvodima koji štite organizacije od digitalnih prijetnji.",
+    "description2": "Kroz karijeru sam prošao put od software engineera do direktora QA odjela. Vodio sam timove do 15 IT inženjera, koordinirao međunarodne projekte mobilnog bankarstva, radio na implementaciji core banking sustava, i gradio QA procese od nule u korporativnom okruženju.",
+    "description3": "DevLogic sam pokrenuo jer vjerujem da manje tvrtke i startupi zaslužuju istu razinu tehničke kvalitete i QA zrelosti koju sam gradio u enterprise okruženjima — ali bez korporativnih cijena i birokracije. Radim s modernim tehnologijama, koristim AI alate za ubrzanje razvoja, a svaki projekt vodim s istom ozbiljnošću kao enterprise sustave na kojima sam radio cijelu karijeru.",
+    "card1Title": "20+ godina",
+    "card1Desc": "Iskustvo u softverskom inženjerstvu, QA-u i projekt managementu",
+    "card2Title": "Do 15 ljudi",
+    "card2Desc": "Najveći tim kojim sam upravljao u enterprise okruženju",
+    "card3Title": "Banking i Cyber",
+    "card3Desc": "Domene u kojima sam gradio i testirao enterprise sustave",
+    "card4Title": "Direktna komunikacija",
+    "card4Desc": "Radite direktno sa mnom — bez middlemana",
     "award": "Nagrađivano",
     "awardDesc": "Tech rješenja 2025"
   },
@@ -42,46 +45,51 @@
     "badge": "Usluge",
     "titleLine1": "Što ",
     "titleLine2": "nudim",
-    "description": "Fokusirane usluge dizajnirane za isporuku kvalitetnih rezultata za vaše poslovanje.",
+    "description": "Fokusirane usluge temeljene na stvarnom enterprise iskustvu.",
     "items": [
       {
-        "title": "Web razvoj",
-        "description": "Prilagođene web aplikacije izgrađene modernim tehnologijama. Od MVP-a do punih platformi, gradim softver koji raste s vašim poslovanjem.",
-        "features": ["React & Next.js", "Node.js & API-ji", "Dizajn baze podataka", "Cloud deployment"]
+        "title": "Web Razvoj",
+        "description": "Izrada web aplikacija od nule ili nadogradnja postojećih sustava. Moderan stack, čist kod, responsivan dizajn.",
+        "features": ["Full-stack web aplikacije (React, Next.js, Node.js)", "Landing stranice i poslovni webovi", "API integracije i backend razvoj", "Optimizacija performansi"]
       },
       {
         "title": "Testiranje i QA",
-        "description": "Sveobuhvatne usluge testiranja koje osiguravaju da je vaš softver pouzdan i bez grešaka. Pomažem timovima izgraditi povjerenje u svoje isporuke.",
-        "features": ["Automatizirano testiranje", "Strategija testiranja", "CI/CD integracija", "Pregledi koda"]
+        "description": "Automatizirano testiranje i osiguranje kvalitete — moja primarna ekspertiza s iskustvom vođenja QA timova u enterprise okruženju.",
+        "features": ["Automatizacija testova (Cypress, Playwright, Selenium)", "Test strategija i planiranje", "CI/CD integracija testova", "Performance i load testiranje"]
       },
       {
-        "title": "DevOps i infrastruktura",
-        "description": "Unaprijedite svoj razvojni proces s modernim DevOps praksama. Od CI/CD cjevovoda do cloud infrastrukture.",
-        "features": ["CI/CD cjevovodi", "Cloud setup (AWS/GCP)", "Docker & Kubernetes", "Monitoring i logiranje"]
+        "title": "DevOps i Infrastruktura",
+        "description": "Postavljanje CI/CD pipelinea, kontejnerizacija i cloud infrastruktura. Automatiziram deployment da se vaš tim može fokusirati na razvoj.",
+        "features": ["CI/CD pipelinei (GitHub Actions, GitLab CI)", "Docker i kontejnerizacija", "Cloud setup (AWS, Hetzner, DigitalOcean)", "Monitoring i alerting"]
+      },
+      {
+        "title": "QA Konzalting",
+        "description": "Trebate uspostaviti QA proces, poboljšati postojeći, ili ocijeniti zrelost vašeg testiranja? Donosim iskustvo stečeno vođenjem QA odjela u bankarskom sektoru i cybersecurityju.",
+        "features": ["Procjena QA zrelosti i gap analiza", "Dizajn test strategije i frameworka", "Mentoriranje QA timova", "Uvođenje QA best practices i procesa"]
       }
     ]
   },
   "products": {
-    "badge": "Kako radim",
-    "titleLine1": "Od prvog poziva do ",
-    "titleLine2": "isporuke",
-    "description": "Jednostavan proces dizajniran za jasnoću i rezultate.",
+    "badge": "Proces",
+    "titleLine1": "Kako izgleda ",
+    "titleLine2": "suradnja",
+    "description": "Jasan i jednostavan proces od prvog poziva do isporuke.",
     "items": [
       {
-        "title": "Uvodni poziv",
-        "description": "Počinjemo s besplatnim pozivom kako bismo razumjeli vaš projekt, ciljeve i vremenski okvir. Bez obveza, samo razgovor."
+        "title": "Upoznavanje",
+        "description": "Besplatni uvodni poziv od 30 minuta. Razumijemo vaš problem, definiramo opseg projekta i rokove. Bez obveze."
       },
       {
         "title": "Ponuda",
-        "description": "Dobivate jasnu ponudu s opsegom, vremenskim okvirom i fiksnom cijenom. Bez iznenađenja ili skrivenih troškova."
+        "description": "U roku 2-3 radna dana šaljem detaljnu ponudu — fiksna cijena za jasno definirane projekte, ili satnica za ongoing rad. Transparentno, bez skrivenih troškova."
       },
       {
         "title": "Razvoj",
-        "description": "Gradim vaše rješenje s redovitim ažuriranjima i demo prikazima. Uvijek ste u toku s napretkom."
+        "description": "Iterativan razvoj s redovitim updateima. Imate pristup Git repozitoriju i staging okruženju. Komuniciramo direktno — email, Slack, ili što vam odgovara."
       },
       {
         "title": "Isporuka i podrška",
-        "description": "Vaš projekt je isporučen s dokumentacijom i predajom. Dostupan sam za kontinuiranu podršku ako je potrebna."
+        "description": "Deployment na produkciju, tehnička dokumentacija, i 30 dana besplatne podrške nakon završetka projekta. Za konzalting angažmane — završni izvještaj s preporukama."
       }
     ]
   },
@@ -176,20 +184,20 @@
     "badge": "Kontakt",
     "titleLine1": "Razgovarajmo",
     "titleLine2": "",
-    "description": "Imate projekt na umu? Pošaljite mi poruku i javit ću vam se unutar 24 sata.",
+    "description": "Imate ideju, projekt ili trebate QA konzultaciju? Javite se — odgovaram unutar 24 sata.",
     "email": "Email",
     "phone": "Nazovite nas",
     "visit": "Posjetite nas",
     "address": "Zagreb, Hrvatska",
-    "calendly": "Preferirate zakazati direktno?",
-    "calendlyLink": "Rezervirajte termin u mom kalendaru",
+    "calendly": "Zakažite besplatni poziv",
+    "calendlyLink": "Rezervirajte termin",
     "form": {
-      "name": "Vaše ime",
-      "namePlaceholder": "Ivan Horvat",
-      "email": "Email adresa",
-      "emailPlaceholder": "ivan@tvrtka.hr",
-      "message": "Vaša poruka",
-      "messagePlaceholder": "Recite mi o svom projektu...",
+      "name": "Ime",
+      "namePlaceholder": "Vaše ime",
+      "email": "Email",
+      "emailPlaceholder": "vas@email.com",
+      "message": "Poruka",
+      "messagePlaceholder": "Opišite ukratko što trebate...",
       "submit": "Pošalji poruku",
       "sending": "Slanje...",
       "success": "Poruka poslana!",
@@ -205,21 +213,22 @@
     }
   },
   "footer": {
-    "description": "Usluge razvoja softvera s fokusom na kvalitetu i pouzdanost. Od web aplikacija do DevOpsa, pomažem tvrtkama graditi bolji softver.",
+    "description": "Razvoj softvera, QA konzalting i DevOps.",
+    "businessInfo": "Paušalni obrt | Zagreb, Hrvatska",
     "servicesTitle": "Usluge",
-    "servicesLinks": ["Web razvoj", "Testiranje i QA", "DevOps"],
+    "servicesLinks": ["Web Razvoj", "Testiranje i QA", "DevOps", "QA Konzalting"],
+    "linksTitle": "Linkovi",
     "legal": "Pravno",
     "legalLinks": ["Politika privatnosti", "Uvjeti korištenja", "Politika kolačića"],
     "socialTitle": "Povežite se",
-    "businessInfo": "Obrt, Hrvatska",
     "copyright": "Sva prava pridržana.",
     "madeWith": "Izgrađeno s",
     "byTeam": "u Hrvatskoj"
   },
   "metadata": {
-    "title": "DevLogic - Usluge razvoja softvera",
-    "description": "Pomažem tvrtkama graditi pouzdane web aplikacije, implementirati strategije testiranja i postaviti DevOps infrastrukturu. Direktna komunikacija, kvalitetni rezultati.",
-    "keywords": "razvoj softvera, web razvoj, testiranje, QA, devops, freelance developer, hrvatska"
+    "title": "DevLogic — Razvoj softvera, QA konzalting i DevOps | Hrvatska",
+    "description": "Razvoj web aplikacija, QA konzalting i DevOps usluge. 20+ godina iskustva u IT-u. Zagreb, Hrvatska.",
+    "keywords": "razvoj softvera, web razvoj, QA konzalting, testiranje, devops, freelance developer, hrvatska"
   },
   "privacyPolicy": {
     "title": "Politika privatnosti",

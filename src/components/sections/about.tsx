@@ -1,17 +1,18 @@
 'use client';
 
 import { useTranslations } from '@/lib/i18n';
-import { Shield, MessageCircle, CreditCard } from 'lucide-react';
+import { Calendar, Users, Building2, MessageCircle } from 'lucide-react';
 import { Badge, Card } from '@/components/ui';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/shared';
 
 export function AboutSection() {
   const t = useTranslations('about');
 
-  const values = [
-    { icon: Shield, title: t('qualityFocus'), description: t('qualityFocusDesc') },
-    { icon: MessageCircle, title: t('directComm'), description: t('directCommDesc') },
-    { icon: CreditCard, title: t('transparentPricing'), description: t('transparentPricingDesc') },
+  const cards = [
+    { icon: Calendar, title: t('card1Title'), description: t('card1Desc') },
+    { icon: Users, title: t('card2Title'), description: t('card2Desc') },
+    { icon: Building2, title: t('card3Title'), description: t('card3Desc') },
+    { icon: MessageCircle, title: t('card4Title'), description: t('card4Desc') },
   ];
 
   return (
@@ -29,19 +30,20 @@ export function AboutSection() {
           </h2>
         </AnimatedSection>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <AnimatedSection direction="left">
-            <p className="text-gray-400 text-lg mb-6">{t('description1')}</p>
+        <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
+          <AnimatedSection direction="left" className="space-y-6">
+            <p className="text-gray-400 text-lg">{t('description1')}</p>
             <p className="text-gray-400 text-lg">{t('description2')}</p>
+            <p className="text-gray-400 text-lg">{t('description3')}</p>
           </AnimatedSection>
 
-          <StaggerContainer className="grid md:grid-cols-3 gap-4">
-            {values.map((value, index) => (
+          <StaggerContainer className="grid grid-cols-2 gap-4">
+            {cards.map((card, index) => (
               <StaggerItem key={index}>
                 <Card hover className="h-full">
-                  <value.icon className="text-primary-400 mb-3" size={28} />
-                  <h3 className="text-white font-semibold mb-1">{value.title}</h3>
-                  <p className="text-gray-400 text-sm">{value.description}</p>
+                  <card.icon className="text-primary-400 mb-3" size={28} />
+                  <h3 className="text-white font-semibold mb-1">{card.title}</h3>
+                  <p className="text-gray-400 text-sm">{card.description}</p>
                 </Card>
               </StaggerItem>
             ))}

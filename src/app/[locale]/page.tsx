@@ -11,11 +11,11 @@ export const runtime = 'edge';
 export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
-  title: 'DevLogic | Software Development Services',
-  description: 'I help businesses build reliable web applications, implement testing strategies, and set up DevOps infrastructure. Direct communication, quality results.',
+  title: 'DevLogic — Software Development, QA Consulting & DevOps | Croatia',
+  description: 'Web development, QA consulting, and DevOps services. 20+ years of IT experience. Zagreb, Croatia.',
   openGraph: {
-    title: 'DevLogic | Software Development Services',
-    description: 'Software development services focused on quality and reliability.',
+    title: 'DevLogic — Software Development & QA Consulting',
+    description: '20+ years of IT experience. Web development, QA consulting, and DevOps.',
     url: 'https://www.devlogic.hr',
     siteName: 'DevLogic',
     type: 'website',
@@ -39,15 +39,24 @@ export default function HomePage() {
             '@context': 'https://schema.org',
             '@type': 'ProfessionalService',
             name: 'DevLogic',
-            description: 'Software development services focused on web applications, testing, and DevOps.',
+            description: 'Software development, QA consulting, and DevOps services',
             url: 'https://www.devlogic.hr',
-            email: 'info@devlogic.hr',
             address: {
               '@type': 'PostalAddress',
+              addressLocality: 'Zagreb',
               addressCountry: 'HR',
             },
-            areaServed: 'Worldwide',
-            serviceType: ['Web Development', 'Software Testing', 'DevOps'],
+            founder: {
+              '@type': 'Person',
+              name: 'Igor',
+              jobTitle: 'Software Engineer & QA Consultant',
+            },
+            serviceType: [
+              'Web Development',
+              'QA Consulting',
+              'Software Testing',
+              'DevOps',
+            ],
           }),
         }}
       />
