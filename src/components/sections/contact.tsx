@@ -64,8 +64,8 @@ export function ContactSection() {
 
   const contactInfo = [
     { icon: Mail, label: t('email'), value: 'info@devlogic.hr' },
-    { icon: Phone, label: t('phone'), value: '+385 1 234 5678' },
-    { icon: MapPin, label: t('visit'), value: t('address') },
+    // { icon: Phone, label: t('phone'), value: '+385 1 234 5678' },
+    // { icon: MapPin, label: t('visit'), value: t('address') },
   ];
 
   return (
