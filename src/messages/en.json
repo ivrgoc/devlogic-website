@@ -257,5 +257,29 @@
     "title": "Privacy Policy",
     "lastUpdated": "Last updated",
     "content": "This privacy policy describes how DevLogic collects, uses, and protects your personal information."
+  },
+  "blog": {
+    "badge": "Blog",
+    "titleLine1": "Latest ",
+    "titleLine2": "Insights",
+    "description": "Explore our latest articles on software development, design, and technology trends.",
+    "featured": "Featured",
+    "allCategories": "All",
+    "readMore": "Read More",
+    "loadMore": "Load More",
+    "noPostsFound": "No posts found in this category.",
+    "minRead": "min read",
+    "backToBlog": "Back to Blog",
+    "relatedPosts": "Related Posts",
+    "shareArticle": "Share this article",
+    "publishedOn": "Published on",
+    "categories": {
+      "development": "Development",
+      "design": "Design",
+      "devops": "DevOps",
+      "ai": "AI & ML",
+      "business": "Business",
+      "tutorials": "Tutorials"
+    }
   }
 }

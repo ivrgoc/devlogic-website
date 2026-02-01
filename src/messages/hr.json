@@ -3,21 +3,21 @@
     "about": "O nama",
     "services": "Usluge",
     "products": "Proizvodi",
-    "whyUs": "Zasto mi",
+    "whyUs": "Zašto mi",
     "portfolio": "Portfolio",
     "contact": "Kontakt",
-    "getStarted": "Zapocnite",
+    "getStarted": "Započnite",
     "blog": "Blog"
   },
   "hero": {
-    "badge": "Prihvacamo nove projekte za 2026",
-    "titleLine1": "Logika susrece",
+    "badge": "Prihvaćamo nove projekte za 2026",
+    "titleLine1": "Logika susreće",
     "titleLine2": "Inovaciju",
-    "description": "Razvijamo iznimna softverska rjesenja koja transformiraju poslovanje. Stratesko razmisljanje, tehnicka izvrsnost i nepokolebljiva predanost vasem uspjehu.",
-    "cta1": "Zapocnite projekt",
-    "cta2": "Istrazite usluge",
+    "description": "Razvijamo iznimna softverska rješenja koja transformiraju poslovanje. Strateško razmišljanje, tehnička izvrsnost i nepokolebljiva predanost vašem uspjehu.",
+    "cta1": "Započnite projekt",
+    "cta2": "Istražite usluge",
     "stats": {
-      "projects": "Isporucenih projekata",
+      "projects": "Isporučenih projekata",
       "clients": "Zadovoljnih klijenata",
       "experience": "Godina iskustva",
       "satisfaction": "Zadovoljstvo klijenata"
@@ -25,129 +25,129 @@
   },
   "about": {
     "badge": "O DevLogicu",
-    "titleLine1": "Inzenjerska izvrsnost,",
-    "titleLine2": " Isporucena",
-    "description1": "DevLogic je premium tehnolska tvrtka specijalizirana za inovativna softverska rjesenja, dizajn proizvoda i tehnicko savjetovanje. Kombiniramo stratesko razmisljanje s tehnickom izvrsnošcu za postizanje iznimnih rezultata koji pokrecu rast poslovanja.",
-    "description2": "Osnovani s vizijom premoscivanja jaza izmedu kompleksne tehnologije i poslovnih potreba, pomogli smo tvrtkama u razlicitim industrijama transformirati njihovu digitalnu prisutnost i operacije.",
+    "titleLine1": "Inženjerska izvrsnost,",
+    "titleLine2": " Isporučena",
+    "description1": "DevLogic je premium tehnološka tvrtka specijalizirana za inovativna softverska rješenja, dizajn proizvoda i tehničko savjetovanje. Kombiniramo strateško razmišljanje s tehničkom izvrsnošću za postizanje iznimnih rezultata koji pokreću rast poslovanja.",
+    "description2": "Osnovani s vizijom premošćivanja jaza između kompleksne tehnologije i poslovnih potreba, pomogli smo tvrtkama u različitim industrijama transformirati njihovu digitalnu prisutnost i operacije.",
     "mission": "Misija",
-    "missionDesc": "Isporuciti transformativna rjesenja",
+    "missionDesc": "Isporučiti transformativna rješenja",
     "vision": "Vizija",
     "visionDesc": "Voditi kroz inovacije",
     "values": "Vrijednosti",
     "valuesDesc": "Integritet, izvrsnost, povjerenje",
     "approach": "Pristup",
-    "approachDesc": "Agilan i suradnicki",
-    "award": "Nagraduvano",
-    "awardDesc": "Tech rjesenja 2025"
+    "approachDesc": "Agilan i suradnički",
+    "award": "Nagrađivano",
+    "awardDesc": "Tech rješenja 2025"
   },
   "services": {
-    "badge": "Nase usluge",
-    "titleLine1": "Sto radimo ",
+    "badge": "Naše usluge",
+    "titleLine1": "Što radimo ",
     "titleLine2": "Najbolje",
-    "description": "Sveobuhvatne tehnolske usluge dizajnirane za unaprjedenje vaseg poslovanja i postizanje znacajnih rezultata.",
+    "description": "Sveobuhvatne tehnološke usluge dizajnirane za unapređenje vašeg poslovanja i postizanje značajnih rezultata.",
     "items": [
       {
         "title": "Dizajn proizvoda",
-        "description": "Dizajn usmjeren na korisnika i UX/UI izvrsnost. Stvaramo prekrasna, intuitivna sucelja koja korisnici vole i koja pokrecu angazman.",
-        "features": ["Istrazivanje korisnika", "UI/UX dizajn", "Prototipiranje", "Dizajn sustavi"]
+        "description": "Dizajn usmjeren na korisnika i UX/UI izvrsnost. Stvaramo prekrasna, intuitivna sučelja koja korisnici vole i koja pokreću angažman.",
+        "features": ["Istraživanje korisnika", "UI/UX dizajn", "Prototipiranje", "Dizajn sustavi"]
       },
       {
         "title": "Razvoj softvera",
-        "description": "Prilagodene aplikacije i skalabilna rjesenja izgraduena modernim tehnologijama. Od MVP-a do enterprise sustava.",
-        "features": ["Web aplikacije", "Mobilne aplikacije", "API-ji i Backend", "Cloud rjesenja"]
+        "description": "Prilagođene aplikacije i skalabilna rješenja izgrađena modernim tehnologijama. Od MVP-a do enterprise sustava.",
+        "features": ["Web aplikacije", "Mobilne aplikacije", "API-ji i Backend", "Cloud rješenja"]
       },
       {
         "title": "Testiranje softvera",
-        "description": "Sveobuhvatne QA usluge osiguravanja kvalitete koje garantiraju da je vas softver pouzdan, siguran i ucinkovit.",
+        "description": "Sveobuhvatne QA usluge osiguravanja kvalitete koje garantiraju da je vaš softver pouzdan, siguran i učinkovit.",
         "features": ["Automatizirano testiranje", "Testiranje performansi", "Sigurnosne revizije", "Pregledi koda"]
       },
       {
         "title": "DevOps",
-        "description": "Automatizacija infrastrukture i kontinuirana isporuka. Pojednostavljujemo vas razvojni proces za brze i sigurnije implementacije.",
+        "description": "Automatizacija infrastrukture i kontinuirana isporuka. Pojednostavljujemo vaš razvojni proces za brže i sigurnije implementacije.",
         "features": ["CI/CD cjevovodi", "Cloud infrastruktura", "Nadzor", "Orkestracija kontejnera"]
       },
       {
         "title": "Savjetovanje",
-        "description": "Stratesko tehnolosko savjetovanje. Pomažemo vam donositi informirane odluke uskladene s vasim poslovnim ciljevima.",
-        "features": ["Tech strategija", "Pregled arhitekture", "Pojacanje tima", "Digitalna transformacija"]
+        "description": "Strateško tehnološko savjetovanje. Pomažemo vam donositi informirane odluke usklađene s vašim poslovnim ciljevima.",
+        "features": ["Tech strategija", "Pregled arhitekture", "Pojačanje tima", "Digitalna transformacija"]
       }
     ]
   },
   "products": {
-    "badge": "Nasi proizvodi",
+    "badge": "Naši proizvodi",
     "titleLine1": "Proizvodi koji ",
-    "titleLine2": "Isporucuju",
-    "description": "Inovativni softverski proizvodi dizajnirani za rjesavanje stvarnih problema i osnazivanje timova za najbolji rad.",
+    "titleLine2": "Isporučuju",
+    "description": "Inovativni softverski proizvodi dizajnirani za rješavanje stvarnih problema i osnaživanje timova za najbolji rad.",
     "comingSoon": "Uskoro",
     "coming2H2026": "Dolazi 2H 2026",
-    "getStarted": "Zapocnite",
-    "learnMore": "Saznajte vise",
+    "getStarted": "Započnite",
+    "learnMore": "Saznajte više",
     "notifyMe": "Obavijesti me",
     "items": [
       {
         "name": "ResumeAI Pro",
-        "tagline": "AI alat za izradu zivotopisa",
-        "description": "Izradite profesionalne zivotopise u minutama s inteligentnim prijedlozima, predloscima specificnim za industriju i ATS optimizacijom.",
-        "features": ["AI prijedlozi", "Profesionalni predlosci", "ATS optimizacija", "Izvoz u PDF/DOCX"]
+        "tagline": "AI alat za izradu životopisa",
+        "description": "Izradite profesionalne životopise u minutama s inteligentnim prijedlozima, predlošcima specifičnim za industriju i ATS optimizacijom.",
+        "features": ["AI prijedlozi", "Profesionalni predlošci", "ATS optimizacija", "Izvoz u PDF/DOCX"]
       },
       {
         "name": "UptimeWatch",
         "tagline": "Nadzor web stranica i API-ja",
-        "description": "Saznajte u trenutku kada vasa stranica padne. Sveobuhvatni nadzor dostupnosti s visekanalnim obavijestima, pracenjem SSL certifikata i detaljnim izvjescima o incidentima.",
-        "features": ["Visekanalne obavijesti", "Pracenje SSL certifikata", "Javne status stranice", "Upravljanje incidentima"]
+        "description": "Saznajte u trenutku kada vaša stranica padne. Sveobuhvatni nadzor dostupnosti s višekanalnim obavijestima, praćenjem SSL certifikata i detaljnim izvješćima o incidentima.",
+        "features": ["Višekanalne obavijesti", "Praćenje SSL certifikata", "Javne status stranice", "Upravljanje incidentima"]
       },
       {
         "name": "TestFlaw",
         "tagline": "AI alat za upravljanje testiranjem",
-        "description": "Test management platforma nove generacije s AI generiranjem test slucajeva, sveobuhvatnim izvjestajima i no-code automatizacijom testiranja.",
-        "features": ["AI generiranje testova", "Sveobuhvatno izvjestavanje", "No-code automatizacija", "Pametna analitika testova"]
+        "description": "Test management platforma nove generacije s AI generiranjem test slučajeva, sveobuhvatnim izvještajima i no-code automatizacijom testiranja.",
+        "features": ["AI generiranje testova", "Sveobuhvatno izvještavanje", "No-code automatizacija", "Pametna analitika testova"]
       }
     ]
   },
   "whyUs": {
-    "badge": "Zasto mi",
-    "titleLine1": "Zasto vodece tvrtke",
+    "badge": "Zašto mi",
+    "titleLine1": "Zašto vodeće tvrtke",
     "titleLine2": " vjeruju DevLogicu",
-    "description": "Nismo samo jos jedna razvojna agencija. Mi smo vas strateski tehnoloski partner predan vasem dugorocnom uspjehu.",
-    "cta1": "Zakazi poziv",
-    "cta2": "Pogledaj nas rad",
+    "description": "Nismo samo još jedna razvojna agencija. Mi smo vaš strateški tehnološki partner predan vašem dugoročnom uspjehu.",
+    "cta1": "Zakaži poziv",
+    "cta2": "Pogledaj naš rad",
     "reasons": [
       {
         "title": "Dokazani rezultati",
-        "description": "150+ uspjesno isporucenih projekata s 99% zadovoljstva klijenata."
+        "description": "150+ uspješno isporučenih projekata s 99% zadovoljstva klijenata."
       },
       {
-        "title": "Strucni tim",
-        "description": "Stariji inzenjeri i dizajneri s dubokom ekspertizom kroz tehnologije."
+        "title": "Stručni tim",
+        "description": "Stariji inženjeri i dizajneri s dubokom ekspertizom kroz tehnologije."
       },
       {
         "title": "Isporuka na vrijeme",
-        "description": "Postujemo rokove i isporucujemo kvalitetan rad unutar dogovorenih vremenskih okvira."
+        "description": "Poštujemo rokove i isporučujemo kvalitetan rad unutar dogovorenih vremenskih okvira."
       },
       {
         "title": "Jasna komunikacija",
-        "description": "Redovita azuriranja, transparentni procesi i uvijek dostupan tim."
+        "description": "Redovita ažuriranja, transparentni procesi i uvijek dostupan tim."
       },
       {
         "title": "Sigurnost na prvom mjestu",
-        "description": "Sigurnosne prakse enterprise razine ugraduene u svako rjesenje."
+        "description": "Sigurnosne prakse enterprise razine ugrađene u svako rješenje."
       },
       {
-        "title": "Skalabilna rjesenja",
+        "title": "Skalabilna rješenja",
         "description": "Arhitektura dizajnirana za rast, od startupa do enterprise razine."
       }
     ]
   },
   "portfolio": {
     "badge": "Portfolio",
-    "titleLine1": "Nas nedavni ",
+    "titleLine1": "Naš nedavni ",
     "titleLine2": "Rad",
-    "description": "Izbor projekata koji prikazuju nasu ekspertizu i predanost izvrsnosti.",
-    "viewCase": "Pogledaj studiju slucaja",
-    "cta": "Zelite vidjeti vise? Razgovarajmo o vasem projektu",
+    "description": "Izbor projekata koji prikazuju našu ekspertizu i predanost izvrsnosti.",
+    "viewCase": "Pogledaj studiju slučaja",
+    "cta": "Želite vidjeti više? Razgovarajmo o vašem projektu",
     "projects": [
       {
-        "title": "FinTech nadzorna ploca",
+        "title": "FinTech nadzorna ploča",
         "category": "Web aplikacija",
         "description": "Platforma za financijsku analitiku u realnom vremenu"
       },
@@ -159,7 +159,7 @@
       {
         "title": "E-trgovina platforma",
         "category": "Full Stack",
-        "description": "Skalabilno rjesenje za trziste"
+        "description": "Skalabilno rješenje za tržište"
       },
       {
         "title": "SaaS analitika",
@@ -169,23 +169,23 @@
     ]
   },
   "testimonials": {
-    "badge": "Svjedocanstva",
-    "titleLine1": "Sto nasi klijenti ",
-    "titleLine2": "Kazu",
-    "description": "Ne vjerujte samo nama na rijec. Evo sto nasi partneri kazu.",
+    "badge": "Svjedočanstva",
+    "titleLine1": "Što naši klijenti ",
+    "titleLine2": "Kažu",
+    "description": "Ne vjerujte samo nama na riječ. Evo što naši partneri kažu.",
     "items": [
       {
-        "quote": "DevLogic je pretvorio nasu viziju u stvarnost. Njihova tehnicka ekspertiza i pozornost na detalje premasili su nasa ocekivanja.",
+        "quote": "DevLogic je pretvorio našu viziju u stvarnost. Njihova tehnička ekspertiza i pozornost na detalje premašili su naša očekivanja.",
         "author": "Sara Chen",
         "role": "CEO, TechStart Inc."
       },
       {
-        "quote": "Rad s DevLogicom bio je prekretnica za nase poslovanje. Isporucili su rjesenje koje se prekrasno skaliralo s nasim rastom.",
+        "quote": "Rad s DevLogicom bio je prekretnica za naše poslovanje. Isporučili su rješenje koje se prekrasno skaliralo s našim rastom.",
         "author": "Michael Roberts",
         "role": "CTO, ScaleUp Labs"
       },
       {
-        "quote": "Predanost tima kvaliteti i komunikaciji ucinila je cijeli razvojni proces glatkim i predvidljivim.",
+        "quote": "Predanost tima kvaliteti i komunikaciji učinila je cijeli razvojni proces glatkim i predvidljivim.",
         "author": "Emily Watson",
         "role": "Direktorica proizvoda, InnovateCo"
       }
@@ -193,29 +193,29 @@
   },
   "contact": {
     "badge": "Kontaktirajte nas",
-    "titleLine1": "Izgradimo nesto",
+    "titleLine1": "Izgradimo nešto",
     "titleLine2": " Nevjerojatno",
-    "description": "Spremni pretvoriti svoje ideje u stvarnost? Javite nam se i razgovarajmo kako vam mozemo pomoci ostvariti vase ciljeve.",
-    "email": "Posaljite email",
+    "description": "Spremni pretvoriti svoje ideje u stvarnost? Javite nam se i razgovarajmo kako vam možemo pomoći ostvariti vaše ciljeve.",
+    "email": "Pošaljite email",
     "phone": "Nazovite nas",
     "visit": "Posjetite nas",
     "address": "Zagreb, Hrvatska",
     "form": {
-      "name": "Vase ime",
+      "name": "Vaše ime",
       "namePlaceholder": "Ivan Horvat",
       "email": "Email adresa",
       "emailPlaceholder": "ivan@tvrtka.hr",
       "company": "Tvrtka",
-      "companyPlaceholder": "Vasa tvrtka",
+      "companyPlaceholder": "Vaša tvrtka",
       "service": "Usluga koja vas zanima",
       "servicePlaceholder": "Odaberite uslugu",
-      "message": "Vasa poruka",
+      "message": "Vaša poruka",
       "messagePlaceholder": "Recite nam o svom projektu...",
-      "submit": "Posalji poruku",
+      "submit": "Pošalji poruku",
       "sending": "Slanje...",
       "success": "Poruka poslana!",
-      "successDesc": "Javit cemo vam se unutar 24 sata.",
-      "error": "Slanje nije uspjelo. Pokusajte ponovno."
+      "successDesc": "Javit ćemo vam se unutar 24 sata.",
+      "error": "Slanje nije uspjelo. Pokušajte ponovno."
     },
     "services": ["Dizajn proizvoda", "Razvoj softvera", "Testiranje softvera", "DevOps", "Savjetovanje", "Ostalo"],
     "errors": {
@@ -228,10 +228,10 @@
     }
   },
   "footer": {
-    "description": "Inzenjerska izvrsnost za moderno poslovanje. Gradimo softver koji je bitan.",
+    "description": "Inženjerska izvrsnost za moderno poslovanje. Gradimo softver koji je bitan.",
     "newsletter": {
       "title": "Budite u toku",
-      "description": "Pretplatite se na nas newsletter za najnovije uvide, azuriranja proizvoda i tech trendove.",
+      "description": "Pretplatite se na naš newsletter za najnovije uvide, ažuriranja proizvoda i tech trendove.",
       "placeholder": "Unesite email",
       "button": "Pretplatite se",
       "success": "Hvala na pretplati!"
@@ -243,19 +243,43 @@
     "productsTitle": "Proizvodi",
     "productsLinks": ["ResumeAI Pro", "UptimeWatch", "TestFlaw"],
     "legal": "Pravno",
-    "legalLinks": ["Politika privatnosti", "Uvjeti koristenja", "Politika kolacica"],
-    "copyright": "Sva prava pridrzana.",
-    "madeWith": "Izradeno s",
+    "legalLinks": ["Politika privatnosti", "Uvjeti korištenja", "Politika kolačića"],
+    "copyright": "Sva prava pridržana.",
+    "madeWith": "Izrađeno s",
     "byTeam": "od DevLogic tima"
   },
   "metadata": {
-    "title": "DevLogic - Logika susrece inovaciju",
-    "description": "DevLogic isporucuje inovativna softverska rjesenja, dizajn proizvoda i tehnicko savjetovanje. Inzenjerska izvrsnost za moderna poslovanja.",
+    "title": "DevLogic - Logika susreće inovaciju",
+    "description": "DevLogic isporučuje inovativna softverska rješenja, dizajn proizvoda i tehničko savjetovanje. Inženjerska izvrsnost za moderna poslovanja.",
     "keywords": "razvoj softvera, web razvoj, mobilne aplikacije, devops, savjetovanje, dizajn proizvoda"
   },
   "privacyPolicy": {
     "title": "Politika privatnosti",
-    "lastUpdated": "Posljednje azuriranje",
-    "content": "Ova politika privatnosti opisuje kako DevLogic prikuplja, koristi i stiti vase osobne podatke."
+    "lastUpdated": "Posljednje ažuriranje",
+    "content": "Ova politika privatnosti opisuje kako DevLogic prikuplja, koristi i štiti vaše osobne podatke."
+  },
+  "blog": {
+    "badge": "Blog",
+    "titleLine1": "Najnoviji ",
+    "titleLine2": "Uvidi",
+    "description": "Istražite naše najnovije članke o razvoju softvera, dizajnu i tehnološkim trendovima.",
+    "featured": "Istaknuto",
+    "allCategories": "Sve",
+    "readMore": "Pročitaj više",
+    "loadMore": "Učitaj više",
+    "noPostsFound": "Nema objava u ovoj kategoriji.",
+    "minRead": "min čitanja",
+    "backToBlog": "Natrag na Blog",
+    "relatedPosts": "Povezane objave",
+    "shareArticle": "Podijeli članak",
+    "publishedOn": "Objavljeno",
+    "categories": {
+      "development": "Razvoj",
+      "design": "Dizajn",
+      "devops": "DevOps",
+      "ai": "AI & ML",
+      "business": "Poslovanje",
+      "tutorials": "Vodiči"
+    }
   }
 }
