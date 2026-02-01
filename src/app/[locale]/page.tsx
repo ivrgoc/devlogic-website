@@ -5,8 +5,6 @@ import {
   ServicesSection,
   ProductsSection,
   WhyUsSection,
-  PortfolioSection,
-  TestimonialsSection,
   ContactSection,
 } from '@/components/sections';
 
@@ -40,8 +38,6 @@ export default function HomePage() {
       <ServicesSection />
       <ProductsSection />
       <WhyUsSection />
-      <PortfolioSection />
-      <TestimonialsSection />
       <ContactSection />
     </>
   );
