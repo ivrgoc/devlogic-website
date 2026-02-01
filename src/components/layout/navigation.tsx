@@ -26,8 +26,8 @@ export function Navigation() {
     { name: t('about'), href: '#about' },
     { name: t('services'), href: '#services' },
     { name: t('products'), href: '#products' },
-    { name: t('whyUs'), href: '#why-us' },
-    { name: t('portfolio'), href: '#portfolio' },
+    // { name: t('whyUs'), href: '#why-us' },
+    // { name: t('portfolio'), href: '#portfolio' },
     { name: t('contact'), href: '#contact' },
   ];
 

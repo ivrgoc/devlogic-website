@@ -4,7 +4,7 @@ import {
   AboutSection,
   ServicesSection,
   ProductsSection,
-  WhyUsSection,
+  // WhyUsSection,
   ContactSection,
 } from '@/components/sections';
 
@@ -37,7 +37,7 @@ export default function HomePage() {
       <AboutSection />
       <ServicesSection />
       <ProductsSection />
-      <WhyUsSection />
+      {/* <WhyUsSection /> */}
       <ContactSection />
     </>
   );
