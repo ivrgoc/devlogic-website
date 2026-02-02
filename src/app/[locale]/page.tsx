@@ -9,7 +9,6 @@ import {
 } from '@/components/sections';
 
 export const runtime = 'edge';
-export const dynamic = 'force-static';
 
 export const metadata: Metadata = {
   title: 'DevLogic — Software Development, QA Consulting & DevOps | Croatia',
