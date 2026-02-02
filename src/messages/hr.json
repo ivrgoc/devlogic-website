@@ -49,8 +49,8 @@
     "items": [
       {
         "title": "Web Razvoj",
-        "description": "Izrada web aplikacija od nule ili nadogradnja postojećih sustava. Moderan stack, čist kod, responsivan dizajn.",
-        "features": ["Full-stack web aplikacije (React, Next.js, Node.js)", "Landing stranice i poslovni webovi", "API integracije i backend razvoj", "Optimizacija performansi"]
+        "description": "Izrada web aplikacija od nule ili nadogradnja postojećih sustava. Moderan stack, čist kod, responsivan dizajn. Uključuje postavljanje infrastrukture i deployementa.",
+        "features": ["Full-stack web aplikacije (React, Next.js, Node.js)", "Landing stranice i poslovni webovi", "API integracije i backend razvoj", "CI/CD, Docker i cloud deployment"]
       },
       {
         "title": "Testiranje i QA",
@@ -58,14 +58,14 @@
         "features": ["Automatizacija testova (Cypress, Playwright, Selenium)", "Test strategija i planiranje", "CI/CD integracija testova", "Performance i load testiranje"]
       },
       {
-        "title": "DevOps i Infrastruktura",
-        "description": "Postavljanje CI/CD pipelinea, kontejnerizacija i cloud infrastruktura. Automatiziram deployment da se vaš tim može fokusirati na razvoj.",
-        "features": ["CI/CD pipelinei (GitHub Actions, GitLab CI)", "Docker i kontejnerizacija", "Cloud setup (AWS, Hetzner, DigitalOcean)", "Monitoring i alerting"]
-      },
-      {
         "title": "QA Konzalting",
         "description": "Trebate uspostaviti QA proces, poboljšati postojeći, ili ocijeniti zrelost vašeg testiranja? Donosim iskustvo stečeno vođenjem QA odjela u bankarskom sektoru i cybersecurityju.",
         "features": ["Procjena QA zrelosti i gap analiza", "Dizajn test strategije i frameworka", "Mentoriranje QA timova", "Uvođenje QA best practices i procesa"]
+      },
+      {
+        "title": "IT Konzalting i Vođenje Projekata",
+        "description": "Digitalna transformacija, koordinacija međunarodnih IT projekata i strateško savjetovanje — s iskustvom vođenja složenih implementacija u bankarstvu i fintechu.",
+        "features": ["Digitalna transformacija i modernizacija sustava", "Vođenje i koordinacija IT projekata", "Upravljanje međunarodnim timovima i vendorima", "Agile/Scrum implementacija i optimizacija procesa"]
       }
     ]
   },
@@ -216,7 +216,7 @@
     "description": "Razvoj softvera, QA konzalting i DevOps.",
     "businessInfo": "Paušalni obrt | Zagreb, Hrvatska",
     "servicesTitle": "Usluge",
-    "servicesLinks": ["Web Razvoj", "Testiranje i QA", "DevOps", "QA Konzalting"],
+    "servicesLinks": ["Web Razvoj", "Testiranje i QA", "QA Konzalting", "IT Konzalting"],
     "linksTitle": "Linkovi",
     "legal": "Pravno",
     "legalLinks": ["Politika privatnosti", "Uvjeti korištenja", "Politika kolačića"],

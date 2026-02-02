@@ -49,8 +49,8 @@
     "items": [
       {
         "title": "Web Development",
-        "description": "Building web applications from scratch or upgrading existing systems. Modern stack, clean code, responsive design.",
-        "features": ["Full-stack web applications (React, Next.js, Node.js)", "Landing pages and business websites", "API integrations and backend development", "Performance optimization"]
+        "description": "Building web applications from scratch or upgrading existing systems. Modern stack, clean code, responsive design. Includes infrastructure setup and deployment.",
+        "features": ["Full-stack web applications (React, Next.js, Node.js)", "Landing pages and business websites", "API integrations and backend development", "CI/CD, Docker, and cloud deployment"]
       },
       {
         "title": "Testing & QA",
@@ -58,14 +58,14 @@
         "features": ["Test automation (Cypress, Playwright, Selenium)", "Test strategy and planning", "CI/CD test integration", "Performance and load testing"]
       },
       {
-        "title": "DevOps & Infrastructure",
-        "description": "Setting up CI/CD pipelines, containerization, and cloud infrastructure. I automate deployment so your team can focus on development.",
-        "features": ["CI/CD pipelines (GitHub Actions, GitLab CI)", "Docker and containerization", "Cloud setup (AWS, Hetzner, DigitalOcean)", "Monitoring and alerting"]
-      },
-      {
         "title": "QA Consulting",
         "description": "Need to establish a QA process, improve an existing one, or assess your testing maturity? I bring experience gained from leading QA departments in banking and cybersecurity.",
         "features": ["QA maturity assessment and gap analysis", "Test strategy and framework design", "QA team mentoring", "Introducing QA best practices and processes"]
+      },
+      {
+        "title": "IT Consulting & Project Management",
+        "description": "Digital transformation, international IT project coordination, and strategic advisory — with experience leading complex implementations in banking and fintech.",
+        "features": ["Digital transformation and system modernization", "IT project management and coordination", "International team and vendor management", "Agile/Scrum implementation and process optimization"]
       }
     ]
   },
@@ -216,7 +216,7 @@
     "description": "Software development, QA consulting, and DevOps.",
     "businessInfo": "Sole proprietorship | Zagreb, Croatia",
     "servicesTitle": "Services",
-    "servicesLinks": ["Web Development", "Testing & QA", "DevOps", "QA Consulting"],
+    "servicesLinks": ["Web Development", "Testing & QA", "QA Consulting", "IT Consulting"],
     "linksTitle": "Links",
     "legal": "Legal",
     "legalLinks": ["Privacy Policy", "Terms of Service", "Cookie Policy"],

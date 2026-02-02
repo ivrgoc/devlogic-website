@@ -1,11 +1,11 @@
 'use client';
 
 import { useTranslations } from '@/lib/i18n';
-import { Code, TestTube, Cloud, Lightbulb } from 'lucide-react';
+import { Code, TestTube, Lightbulb, Workflow } from 'lucide-react';
 import { Badge, Card } from '@/components/ui';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/shared';
 
-const serviceIcons = [Code, TestTube, Cloud, Lightbulb];
+const serviceIcons = [Code, TestTube, Lightbulb, Workflow];
 
 export function ServicesSection() {
   const t = useTranslations('services');
