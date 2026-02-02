@@ -1,7 +1,6 @@
 'use client';
 
 import { useTranslations } from '@/lib/i18n';
-import { Github, Linkedin } from 'lucide-react';
 import { Link } from '@/i18n/routing';
 import { Logo } from '@/components/shared';
 
@@ -43,35 +42,6 @@ export function Footer() {
                   </a>
                 </li>
               ))}
-            </ul>
-          </div>
-
-          {/* Links */}
-          <div>
-            <h4 className="text-white font-semibold mb-4">{t('linksTitle') || 'Links'}</h4>
-            <ul className="space-y-2">
-              <li>
-                <a
-                  href="https://github.com/devlogic-hr"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-primary-400 transition-colors text-sm flex items-center gap-2"
-                >
-                  <Github size={16} />
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://linkedin.com/in/ivrgoc"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-primary-400 transition-colors text-sm flex items-center gap-2"
-                >
-                  <Linkedin size={16} />
-                  LinkedIn
-                </a>
-              </li>
             </ul>
           </div>
 
