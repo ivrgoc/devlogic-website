@@ -2,12 +2,8 @@
   "nav": {
     "about": "O meni",
     "services": "Usluge",
-    "projects": "Projekti",
-    "whyUs": "Zašto mi",
-    "portfolio": "Portfolio",
     "contact": "Kontakt",
-    "getStarted": "Razgovarajmo",
-    "blog": "Blog"
+    "getStarted": "Razgovarajmo"
   },
   "hero": {
     "badge": "20+ godina u IT industriji · Dostupan za angažmane",
@@ -116,93 +112,6 @@
       }
     ]
   },
-  "whyUs": {
-    "badge": "Zašto mi",
-    "titleLine1": "Zašto vodeće tvrtke",
-    "titleLine2": " vjeruju DevLogicu",
-    "description": "Nismo samo još jedna razvojna agencija. Mi smo vaš strateški tehnološki partner predan vašem dugoročnom uspjehu.",
-    "cta1": "Zakaži poziv",
-    "cta2": "Pogledaj naš rad",
-    "reasons": [
-      {
-        "title": "Dokazani rezultati",
-        "description": "150+ uspješno isporučenih projekata s 99% zadovoljstva klijenata."
-      },
-      {
-        "title": "Stručni tim",
-        "description": "Stariji inženjeri i dizajneri s dubokom ekspertizom kroz tehnologije."
-      },
-      {
-        "title": "Isporuka na vrijeme",
-        "description": "Poštujemo rokove i isporučujemo kvalitetan rad unutar dogovorenih vremenskih okvira."
-      },
-      {
-        "title": "Jasna komunikacija",
-        "description": "Redovita ažuriranja, transparentni procesi i uvijek dostupan tim."
-      },
-      {
-        "title": "Sigurnost na prvom mjestu",
-        "description": "Sigurnosne prakse enterprise razine ugrađene u svako rješenje."
-      },
-      {
-        "title": "Skalabilna rješenja",
-        "description": "Arhitektura dizajnirana za rast, od startupa do enterprise razine."
-      }
-    ]
-  },
-  "portfolio": {
-    "badge": "Portfolio",
-    "titleLine1": "Naš nedavni ",
-    "titleLine2": "Rad",
-    "description": "Izbor projekata koji prikazuju našu ekspertizu i predanost izvrsnosti.",
-    "viewCase": "Pogledaj studiju slučaja",
-    "cta": "Želite vidjeti više? Razgovarajmo o vašem projektu",
-    "projects": [
-      {
-        "title": "FinTech nadzorna ploča",
-        "category": "Web aplikacija",
-        "description": "Platforma za financijsku analitiku u realnom vremenu"
-      },
-      {
-        "title": "Zdravstvena aplikacija",
-        "category": "Mobilna aplikacija",
-        "description": "Upravljanje pacijentima i telemedicina"
-      },
-      {
-        "title": "E-trgovina platforma",
-        "category": "Full Stack",
-        "description": "Skalabilno rješenje za tržište"
-      },
-      {
-        "title": "SaaS analitika",
-        "category": "Enterprise",
-        "description": "Platforma za poslovnu inteligenciju"
-      }
-    ]
-  },
-  "testimonials": {
-    "badge": "Svjedočanstva",
-    "titleLine1": "Što naši klijenti ",
-    "titleLine2": "Kažu",
-    "description": "Ne vjerujte samo nama na riječ. Evo što naši partneri kažu.",
-    "items": [
-      {
-        "quote": "DevLogic je pretvorio našu viziju u stvarnost. Njihova tehnička ekspertiza i pozornost na detalje premašili su naša očekivanja.",
-        "author": "Sara Chen",
-        "role": "CEO, TechStart Inc."
-      },
-      {
-        "quote": "Rad s DevLogicom bio je prekretnica za naše poslovanje. Isporučili su rješenje koje se prekrasno skaliralo s našim rastom.",
-        "author": "Michael Roberts",
-        "role": "CTO, ScaleUp Labs"
-      },
-      {
-        "quote": "Predanost tima kvaliteti i komunikaciji učinila je cijeli razvojni proces glatkim i predvidljivim.",
-        "author": "Emily Watson",
-        "role": "Direktorica proizvoda, InnovateCo"
-      }
-    ]
-  },
   "contact": {
     "badge": "Kontakt",
     "titleLine1": "Razgovarajmo",
@@ -258,29 +167,5 @@
     "title": "Politika privatnosti",
     "lastUpdated": "Posljednje ažuriranje",
     "content": "Ova politika privatnosti opisuje kako DevLogic prikuplja, koristi i štiti vaše osobne podatke."
-  },
-  "blog": {
-    "badge": "Blog",
-    "titleLine1": "Najnoviji ",
-    "titleLine2": "Uvidi",
-    "description": "Istražite naše najnovije članke o razvoju softvera, dizajnu i tehnološkim trendovima.",
-    "featured": "Istaknuto",
-    "allCategories": "Sve",
-    "readMore": "Pročitaj više",
-    "loadMore": "Učitaj više",
-    "noPostsFound": "Nema objava u ovoj kategoriji.",
-    "minRead": "min čitanja",
-    "backToBlog": "Natrag na Blog",
-    "relatedPosts": "Povezane objave",
-    "shareArticle": "Podijeli članak",
-    "publishedOn": "Objavljeno",
-    "categories": {
-      "development": "Razvoj",
-      "design": "Dizajn",
-      "devops": "DevOps",
-      "ai": "AI & ML",
-      "business": "Poslovanje",
-      "tutorials": "Vodiči"
-    }
   }
 }

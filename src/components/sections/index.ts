@@ -3,7 +3,4 @@ export { AboutSection } from './about';
 export { ClientsSection } from './clients';
 export { ServicesSection } from './services';
 export { ProductsSection } from './products';
-export { WhyUsSection } from './why-us';
-export { PortfolioSection } from './portfolio';
-export { TestimonialsSection } from './testimonials';
 export { ContactSection } from './contact';

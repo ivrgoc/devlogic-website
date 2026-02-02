@@ -2,12 +2,8 @@
   "nav": {
     "about": "About",
     "services": "Services",
-    "projects": "Projects",
-    "whyUs": "Why Us",
-    "portfolio": "Portfolio",
     "contact": "Contact",
-    "getStarted": "Let's Talk",
-    "blog": "Blog"
+    "getStarted": "Let's Talk"
   },
   "hero": {
     "badge": "20+ years in IT · Available for engagements",
@@ -116,93 +112,6 @@
       }
     ]
   },
-  "whyUs": {
-    "badge": "Why Choose Us",
-    "titleLine1": "Why Leading Companies",
-    "titleLine2": " Trust DevLogic",
-    "description": "We're not just another development agency. We're your strategic technology partner committed to your long-term success.",
-    "cta1": "Schedule a Call",
-    "cta2": "View Our Work",
-    "reasons": [
-      {
-        "title": "Proven Track Record",
-        "description": "150+ successful projects delivered with 99% client satisfaction rate."
-      },
-      {
-        "title": "Expert Team",
-        "description": "Senior engineers and designers with deep expertise across technologies."
-      },
-      {
-        "title": "On-Time Delivery",
-        "description": "We respect deadlines and deliver quality work within agreed timelines."
-      },
-      {
-        "title": "Clear Communication",
-        "description": "Regular updates, transparent processes, and always accessible team."
-      },
-      {
-        "title": "Security First",
-        "description": "Enterprise-grade security practices built into every solution we deliver."
-      },
-      {
-        "title": "Scalable Solutions",
-        "description": "Architecture designed for growth, from startup to enterprise scale."
-      }
-    ]
-  },
-  "portfolio": {
-    "badge": "Portfolio",
-    "titleLine1": "Our Recent ",
-    "titleLine2": "Work",
-    "description": "A selection of projects that showcase our expertise and commitment to excellence.",
-    "viewCase": "View Case Study",
-    "cta": "Want to see more? Let's talk about your project",
-    "projects": [
-      {
-        "title": "FinTech Dashboard",
-        "category": "Web Application",
-        "description": "Real-time financial analytics platform"
-      },
-      {
-        "title": "HealthCare App",
-        "category": "Mobile Application",
-        "description": "Patient management and telemedicine"
-      },
-      {
-        "title": "E-Commerce Platform",
-        "category": "Full Stack",
-        "description": "Scalable marketplace solution"
-      },
-      {
-        "title": "SaaS Analytics",
-        "category": "Enterprise",
-        "description": "Business intelligence platform"
-      }
-    ]
-  },
-  "testimonials": {
-    "badge": "Testimonials",
-    "titleLine1": "What Our Clients ",
-    "titleLine2": "Say",
-    "description": "Don't just take our word for it. Here's what our partners have to say.",
-    "items": [
-      {
-        "quote": "DevLogic transformed our vision into reality. Their technical expertise and attention to detail exceeded our expectations.",
-        "author": "Sarah Chen",
-        "role": "CEO, TechStart Inc."
-      },
-      {
-        "quote": "Working with DevLogic was a game-changer for our business. They delivered a solution that scaled beautifully with our growth.",
-        "author": "Michael Roberts",
-        "role": "CTO, ScaleUp Labs"
-      },
-      {
-        "quote": "The team's commitment to quality and communication made the entire development process smooth and predictable.",
-        "author": "Emily Watson",
-        "role": "Product Director, InnovateCo"
-      }
-    ]
-  },
   "contact": {
     "badge": "Contact",
     "titleLine1": "Let's",
@@ -258,29 +167,5 @@
     "title": "Privacy Policy",
     "lastUpdated": "Last updated",
     "content": "This privacy policy describes how DevLogic collects, uses, and protects your personal information."
-  },
-  "blog": {
-    "badge": "Blog",
-    "titleLine1": "Latest ",
-    "titleLine2": "Insights",
-    "description": "Explore our latest articles on software development, design, and technology trends.",
-    "featured": "Featured",
-    "allCategories": "All",
-    "readMore": "Read More",
-    "loadMore": "Load More",
-    "noPostsFound": "No posts found in this category.",
-    "minRead": "min read",
-    "backToBlog": "Back to Blog",
-    "relatedPosts": "Related Posts",
-    "shareArticle": "Share this article",
-    "publishedOn": "Published on",
-    "categories": {
-      "development": "Development",
-      "design": "Design",
-      "devops": "DevOps",
-      "ai": "AI & ML",
-      "business": "Business",
-      "tutorials": "Tutorials"
-    }
   }
 }
