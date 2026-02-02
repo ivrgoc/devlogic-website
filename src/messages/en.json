@@ -10,10 +10,10 @@
     "blog": "Blog"
   },
   "hero": {
-    "badge": "20+ years in IT · Available for projects",
-    "titleLine1": "Software Development & QA Consulting",
-    "titleLine2": "with hands-on experience.",
-    "description": "Full-stack development, automated testing, and DevOps — from someone who has led QA teams in corporate environments and worked on enterprise systems. That same experience is now available for your project.",
+    "badge": "20+ years in IT · Available for engagements",
+    "titleLine1": "Experience can't be improvised.",
+    "titleLine2": "20 years in the making — now working for you.",
+    "description": "Independent software engineer and QA consultant with experience in banking, cybersecurity, and digital transformation. From one-time projects to long-term engagements.",
     "cta1": "Let's Talk About Your Project",
     "cta2": "View Services",
     "stats": {
@@ -27,9 +27,9 @@
     "badge": "About",
     "titleLine1": "More Than Two Decades",
     "titleLine2": " in Software",
-    "description1": "I'm Igor — a software engineer with over 20 years of experience in the IT industry. I currently lead a QA department at a leading global cybersecurity company, managing a team of 10+ QA engineers building products that protect organizations from digital threats.",
-    "description2": "Throughout my career, I've progressed from software engineer to Director of QA. I've led teams of up to 15 IT engineers, coordinated international mobile banking projects, worked on core banking system implementations, and built QA processes from the ground up in corporate environments.",
-    "description3": "I started DevLogic because I believe smaller companies and startups deserve the same level of technical quality and QA maturity I've been building in enterprise environments — but without corporate prices and bureaucracy. I work with modern technologies, use AI tools to accelerate development, and bring the same rigor to every project that I've applied to enterprise systems throughout my career.",
+    "description1": "DevLogic was born from a simple idea: experience gained from leading enterprise projects should be accessible to everyone. With over 20 years in IT, I've walked the full path — from software development, through leading teams of up to 15 engineers, to managing QA departments at global companies in cybersecurity and financial services.",
+    "description2": "My particular strength lies in project management and digital transformation — I've coordinated international digital banking projects, led core banking system implementations across multiple markets, and built QA processes from the ground up in corporate environments.",
+    "description3": "Today, I apply all of that to projects for companies of all sizes — with the same structure and rigor, but without corporate bureaucracy and agency overhead.",
     "card1Title": "20+ Years",
     "card1Desc": "Experience in software engineering, QA, and project management",
     "card2Title": "Up to 15 People",
@@ -41,6 +41,25 @@
     "award": "Award Winning",
     "awardDesc": "Tech Solutions 2025"
   },
+  "clients": {
+    "badge": "Clients",
+    "titleLine1": "I Work with Teams",
+    "titleLine2": " of All Sizes",
+    "items": [
+      {
+        "title": "Startups & Small Teams",
+        "description": "Need a reliable technical partner to bring your MVP or web application to production? I work as an extension of your team — flexible and without long contracts."
+      },
+      {
+        "title": "Growing Companies",
+        "description": "Is your team growing faster than your QA processes? I help establish testing, automation, and DevOps practices that scale with you."
+      },
+      {
+        "title": "Enterprise & Corporations",
+        "description": "Need an independent QA consultant or project coordinator with experience on complex international implementations? I bring an enterprise mindset without agency overhead."
+      }
+    ]
+  },
   "services": {
     "badge": "Services",
     "titleLine1": "What I ",
@@ -50,29 +69,33 @@
       {
         "title": "Web Development",
         "description": "Building web applications from scratch or upgrading existing systems. Modern stack, clean code, responsive design. Includes infrastructure setup and deployment.",
-        "features": ["Full-stack web applications (React, Next.js, Node.js)", "Landing pages and business websites", "API integrations and backend development", "CI/CD, Docker, and cloud deployment"]
+        "features": ["Full-stack web applications (React, Next.js, Node.js)", "Landing pages and business websites", "API integrations and backend development", "CI/CD, Docker, and cloud deployment"],
+        "tag": "For startups and small teams"
       },
       {
         "title": "Testing & QA",
         "description": "Automated testing and quality assurance — my primary expertise with experience leading QA teams in enterprise environments.",
-        "features": ["Test automation (Cypress, Playwright, Selenium)", "Test strategy and planning", "CI/CD test integration", "Performance and load testing"]
+        "features": ["Test automation (Cypress, Playwright, Selenium)", "Test strategy and planning", "CI/CD test integration", "Performance and load testing"],
+        "tag": "For teams of all sizes"
       },
       {
         "title": "QA Consulting",
         "description": "Need to establish a QA process, improve an existing one, or assess your testing maturity? I bring experience gained from leading QA departments in banking and cybersecurity.",
-        "features": ["QA maturity assessment and gap analysis", "Test strategy and framework design", "QA team mentoring", "Introducing QA best practices and processes"]
+        "features": ["QA maturity assessment and gap analysis", "Test strategy and framework design", "QA team mentoring", "Introducing QA best practices and processes"],
+        "tag": "For enterprise and growing companies"
       },
       {
         "title": "IT Consulting & Project Management",
         "description": "Digital transformation, international IT project coordination, and strategic advisory — with experience leading complex implementations in banking and fintech.",
-        "features": ["Digital transformation and system modernization", "IT project management and coordination", "International team and vendor management", "Agile/Scrum implementation and process optimization"]
+        "features": ["Digital transformation and system modernization", "IT project management and coordination", "International team and vendor management", "Agile/Scrum implementation and process optimization"],
+        "tag": "For enterprise and international projects"
       }
     ]
   },
   "products": {
     "badge": "Process",
-    "titleLine1": "How We ",
-    "titleLine2": "Work Together",
+    "titleLine1": "How We Work ",
+    "titleLine2": "Together",
     "description": "A clear, straightforward process from first call to delivery.",
     "items": [
       {
@@ -81,15 +104,15 @@
       },
       {
         "title": "Proposal",
-        "description": "Within 2-3 business days I send a detailed proposal — fixed price for well-defined projects, or hourly rate for ongoing work. Transparent, no hidden costs."
+        "description": "Within 2-3 business days I send a detailed proposal — fixed price for defined projects, or hourly rate for ongoing engagements. For enterprise clients: I work with your procurement process and NDAs."
       },
       {
-        "title": "Development",
-        "description": "Iterative development with regular updates. You get access to the Git repository and staging environment. We communicate directly — email, Slack, or whatever works for you."
+        "title": "Execution",
+        "description": "Iterative development with regular updates. Access to Git repository and staging environment. Direct communication — email, Slack, or whatever works for you."
       },
       {
         "title": "Delivery & Support",
-        "description": "Production deployment, technical documentation, and 30 days of free support after project completion. For consulting engagements — a final report with recommendations."
+        "description": "Production deployment, technical documentation, and 30 days of free support. For consulting engagements — a final report with recommendations and action plan."
       }
     ]
   },
@@ -184,13 +207,14 @@
     "badge": "Contact",
     "titleLine1": "Let's",
     "titleLine2": " Talk",
-    "description": "Have an idea, project, or need QA consulting? Reach out — I respond within 24 hours.",
+    "description": "Whether you're a startup with an idea or an enterprise with a specific project — the first step is the same. Reach out, I respond within 24 hours.",
     "email": "Email",
     "phone": "Call Us",
     "visit": "Visit Us",
     "address": "Zagreb, Croatia",
     "calendly": "Schedule a free call",
     "calendlyLink": "Book a time",
+    "ndaNote": "Available for NDAs and formal procurement processes.",
     "form": {
       "name": "Name",
       "namePlaceholder": "Your name",
@@ -213,7 +237,7 @@
     }
   },
   "footer": {
-    "description": "Software development, QA consulting, and DevOps.",
+    "description": "Software development, QA consulting, and IT project management.",
     "businessInfo": "Sole proprietorship | Zagreb, Croatia",
     "servicesTitle": "Services",
     "servicesLinks": ["Web Development", "Testing & QA", "QA Consulting", "IT Consulting"],

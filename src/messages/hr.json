@@ -10,10 +10,10 @@
     "blog": "Blog"
   },
   "hero": {
-    "badge": "20+ godina u IT industriji · Dostupan za projekte",
-    "titleLine1": "Razvoj softvera i QA konzalting",
-    "titleLine2": "s iskustvom iz prve ruke.",
-    "description": "Full-stack razvoj, automatizirano testiranje i DevOps — od nekoga tko je vodio QA timove u korporativnom okruženju i radio na enterprise sustavima. Sada to isto iskustvo dostupno i vašem projektu.",
+    "badge": "20+ godina u IT industriji · Dostupan za angažmane",
+    "titleLine1": "Iskustvo se ne improvizira.",
+    "titleLine2": "20 godina ga gradim — sada radi za vas.",
+    "description": "Nezavisni softverski inženjer i QA konzultant s iskustvom u bankarstvu, cybersecurityju i digitalnoj transformaciji. Od jednokratnog projekta do dugoročnog angažmana.",
     "cta1": "Razgovarajmo o projektu",
     "cta2": "Pogledaj usluge",
     "stats": {
@@ -28,8 +28,8 @@
     "titleLine1": "Više od dva desetljeća",
     "titleLine2": " u softveru",
     "description1": "DevLogic je nastao iz jednostavne ideje: iskustvo stečeno vođenjem enterprise projekata trebalo bi biti dostupno svima. S više od 20 godina u IT-u, prošao sam cijeli put — od razvoja softvera, preko vođenja timova do 15 inženjera, do upravljanja QA odjelima u globalnim tvrtkama iz područja cybersecurityja i financijskih usluga.",
-    "description2": "Posebna snaga je u projekt managementu i digitalnoj transformaciji — koordinirao sam međunarodne projekte mobilnog bankarstva, vodio implementacije core banking sustava na više tržišta, i gradio QA procese od temelja u korporativnim okruženjima.",
-    "description3": "Sve to danas primjenjujem na projekte za manje tvrtke i startupe — s istom strukturom i ozbiljnošću, ali bez korporativne birokracije.",
+    "description2": "Posebna snaga je u projekt managementu i digitalnoj transformaciji — koordinirao sam međunarodne projekte digitalnog bankarstva, vodio implementacije core banking sustava na više tržišta, i gradio QA procese od temelja u korporativnim okruženjima.",
+    "description3": "Sve to danas primjenjujem na projekte za tvrtke svih veličina — s istom strukturom i ozbiljnošću, ali bez korporativne birokracije i agencijskog overheada.",
     "card1Title": "20+ godina",
     "card1Desc": "Iskustvo u softverskom inženjerstvu, QA-u i projekt managementu",
     "card2Title": "Do 15 ljudi",
@@ -37,9 +37,28 @@
     "card3Title": "Banking i Cyber",
     "card3Desc": "Domene u kojima sam gradio i testirao enterprise sustave",
     "card4Title": "Direktna komunikacija",
-    "card4Desc": "Radite direktno sa mnom — bez middlemana",
+    "card4Desc": "Radite direktno sa mnom — bez posrednika",
     "award": "Nagrađivano",
     "awardDesc": "Tech rješenja 2025"
+  },
+  "clients": {
+    "badge": "Klijenti",
+    "titleLine1": "Radim s timovima",
+    "titleLine2": " svih veličina",
+    "items": [
+      {
+        "title": "Startupi i mali timovi",
+        "description": "Trebate pouzdanog tehničkog partnera koji će vaš MVP ili web aplikaciju dovesti do produkcije? Radim kao produžetak vašeg tima — fleksibilno i bez dugih ugovora."
+      },
+      {
+        "title": "Rastuće tvrtke",
+        "description": "Vaš tim raste brže nego QA procesi? Pomažem uspostaviti testiranje, automatizaciju i DevOps prakse koje skaliraju s vama."
+      },
+      {
+        "title": "Enterprise i korporacije",
+        "description": "Trebate nezavisnog QA konzultanta ili projekt koordinatora s iskustvom na složenim međunarodnim implementacijama? Donosim enterprise mindset bez agencijskog overheada."
+      }
+    ]
   },
   "services": {
     "badge": "Usluge",
@@ -49,23 +68,27 @@
     "items": [
       {
         "title": "Web Razvoj",
-        "description": "Izrada web aplikacija od nule ili nadogradnja postojećih sustava. Moderan stack, čist kod, responsivan dizajn. Uključuje postavljanje infrastrukture i deployementa.",
-        "features": ["Full-stack web aplikacije (React, Next.js, Node.js)", "Landing stranice i poslovni webovi", "API integracije i backend razvoj", "CI/CD, Docker i cloud deployment"]
+        "description": "Izrada web aplikacija od nule ili nadogradnja postojećih sustava. Moderan stack, čist kod, responsivan dizajn. Uključuje postavljanje infrastrukture i deploymenta.",
+        "features": ["Full-stack web aplikacije (React, Next.js, Node.js)", "Landing stranice i poslovni webovi", "API integracije i backend razvoj", "CI/CD, Docker i cloud deployment"],
+        "tag": "Za startupe i manje tvrtke"
       },
       {
         "title": "Testiranje i QA",
         "description": "Automatizirano testiranje i osiguranje kvalitete — moja primarna ekspertiza s iskustvom vođenja QA timova u enterprise okruženju.",
-        "features": ["Automatizacija testova (Cypress, Playwright, Selenium)", "Test strategija i planiranje", "CI/CD integracija testova", "Performance i load testiranje"]
+        "features": ["Automatizacija testova (Cypress, Playwright, Selenium)", "Test strategija i planiranje", "CI/CD integracija testova", "Performance i load testiranje"],
+        "tag": "Za timove svih veličina"
       },
       {
         "title": "QA Konzalting",
         "description": "Trebate uspostaviti QA proces, poboljšati postojeći, ili ocijeniti zrelost vašeg testiranja? Donosim iskustvo stečeno vođenjem QA odjela u bankarskom sektoru i cybersecurityju.",
-        "features": ["Procjena QA zrelosti i gap analiza", "Dizajn test strategije i frameworka", "Mentoriranje QA timova", "Uvođenje QA best practices i procesa"]
+        "features": ["Procjena QA zrelosti i gap analiza", "Dizajn test strategije i frameworka", "Mentoriranje QA timova", "Uvođenje QA best practices i procesa"],
+        "tag": "Za enterprise i rastuće tvrtke"
       },
       {
         "title": "IT Konzalting i Vođenje Projekata",
         "description": "Digitalna transformacija, koordinacija međunarodnih IT projekata i strateško savjetovanje — s iskustvom vođenja složenih implementacija u bankarstvu i fintechu.",
-        "features": ["Digitalna transformacija i modernizacija sustava", "Vođenje i koordinacija IT projekata", "Upravljanje međunarodnim timovima i vendorima", "Agile/Scrum implementacija i optimizacija procesa"]
+        "features": ["Digitalna transformacija i modernizacija sustava", "Vođenje i koordinacija IT projekata", "Upravljanje međunarodnim timovima i vendorima", "Agile/Scrum implementacija i optimizacija procesa"],
+        "tag": "Za enterprise i međunarodne projekte"
       }
     ]
   },
@@ -81,15 +104,15 @@
       },
       {
         "title": "Ponuda",
-        "description": "U roku 2-3 radna dana šaljem detaljnu ponudu — fiksna cijena za jasno definirane projekte, ili satnica za ongoing rad. Transparentno, bez skrivenih troškova."
+        "description": "U roku 2-3 radna dana šaljem detaljnu ponudu — fiksna cijena za definirane projekte, ili satnica za ongoing angažmane. Za enterprise klijente: radim s vašim procurement procesom i NDA-ovima."
       },
       {
-        "title": "Razvoj",
-        "description": "Iterativan razvoj s redovitim updateima. Imate pristup Git repozitoriju i staging okruženju. Komuniciramo direktno — email, Slack, ili što vam odgovara."
+        "title": "Realizacija",
+        "description": "Iterativan razvoj s redovitim updateima. Pristup Git repozitoriju i staging okruženju. Direktna komunikacija — email, Slack, ili što vam odgovara."
       },
       {
         "title": "Isporuka i podrška",
-        "description": "Deployment na produkciju, tehnička dokumentacija, i 30 dana besplatne podrške nakon završetka projekta. Za konzalting angažmane — završni izvještaj s preporukama."
+        "description": "Deployment na produkciju, tehnička dokumentacija, i 30 dana besplatne podrške. Za konzalting angažmane — završni izvještaj s preporukama i action planom."
       }
     ]
   },
@@ -184,13 +207,14 @@
     "badge": "Kontakt",
     "titleLine1": "Razgovarajmo",
     "titleLine2": "",
-    "description": "Imate ideju, projekt ili trebate QA konzultaciju? Javite se — odgovaram unutar 24 sata.",
+    "description": "Bez obzira jeste li startup s idejom ili enterprise s konkretnim projektom — prvi korak je isti. Javite se, odgovaram unutar 24 sata.",
     "email": "Email",
     "phone": "Nazovite nas",
     "visit": "Posjetite nas",
     "address": "Zagreb, Hrvatska",
     "calendly": "Zakažite besplatni poziv",
     "calendlyLink": "Rezervirajte termin",
+    "ndaNote": "Dostupan za NDA i formalne procurement procese.",
     "form": {
       "name": "Ime",
       "namePlaceholder": "Vaše ime",
@@ -213,7 +237,7 @@
     }
   },
   "footer": {
-    "description": "Razvoj softvera, QA konzalting i DevOps.",
+    "description": "Razvoj softvera, QA konzalting i vođenje IT projekata.",
     "businessInfo": "Paušalni obrt | Zagreb, Hrvatska",
     "servicesTitle": "Usluge",
     "servicesLinks": ["Web Razvoj", "Testiranje i QA", "QA Konzalting", "IT Konzalting"],

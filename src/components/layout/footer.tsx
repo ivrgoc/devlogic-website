@@ -9,10 +9,10 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   const services = [
-    { name: 'Web Development', href: '#services' },
-    { name: 'Testing & QA', href: '#services' },
-    { name: 'DevOps', href: '#services' },
-    { name: 'QA Consulting', href: '#services' },
+    { name: t('servicesLinks.0'), href: '#services' },
+    { name: t('servicesLinks.1'), href: '#services' },
+    { name: t('servicesLinks.2'), href: '#services' },
+    { name: t('servicesLinks.3'), href: '#services' },
   ];
 
   return (

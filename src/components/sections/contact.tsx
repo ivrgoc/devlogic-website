@@ -103,6 +103,9 @@ export function ContactSection() {
                 </a>
               </div>
             </GlassCard>
+
+            {/* NDA Note */}
+            <p className="text-xs text-gray-500 text-center mt-4">{t('ndaNote')}</p>
           </AnimatedSection>
 
           {/* Contact Form */}

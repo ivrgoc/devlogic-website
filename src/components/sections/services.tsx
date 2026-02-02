@@ -20,6 +20,7 @@ export function ServicesSection() {
       t(`items.${index}.features.2`),
       t(`items.${index}.features.3`),
     ],
+    tag: t(`items.${index}.tag`),
   }));
 
   return (
@@ -55,6 +56,7 @@ export function ServicesSection() {
                     </li>
                   ))}
                 </ul>
+                <p className="text-xs text-gray-500 mt-4">{service.tag}</p>
               </Card>
             </StaggerItem>
           ))}
